@@ -1,0 +1,81 @@
+.TB-title {
+    font-family: Aventura;
+    color: green;
+    text-align: center;
+    text-shadow: black 3px 2px;
+    font-size: 45px;
+}
+.TB-subtitle {
+    font-family: "canter bold";
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.tacklebox-header {
+    font-family: "canter bold";
+    font-size: 30px;
+    text-align: center;
+}
+/* .current-tacklebox {
+    font-family: "canter bold";
+    font-size: 20px;
+    text-align: center;
+} */
+.all-lures-header {
+    font-family: "canter bold";
+    font-size: 30px;
+    text-align: center; 
+}
+
+
+.lure-list {
+    display: flex;
+    justify-content:space-between;
+    list-style-type:none;
+    position: relative;
+    right: 0px;
+    }
+
+.current-tacklebox {
+    display: flex;
+    justify-content:space-between;
+    list-style-type:none;
+}
+  
+  li {
+    line-height: 1.5em;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    display: inline;
+  }
+
+  .lure-card{
+    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+    width: 250px;
+    box-shadow: 0 2px 5px 2px black;
+   text-align: center;
+   border-radius: 15px;
+   margin-bottom: 40px;;
+   margin-right: 10px;
+  }
+
+  img {
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 2px black;
+    align-content: center;
+  
+  }
+  .current-tacklebox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 400px;
+    border-radius: 8px;
+    border: 2px solid black;
+    background-image: url('https://cdn.hipwallpaper.com/i/3/62/Fh3Hbq.jpg');
+    background-size: cover;
+    position: relative;
+    right: 0px;
+  }

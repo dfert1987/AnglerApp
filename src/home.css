@@ -27,7 +27,7 @@ body{
     text-decoration: none;
 
     top: 70px;
-    right: 45px;
+   
     height: 450px;
 
 }
@@ -42,6 +42,7 @@ body{
 
 .button-image{
     height: 100%;
+    width: 270px;
     border-radius: 8px;
     border: solid 1px black;
     box-shadow: 0 8px 6px -6px black;
