@@ -5,6 +5,7 @@
 html {
     text-align: right;
     justify-content: right;
+    width: 100%;
 }
 .nav {
     justify-content: right;
@@ -31,11 +32,6 @@ html {
 
 } */
 
-.btn{
-    border: 1px solid black;
-    cursor: pointer;
-    display: inline-block;  
-}
 
 .logoBtn{
     background: transparent;

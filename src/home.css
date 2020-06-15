@@ -1,7 +1,85 @@
-/* .home{
-    background-image: url('https://www.patternpictures.com/wp-content/uploads/Light-wood-background-texture-with-subtle-cracks-patternpictures-1113.jpg')
+body{
+    background: url('https://i.imgur.com/SotcQ8h.jpg') no-repeat center center fixed; 
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover;
+    height: 100%;
+    width: auto;
+  }
+
+.welcome {
+    font-size: 60px;
+    font-family: Aventura;
+    color: green;
+    position: relative;
+    top: 40px;
+    text-align: center;
+    text-shadow: black 3px 2px;
+    
 }
 
-h1 {
-    font-size: 100px;
-} */
+.button-container {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    position: relative;
+    text-decoration: none;
+
+    top: 70px;
+    right: 45px;
+    height: 450px;
+
+}
+
+.button-card {
+    flex: 33.33%;
+    /* padding: 5px; */
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.button-image{
+    height: 100%;
+    border-radius: 8px;
+    border: solid 1px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+button.btn {
+    z-index: 1000;
+    /* padding: 0 5px 5px 20px; */
+    display: flex;
+    position: relative;
+    top: -240px;
+    right: -180px;
+    cursor: pointer;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "canter bold";
+    font-size: 45px;
+    height: 80px;
+    border-radius: 20px;
+    align-content: center;
+}
+
+.link {
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
+
+}
+
+#fishbutton{
+    padding: 18px 5px 5px 20px;
+}
+
+#mapbutton{
+    padding: 18px 5px 5px 45px;
+}
+
+#tbbutton{
+    padding: 18px 5px 5px 8px;
+}
+

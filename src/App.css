@@ -1,27 +1,14 @@
-/* .bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%; */
-/* } */
+body {
+  height: 100vh;
+  
+}
 
-/* .bg img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom:0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%; */
-/* 
- 
-
-  .title-space {
-    z-index: 1000;
-  } */
-
+#root{
+  height: 100%;
+}
+html {
+  height: 100vh;
+}
 
 
 

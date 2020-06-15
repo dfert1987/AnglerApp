@@ -1,11 +1,17 @@
-html { 
+body{
+    height: 100vh;
+}
+
+
+.landing-container { 
     background: url('https://i.imgur.com/C2IhcZg.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100%;
   }
-h1 {
+  .Title {
     font-family: "Aventura";
     font-size: 130px;
     text-align: center;
@@ -15,7 +21,7 @@ h1 {
     top: 100px;
 }
 
-h3 {
+.welcome-to {
     text-align: center;
     font-size: 80px;
     font-family: "canter bold";
@@ -23,7 +29,7 @@ h3 {
     top:155px;
 }
 
-h4 {
+.subtitle {
     text-align: center;
     font-family: "canter bold";
     font-size: 50px;
