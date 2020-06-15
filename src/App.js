@@ -1,0 +1,36 @@
+import React from 'react';
+import './App.css' 
+import Title from './title.js';
+import Home from './home.js';
+import TackleBox from  './tackle box.js';
+import Map from './map.js';
+import Fish from './fish.js';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+
+
+function App() {
+  return (
+  <Router>
+      <Route exact path='/'>
+        <Title />
+      </Route>
+
+      <Route exact path='/home'>
+          <Home />
+        </Route>
+        <Route path='/tacklebox'>
+          <TackleBox />
+        </Route>
+        <Route path='/map'>
+          <Map />
+          </Route>
+        <Route path ='/fish'>
+          <Fish />
+        </Route>
+  
+
+  </Router>
+  ) 
+}
+
+export default App;

@@ -1,0 +1,121 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+html {
+    text-align: right;
+    justify-content: right;
+}
+.nav {
+    justify-content: right;
+    
+}
+
+.logo img{
+    width: 50px;
+    margin: 3px;
+
+}
+
+/* div .main {
+    text-align: right;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/000/133/727/original/WoodBackground54342.jpg');
+} */
+
+/* .bar {
+    width: 30px;
+    margin: 4px;
+    height: 3px;
+    color: lightcyan;
+    background: burlywood;
+
+} */
+
+.btn{
+    border: 1px solid black;
+    cursor: pointer;
+    display: inline-block;  
+}
+
+.logoBtn{
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    border-bottom: 2px solid black;
+}
+
+
+body {
+    font-family: 'Parker';
+}
+
+ul {
+    list-style: none;
+    height: 0px;
+    overflow: hidden;
+    align-content: right;
+    position: relative;
+    right: -950px;
+    justify-content: right;
+}
+
+.showNav {
+    height: auto;
+}
+
+ul li a{
+    text-decoration: none;
+    justify-content: space-between 30px;
+    display: block;
+    color: white;
+    text-shadow: black 3px 2px;
+    padding: 10px;
+    font-size: 43px;
+    font-family: "canter bold";
+    transition: all 0.5s ease;
+    
+}
+
+ul li a:visited{
+    /* color:rgb(14, 103, 14); */
+}
+ul li a:hover{
+    /* background:rgb(99, 42, 42); */
+    color: green;
+}
+
+/* responsive shit */
+
+@media screen and (min-width: 640px){
+nav{
+        background-image: url('https://i.imgur.com/7vpsE7I.jpg');
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        border-bottom: burlywood 2px solid;
+
+    }
+
+}
+
+.btn{
+    display: none;
+}
+
+ul{
+    display:flex;
+    height: auto;
+    /* background: transparent; */
+}
+
+nav ul a{
+    background: transparent;
+}
+
+.logoBtn{
+    border:none;
+
+}
