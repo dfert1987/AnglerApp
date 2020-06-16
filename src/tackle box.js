@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './tacklebox.css';
 import LureCard from './components/LureCard';
+import LureForm from './components/LureForm';
 import Navbar from './navbar.js'
 
 class TackleBox extends Component {
@@ -105,6 +106,9 @@ class TackleBox extends Component {
                 <ul className="current-tacklebox">
                     {this.showTackleBox()}
                 </ul>
+            </div>
+            <div className="form container">
+                <LureForm />
             </div>
             <div className="all-lures">
                 <h3 className="all-lures-header">LURE OPTIONS</h3>
