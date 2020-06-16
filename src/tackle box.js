@@ -101,13 +101,13 @@ class TackleBox extends Component {
                 <h3 className="TB-subtitle"> - Customize Your Tackle Box -</h3>
             </div>
             <div className="your-tacklebox">
-                <h3 className="tacklebox-header">Current TackleBox</h3>
+                <h3 className="tacklebox-header">CURRENT TACKLE BOX</h3>
                 <ul className="current-tacklebox">
                     {this.showTackleBox()}
                 </ul>
             </div>
             <div className="all-lures">
-                <h3 className="all-lures-header">Lure Options</h3>
+                <h3 className="all-lures-header">LURE OPTIONS</h3>
                 <ul className="lure-list">
                     {this.showLures()}
                 </ul>

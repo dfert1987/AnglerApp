@@ -16,8 +16,8 @@
 }
 
 .tacklebox-header {
-    font-family: "canter bold";
-    font-size: 30px;
+    font-family: "Aventura";
+    font-size: 20px;
     text-align: center;
 }
 /* .current-tacklebox {
@@ -26,30 +26,54 @@
     text-align: center;
 } */
 .all-lures-header {
-    font-family: "canter bold";
-    font-size: 30px;
+    font-family: "Aventura";
+    font-size: 20px;
     text-align: center; 
 }
 
+.Add-remove {
+    height:40px;
+    width: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "canter bold";
+    font-size: 20px;
+    position: relative;
+    top: -5px;
+}
 
 .lure-list {
     display: flex;
     justify-content:space-between;
     list-style-type:none;
     position: relative;
-    right: 0px;
+    width: 80%;
+    right: -2px;
+    align-content: center;
+    margin: auto;
     }
 
 .current-tacklebox {
     display: flex;
     justify-content:space-between;
     list-style-type:none;
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+.current-tacklebox li {
+    /* position: absolute; */
+    top: 10px;
+    margin: 10px;
+    margin-bottom: 10px;
+   
 }
   
   li {
     line-height: 1.5em;
     border-bottom: 1px solid #ccc;
-    float: left;
+    /* float: left; */
     display: inline;
   }
 
@@ -65,11 +89,12 @@
    font-style: bold;
    border-radius: 15px;
    margin-bottom: 40px;
-   margin-right: 10px;
+   margin-right:3px;
   }
 
   .lure-card-img {
     width: 150px;
+    height: 80px;
     border-radius: 10px;
     box-shadow: 0 2px 5px 2px black;
     align-content: center;
