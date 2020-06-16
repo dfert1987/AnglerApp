@@ -1,6 +1,13 @@
+
 body{
-    height: 100vh;
-}
+    background: url('https://www.adventure-at-nature.com/wp-content/uploads/2018/06/iStock-821005576-1024x465.jpg') no-repeat center center fixed; 
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    background-size: cover;
+    height: 100%;
+    width: auto;
+  }
 
 
 .landing-container { 

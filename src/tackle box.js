@@ -29,6 +29,7 @@ class TackleBox extends Component {
     showTackleBox = () => this.state.tacklebox.map(lure => {
         return <LureCard key={lure.id} 
         removeFromTackleBox={this.removeFromTackleBox} 
+        unfavoriteBackend={this.unfavoriteBackend}
         lure={lure}/>
         })
 
@@ -39,23 +40,41 @@ class TackleBox extends Component {
               })
             }
         }   
-        tackleBoxBackend = (lure) => {
-            if (lure.favorited == false) {
-              lure.favorited = true 
-            } else lure.favorited = true
-            
-             fetch(`http://localhost:3000/lures/${lure.id}`, {
-            method: 'PATCH',
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(lure)
-          })
-          }
+    tackleBoxBackend = (lure) => {
+        if (lure.favorited === false) {
+            lure.favorited = true
+        } else lure.favorited = true 
+            fetch(`http://localhost:3000/lures/${lure.id}`, {
+                method: 'PATCH',
+                headers: {
+                "Content-Type": "application/json"
+                 },
+                body: JSON.stringify(lure)
+                })
+            }
+    removeFromTackleBox = (lure) => {
+        const filtered = this.state.tacklebox.filter(activeLure => activeLure.id !== lure.id )
+            this.setState(
+                {tacklebox: filtered}
+            )
+        }
 
+    unfavoriteBackend =(lure) => {
+        if (lure.favorited === true) {
+            lure.favorited = false
+        } else lure.favorited = false 
+            fetch(`http://localhost:3000/lures/${lure.id}`, {
+                method: 'PATCH',
+                headers: {
+                "Content-Type": "application/json"
+                 },
+                body: JSON.stringify(lure)
+                })
+    }
+         
     render(){
         return  (
-        <div className="main">
+        <div className="main-tb">
             <div className="nav-bar">
                 <Navbar />
             </div>
