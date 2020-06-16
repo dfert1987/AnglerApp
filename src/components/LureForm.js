@@ -11,19 +11,30 @@ export default class LureForm extends Component {
         size: ""
     }
 
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]:event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addLure(this.state)
+    }
+
     render(){
+        
         return (
-            
-            <form className="addLure">
+            <form onSubmit={this.handleSubmit} className="addLure">
                 <h2 className="form-title">ADD NEW LURE</h2>
-                <label> NAME:   </label>
-                <input class="input" type="text" name='name' placeholder="Name" value={this.state.name}/>
+                <label> NAME:  </label>
+                <input className="input" type="text" name='name' placeholder="Name" value={this.state.name} onChange={this.handleChange}/>
                 <label>  IMAGE:  </label>
-                <input class="input" type="text" name='image' placeholder="Image URL" value={this.state.image}/> <br/>
+                <input className="input" type="text" name='image' placeholder="Image URL" value={this.state.image} onChange={this.handleChange}/> <br/>
                 <label>  BRAND:  </label>
-                <input class="input" type="text" name='brand' placeholder="Brand" value={this.state.brand}/> 
+                <input className="input" type="text" name='brand' placeholder="Brand" value={this.state.brand} onChange={this.handleChange} /> 
                 <label>  TYPE:  </label>
-                <select class="input" id="lure-types" value={this.state.type}>
+                <select className="input" id="lure-types" name='type' value={this.state.type} onChange={this.handleChange}>
                     <option value = "crank">CRANK</option>
                     <option value = "popper">POPPER</option>
                     <option value = "fly">FLY</option>
@@ -36,14 +47,14 @@ export default class LureForm extends Component {
                     <option value = "topwater">TOPWATER</option>
                 </select><br/>
                 <label>  COLOR:  </label>
-                <input class="input" type="text" name='color' placeholder="Color" value={this.state.color}/>
+                <input className="input" type="text" name='color' placeholder="Color" value={this.state.color} onChange={this.handleChange}/>
                 <label>  SIZE:  </label>
-                <select class="input" id="lure-size" value={this.state.size} >
+                <select className="input" id="lure-size" name='size' value={this.state.size} onChange={this.handleChange}>
                     <option value = "S">SMALL</option>
                     <option value = "M">MEDIUM</option>
                     <option value = "L">LARGE</option>
                 </select><br/>
-                <input class="submit" type="submit" value="Add Lure"/>
+                <input className="submit" type="submit" value="Add Lure"/>
             </form>
         )
     }

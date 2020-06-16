@@ -7,6 +7,7 @@ import Navbar from './navbar.js'
 class TackleBox extends Component {
 
     state = {
+        count: 4,
         lures: [],
         tacklebox: []   
       }
@@ -90,8 +91,13 @@ class TackleBox extends Component {
                 body: JSON.stringify(lure)
                 })
     }
-         
+    addLure = (newLure) => {
+        this.setState({
+            lures:[...this.state.lures, {...newLure, id: this.state.count+1}]
+        })
+    }
     render(){
+        console.log(...this.state.lures)
         return  (
         <div className="main-tb">
             <div className="nav-bar">
@@ -108,7 +114,7 @@ class TackleBox extends Component {
                 </ul>
             </div>
             <div className="form container">
-                <LureForm />
+                <LureForm addLure={this.addLure}/>
             </div>
             <div className="all-lures">
                 <h3 className="all-lures-header">LURE OPTIONS</h3>
