@@ -7,7 +7,6 @@ import Navbar from './navbar.js'
 class TackleBox extends Component {
 
     state = {
-        count: 4,
         lures: [],
         tacklebox: []   
       }
@@ -93,7 +92,19 @@ class TackleBox extends Component {
     }
     addLure = (newLure) => {
         this.setState({
-            lures:[...this.state.lures, {...newLure, id: this.state.count+1}]
+            lures: [...this.state.lures, newLure]
+        })
+
+        const lure = {
+            lure: newLure
+        }
+
+        fetch('http://localhost:3000/lures', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+           body: JSON.stringify(lure) 
         })
     }
     render(){

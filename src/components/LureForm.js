@@ -3,12 +3,14 @@ import React, {Component} from 'react'
 export default class LureForm extends Component {
 
     state = {
+        id: 5,
         name: "",
         image: "",
         brand: "",
-        type: "",
+        lureType: "",
         color: "",
-        size: ""
+        size: "",
+        favorited: false
     }
 
     handleChange = (event) => {
@@ -34,7 +36,7 @@ export default class LureForm extends Component {
                 <label>  BRAND:  </label>
                 <input className="input" type="text" name='brand' placeholder="Brand" value={this.state.brand} onChange={this.handleChange} /> 
                 <label>  TYPE:  </label>
-                <select className="input" id="lure-types" name='type' value={this.state.type} onChange={this.handleChange}>
+                <select className="input" id="lure-types" name='lureType' value={this.state.lureType} onChange={this.handleChange}>
                     <option value = "crank">CRANK</option>
                     <option value = "popper">POPPER</option>
                     <option value = "fly">FLY</option>
@@ -54,6 +56,8 @@ export default class LureForm extends Component {
                     <option value = "M">MEDIUM</option>
                     <option value = "L">LARGE</option>
                 </select><br/>
+                <input type="hidden" name="favorited" value = {this.state.favorited}/>
+                <input type="hidden" name="id" value = {this.state.id + 1}/>
                 <input className="submit" type="submit" value="Add Lure"/>
             </form>
         )
