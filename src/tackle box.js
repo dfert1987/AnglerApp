@@ -13,11 +13,29 @@ class TackleBox extends Component {
     componentDidMount(){
         fetch('http://localhost:3000/lures')
             .then(response => response.json())
-            .then(result => this.setState(
-              {lures: result}
-            )
+            .then(result => this.controllerFunction(result)
         )
     }
+    controllerFunction = (result) => {
+        this.setLures(result)
+        
+
+    }
+
+    setLures =(result) => {
+        this.setState(
+            {lures: result}
+          )
+          this.setTackleBox(result)
+        }
+
+    setTackleBox =() => {
+    const setTB = this.state.lures.filter(lure => lure.favorited !== false)
+        this.setState({
+            tacklebox:setTB
+          })
+    }
+    
 
     showLures = () => this.state.lures.map(lure => {
         return <LureCard key={lure.id} 
