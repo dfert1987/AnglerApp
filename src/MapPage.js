@@ -6,9 +6,28 @@ import './map.css';
 
 class MapPage extends Component {
 
+    state = {
+        Locations: []
+      }
+
     componentDidMount() {
         this.renderMap()
+        fetch('http://localhost:3000/locations')
+            .then(response => response.json())
+            .then(result => this.controllerFunction(result)
+        )
     }
+
+    controllerFunction = (result) => {
+        this.setLocations(result)
+        console.log(result)
+    }
+
+    setLocations =(result) => {
+        this.setState(
+            {locations: result}
+          )
+        }
 
     renderMap = () => {
         loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyDYaZrPGmzfTjvWMW9uQAeJopq1UflPhvw&callback=initMap")
