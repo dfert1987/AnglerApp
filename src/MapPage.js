@@ -7,11 +7,10 @@ import './map.css';
 class MapPage extends Component {
 
     state = {
-        Locations: []
+        locations: []
       }
 
     componentDidMount() {
-        // this.renderMap()
         fetch('http://localhost:3000/locations')
             .then(response => response.json())
             .then(result => this.controllerFunction(result)
@@ -40,13 +39,28 @@ class MapPage extends Component {
             center: {lat:39.113014, lng: -105.358887},
             zoom: 8
             })
-        
-    var marker = new window.google.maps.Marker({
-            position: {lat:39.113014, lng: -105.358887},
-            map: map,
-            title: 'Hello World!'
-    })
- }
+    
+    this.state.locations.map(location => {
+
+        var contentString = `${location.name}`
+
+        var infowindow = new window.google.maps.InfoWindow({
+            content:contentString
+        })
+
+        var marker = new window.google.maps.Marker({
+            position: {lat: parseFloat(location.lat), 
+                    lng: parseFloat(location.lng)},
+            map: map, 
+            title: location.name        
+         })
+
+         marker.addListener('click', function() {
+             infowindow.open(map, marker)
+         })
+
+      })
+    }
     render(){
         return  (
             <div className="Main Render">
