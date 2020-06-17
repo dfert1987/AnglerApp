@@ -46,17 +46,19 @@ class MapPage extends Component {
     this.state.locations.map(location => {
 
         var contentString = `${location.name}`
+        var locationID = location.id
 
         var marker = new window.google.maps.Marker({
             position: {lat: parseFloat(location.lat), 
                     lng: parseFloat(location.lng)},
             map: map, 
             title: location.name,
-            icon:  MarkerImage      
+            icon:  MarkerImage,
+            id: location.id      
         })
         
         marker.addListener('click', function() {
-
+            window.location.href = `/tripspage/${location.id}`
      
         })
 

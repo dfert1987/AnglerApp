@@ -24,7 +24,7 @@ function App() {
         </Route>
         <Route path='/mappage'>
           <MapPage />
-          </Route>
+        </Route>
         <Route path ='/fish'>
           <Fish />
         </Route>
