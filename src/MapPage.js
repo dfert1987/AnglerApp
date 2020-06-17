@@ -11,7 +11,7 @@ class MapPage extends Component {
       }
 
     componentDidMount() {
-        this.renderMap()
+        // this.renderMap()
         fetch('http://localhost:3000/locations')
             .then(response => response.json())
             .then(result => this.controllerFunction(result)
@@ -25,7 +25,8 @@ class MapPage extends Component {
 
     setLocations =(result) => {
         this.setState(
-            {locations: result}
+            {locations: result},
+            this.renderMap()
           )
         }
 
@@ -33,13 +34,19 @@ class MapPage extends Component {
         loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyDYaZrPGmzfTjvWMW9uQAeJopq1UflPhvw&callback=initMap")
         window.initMap = this.initMap
     }
+
     initMap = () => {
        const map = new window.google.maps.Map(document.getElementById('map'), {
             center: {lat:39.113014, lng: -105.358887},
             zoom: 8
             })
-        }
-    
+        
+    var marker = new window.google.maps.Marker({
+            position: {lat:39.113014, lng: -105.358887},
+            map: map,
+            title: 'Hello World!'
+    })
+ }
     render(){
         return  (
             <div className="Main Render">
