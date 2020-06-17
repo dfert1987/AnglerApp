@@ -1,10 +1,23 @@
+.maptitle {
+    font-family: aventura;
+    font-size: 50px;
+    color: green;
+    text-shadow: 2px 2px black;
+    text-align: center;
+}
+
+.mapsubtitle {
+    font-family: "canter bold";
+    font-size: 30px;
+    text-align: center;
+}
+
 #map{
     height: 75vh;
     width: 100vh;
     margin: 20px;
     position: relative;
-    top: 50px;
-    right: -300px;
+    right: -310px;
     border-image-source: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2') 25 25 round;
 }
 .map-wrapper {
@@ -16,3 +29,4 @@ html, body {
     margin: 0;
     padding: 0;
 }
+

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Navbar from './navbar.js';
-import './map.css';
+import MarkerImage from './images/clearfishsmall.png';
 
+import './map.css';
 
 
 class MapPage extends Component {
@@ -39,33 +40,41 @@ class MapPage extends Component {
             center: {lat:39.113014, lng: -105.358887},
             zoom: 8
             })
+    var infowindow = new window.google.maps.InfoWindow()
+
     
     this.state.locations.map(location => {
 
         var contentString = `${location.name}`
 
-        var infowindow = new window.google.maps.InfoWindow({
-            content:contentString
-        })
-
         var marker = new window.google.maps.Marker({
             position: {lat: parseFloat(location.lat), 
                     lng: parseFloat(location.lng)},
             map: map, 
-            title: location.name        
-         })
+            title: location.name,
+            icon:  MarkerImage      
+        })
+        
+        marker.addListener('click', function() {
 
-         marker.addListener('click', function() {
-             infowindow.open(map, marker)
-         })
+     
+        })
 
-      })
+         marker.addListener('mouseover', function() {
+
+            infowindow.setContent(contentString)
+
+            infowindow.open(map, marker)
+        })
+    })
     }
     render(){
         return  (
             <div className="Main Render">
                 <div className="nav-bar">
                     <Navbar />
+                    <h1 className="maptitle">YOUR FISHING SPOTS</h1>
+                    <h3 className="mapsubtitle">- Click a Marker to See Past Trips-</h3>
                 </div>
                 <div className="map-wrapper">
                     <div id="map"></div>
