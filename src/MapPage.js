@@ -46,7 +46,6 @@ class MapPage extends Component {
     this.state.locations.map(location => {
 
         var contentString = `${location.name}`
-        var locationID = location.id
 
         var marker = new window.google.maps.Marker({
             position: {lat: parseFloat(location.lat), 
