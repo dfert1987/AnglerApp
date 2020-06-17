@@ -25,7 +25,7 @@ class Home extends Component{
                 </div>
                 <div class="button-card" id="button-map">
                     <img class="button-image" src="https://i.imgur.com/215fMsA.jpg" alt="Map"></img>
-                    <a class="link" href="/map">
+                    <a class="link" href="/mappage">
                         <button id="mapbutton" class="btn">Map</button>
                     </a>
                 </div>

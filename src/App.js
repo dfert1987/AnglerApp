@@ -3,9 +3,10 @@ import './App.css'
 import Title from './title.js';
 import Home from './home.js';
 import TackleBox from  './tackle box.js';
-import Map from './map.js';
+import MapPage from './MapPage.js';
 import Fish from './fish.js';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+
 
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
         <Route path='/tacklebox'>
           <TackleBox />
         </Route>
-        <Route path='/map'>
-          <Map />
+        <Route path='/mappage'>
+          <MapPage />
           </Route>
         <Route path ='/fish'>
           <Fish />

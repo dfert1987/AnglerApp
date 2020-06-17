@@ -33,7 +33,7 @@ class Navbar extends Component{
                 <ul>
 \                    <li><a href="/home"> Home  </a></li>
                     <li><a href="/tacklebox"> TackleBox  </a></li>
-                    <li><a href="/map">  Map  </a></li>
+                    <li><a href="/MapPage">  Map  </a></li>
                     <li><a href="/fish">  Fish Log </a></li>
                 </ul>
                 </div>
