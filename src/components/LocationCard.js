@@ -8,9 +8,18 @@ export default function LocationCard({location}) {
    
 
     return (
-        <div className="trips-card">
+    <div className="Location-Card">
+        <div className="Location-header">
             <h1>WELCOME TO {upper}</h1>
+            <h3>- {location.body} -</h3>
+            <div className="Image-container">
+                <img src={location.image} />
+            </div>
         </div>
+        <div className="Info-Section">
+            <p className="description">{location.description}</p>
+        </div>
+    </div>
     )
 
 }
