@@ -6,28 +6,124 @@
  right: 800px;
  flex-flow: row;
  flex-direction: row;
- margin-bottom: 50px;
- width: 80%;
+ margin-bottom: 80px;
+ height: '100%';
+ width: 35%;
  justify-content: space-between;
+
+
 }
 .fish-list {
     flex-flow: column;
+    padding-bottom: 40px;
 }
-.FishName {
-    position: absolute;
-    right: 80px;
-    text-shadow: 2px 2px white;
-    font-size: 60px;
+
+.Card-Front{
+    /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
+    width: '100%';
+    height: '100%';
 }
+
+.Card-Back{
+    /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
+    width: '100%';
+    height: '100%';
+}
+div.flippy-card.flippy-front{
+    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+    box-shadow:3px 3px 7px;
+    border: 2px solid;
+    display: flex;
+
+
+}
+div.flippy-card.flippy-back{
+    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+    box-shadow:3px 3px 7px ;
+    border: 2px solid;
+    padding-bottom: 20px;
+
+
+}
+
 .FishPic {
     width: 70%;
     position: relative;
-    right: 155px;
+    /* right: 75px; */
+    top: -5px;
+    border-radius: 3px;
+    box-shadow:5px 5px 13px;
+    align-self: center;
+
 }
 .FishName {
     position: relative;
     left: 0px;
+    text-shadow: 2px 2px 5px black;
+    color: white
+
 }
 .FishCardContainer {
-    background-image: url('https://images-na.ssl-images-amazon.com/images/I/71D%2BZ8nv-jL._AC_SX466_.jpg');
+    /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+
+
 }
+.NotCaughtTitle {
+    position: absolute;
+    right: -850px;
+    text-align: center;
+    font-family: aventura;
+    top: 10px;
+    font-size: 30px;
+}
+.Front-Content{
+    display: flex;
+    flex-direction: column;
+
+}
+.Button-Flip {
+    position: relative;
+    top: 10px;
+    width: 200px;
+    align-self: center;
+    height: 35px;
+    font-family: aventura;
+    text-shadow: 2px 2px 1px black;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 5px;
+}
+.Button-Flip-Back {
+    position: relative;
+    top: 10px;
+    width: 200px;
+    height: 35px;
+    font-family: aventura;
+    text-shadow: 2px 2px 1px black;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 5px;
+    right: 150px;
+    top: -10px
+}
+.Card-Back {
+    
+}
+.Card-Back-Content {
+    color: white;
+    text-align: left;
+    top: -8px;
+    position: relative;
+    text-shadow: 2px 2px black;
+}
+.fishparagraph {
+    background-color: 'rgba(52, 52, 52, 0.8)';
+    padding: 2px
+}
+

@@ -40,6 +40,7 @@ showFish = () => this.state.allFish.map(oneFish => {
             <h1>FISH-DEX</h1>
         </div> 
             <div className="fishContainer">
+                <h2 className='NotCaughtTitle'>HAVEN'T CAUGHT</h2>
                 <ul className="fish-list">
                     {this.showFish()}
                 </ul>
