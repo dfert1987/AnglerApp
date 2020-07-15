@@ -1,0 +1,33 @@
+.fishContainer {
+ align-self: center;
+ justify-content: center;
+ display: flex;
+ position: relative;
+ right: 800px;
+ flex-flow: row;
+ flex-direction: row;
+ margin-bottom: 50px;
+ width: 80%;
+ justify-content: space-between;
+}
+.fish-list {
+    flex-flow: column;
+}
+.FishName {
+    position: absolute;
+    right: 80px;
+    text-shadow: 2px 2px white;
+    font-size: 60px;
+}
+.FishPic {
+    width: 70%;
+    position: relative;
+    right: 155px;
+}
+.FishName {
+    position: relative;
+    left: 0px;
+}
+.FishCardContainer {
+    background-image: url('https://images-na.ssl-images-amazon.com/images/I/71D%2BZ8nv-jL._AC_SX466_.jpg');
+}

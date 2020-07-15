@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Navbar from './navbar.js';
 import MarkerImage from './images/clearfishsmall.png';
 

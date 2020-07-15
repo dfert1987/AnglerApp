@@ -37,7 +37,6 @@ class TackleBox extends Component {
           })
     }
     
-
     showLures = () => this.state.lures.map(lure => {
         return <LureCard key={lure.id} 
         addToTackleBox={this.addToTackleBox}
@@ -52,6 +51,7 @@ class TackleBox extends Component {
         lure={lure}/>
         })
 
+        
     addToTackleBox = (lure) => {
         if(!this.state.tacklebox.find(activeLure => lure.id === activeLure.id)){
             this.setState({
