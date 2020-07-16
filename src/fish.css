@@ -1,0 +1,191 @@
+.fishContainer {
+ align-self: center;
+ justify-content: center;
+ display: flex;
+ position: relative;
+ right: 800px;
+ flex-flow: row;
+ flex-direction: row;
+ margin-bottom: 80px;
+ height: '100%';
+ width: 35%;
+ justify-content: space-between;
+}
+
+.Button-Container{
+    right: 5px
+}
+.AddCaughtButton {
+    position: relative;
+    top: 0px;
+    width: 429px;
+    align-self: center;
+    height: 35px;
+    font-family: aventura;
+    text-shadow: 2px 2px 1px black;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 5px;
+    right: 6px
+}
+.caught-fishContainer{
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    right: 740px;
+    flex-flow: row;
+    flex-direction: row;
+    margin-bottom: 80px;
+    height: '100%';
+    width: 100%;
+    padding-bottom: 50px;
+    justify-content: space-between;
+   
+   }
+.fish-list {
+    flex-flow: column;
+    padding-bottom: 40px;
+}
+
+.Card-Front{
+    /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
+    width: '100%';
+    height: '100%';
+    justify-content: center;
+    justify-items: center;
+
+}
+
+.Card-Back{
+    /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
+    width: '100%';
+    height: '100%';
+}
+div.flippy-card.flippy-front{
+    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+    box-shadow:3px 3px 7px;
+    border: 2px solid;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    justify-items: center;
+
+
+}
+div.flippy-card.flippy-back{
+    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+    box-shadow:3px 3px 7px ;
+    border: 2px solid;
+    padding-bottom: 20px;
+
+
+}
+
+.FishPic {
+    width: 400px;
+    position: relative;
+    height: 150px;
+    top: 50%;
+    margin: 0px;
+    border-radius: 3px;
+    box-shadow:5px 5px 13px;
+    align-self: center;
+    right: 5px;
+    justify-self: center;
+
+}
+.FishName {
+    position: relative;
+    left: 0px;
+    text-shadow: 2px 2px 5px black;
+    color: white
+
+}
+.all-fish{
+    display: flex;
+    align-content: center;
+}
+.FishCardContainer {
+    justify-content: center;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+    right: 0px;
+    height: 300px;
+}
+
+
+
+.NotCaughtTitle {
+    position: absolute;
+    right: -785px;
+    text-align: center;
+    font-family: aventura;
+    top: 10px;
+    font-size: 30px;
+}
+.Front-Content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.Button-Flip {
+    position: relative;
+    top: 10px;
+    width: 200px;
+    align-self: center;
+    height: 45px;
+    font-family: aventura;
+    text-shadow: 2px 2px 1px black;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 5px;
+    right: 100px
+    
+}
+.Button-Flip-Back {
+    position: relative;
+    top: 10px;
+    width: 200px;
+    height: 35px;
+    font-family: aventura;
+    text-shadow: 2px 2px 1px black;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 5px;
+    right: 100px;
+    top: 20px
+}
+
+.CaughtTitle {
+    position: relative;
+    font-family: aventura;
+    top: 10px;
+    font-size: 30px;
+    right: -1230px
+}
+.Card-Back-Content {
+    color: white;
+    text-align: left;
+    top: -8px;
+    position: relative;
+    text-shadow: 2px 2px black;
+}
+.fishparagraph {
+    background-color: 'rgba(52, 52, 52, 0.8)';
+    padding: 2px;
+    justify-content: center;
+}
+
+.caught-list {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    padding-bottom: 40px;
+}
+

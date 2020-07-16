@@ -19,8 +19,6 @@ class TackleBox extends Component {
     }
     controllerFunction = (result) => {
         this.setLures(result)
-        
-
     }
 
     setLures =(result) => {
@@ -35,9 +33,10 @@ class TackleBox extends Component {
         this.setState({
             tacklebox:setTB
           })
+          console.log(this.state.caughtFish)
+
     }
     
-
     showLures = () => this.state.lures.map(lure => {
         return <LureCard key={lure.id} 
         addToTackleBox={this.addToTackleBox}
@@ -52,6 +51,7 @@ class TackleBox extends Component {
         lure={lure}/>
         })
 
+        
     addToTackleBox = (lure) => {
         if(!this.state.tacklebox.find(activeLure => lure.id === activeLure.id)){
             this.setState({

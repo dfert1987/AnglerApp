@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 export default class LureForm extends Component {
 
     state = {
-        id: 5,
+        id: 6,
         name: "",
         image: "",
         brand: "",
@@ -57,7 +57,8 @@ export default class LureForm extends Component {
                     <option value = "L">LARGE</option>
                 </select><br/>
                 <input type="hidden" name="favorited" value = {this.state.favorited}/>
-                <input type="hidden" name="id" value = {this.state.id + 1}/>
+                <input type="hidden" name="id" value = {this.state.id ++
+                }/>
                 <input className="submit" type="submit" value="Add Lure"/>
             </form>
         )
