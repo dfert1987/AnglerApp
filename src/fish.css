@@ -10,9 +10,24 @@
  height: '100%';
  width: 35%;
  justify-content: space-between;
-
 }
 
+.Button-Container{
+    right: 5px
+}
+.AddCaughtButton {
+    position: relative;
+    top: 0px;
+    width: 429px;
+    align-self: center;
+    height: 35px;
+    font-family: aventura;
+    text-shadow: 2px 2px 1px black;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 5px;
+    right: 0px
+}
 .caught-fishContainer{
     align-self: center;
     justify-content: center;
@@ -37,6 +52,9 @@
     /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
     width: '100%';
     height: '100%';
+    justify-content: center;
+    justify-items: center;
+
 }
 
 .Card-Back{
@@ -49,6 +67,10 @@ div.flippy-card.flippy-front{
     box-shadow:3px 3px 7px;
     border: 2px solid;
     display: flex;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    justify-items: center;
 
 
 }
@@ -64,12 +86,14 @@ div.flippy-card.flippy-back{
 .FishPic {
     width: 400px;
     position: relative;
-    /* right: 75px; */
-    top: -5px;
+    height: 150px;
+    top: 50%;
+    margin: 0px;
     border-radius: 3px;
     box-shadow:5px 5px 13px;
     align-self: center;
-    right: 5px
+    right: 5px;
+    justify-self: center;
 
 }
 .FishName {
@@ -84,14 +108,14 @@ div.flippy-card.flippy-back{
     align-content: center;
 }
 .FishCardContainer {
-    justify-content: space-between;
-    margin-bottom: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
     padding-bottom: 5px;
     position: relative;
     top: 50px;
     z-index: 1;
     right: 0px;
-    height: 370px;
+    height: 300px;
 }
 
 
@@ -107,6 +131,7 @@ div.flippy-card.flippy-back{
 .Front-Content{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
 }
 .Button-Flip {
@@ -114,12 +139,14 @@ div.flippy-card.flippy-back{
     top: 10px;
     width: 200px;
     align-self: center;
-    height: 35px;
+    height: 45px;
     font-family: aventura;
     text-shadow: 2px 2px 1px black;
     background-color: darkgreen;
     color: white;
     border-radius: 5px;
+    right: 100px
+    
 }
 .Button-Flip-Back {
     position: relative;
@@ -131,7 +158,7 @@ div.flippy-card.flippy-back{
     background-color: darkgreen;
     color: white;
     border-radius: 5px;
-    right: 150px;
+    right: 100px;
     top: 20px
 }
 
@@ -152,7 +179,8 @@ div.flippy-card.flippy-back{
 }
 .fishparagraph {
     background-color: 'rgba(52, 52, 52, 0.8)';
-    padding: 2px
+    padding: 2px;
+    justify-content: center;
 }
 
 .caught-list {

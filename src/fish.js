@@ -7,7 +7,8 @@ import './fish.css'
 class Fish extends Component {
 
 state = {
-    allFish: []  
+    allFish: [],
+    caughtFish:[]  
   }
 
   componentDidMount(){
@@ -24,23 +25,72 @@ setFish = (result) => {
     this.setState(
         {allFish: result}
       )
+      this.setCaughtFish(result)
 }
 
+setCaughtFish = () => {
+    const setCF = this.state.allFish.filter(oneFish => oneFish.caught !== false)
+    this.setState({
+        caughtFish:setCF
+      })
+      console.log(this.state.caughtFish)
+}
+
+
 showFish = () => this.state.allFish.map(oneFish => {
-    if(oneFish.caught === false) {
     return <FishCard key={oneFish.id} 
+        addToCaught={this.addToCaught}
+        caughtBackend={this.caughtBackend} 
         oneFish={oneFish}/> 
-    }
 })
+addToCaught= (oneFish) => {
+    if(!this.state.caughtFish.find(activeFish => oneFish.id === activeFish.id)){
+        this.setState({
+            caughtFish:[...this.state.caughtFish, oneFish]
+          })
+        }
+    }  
+caughtBackend = (oneFish) => {
+    if (oneFish.caught === false) {
+        oneFish.caught = true
+    } else oneFish.caught = true 
+        fetch(`http://localhost:3000/fish/${oneFish.id}`, {
+            method: 'PATCH',
+            headers: {
+            "Content-Type": "application/json"
+             },
+            body: JSON.stringify(oneFish)
+            })
+        }
 
-showCaught = () => this.state.allFish.map(oneFish => {
-    if(oneFish.caught === true) {
+showCaught = () => this.state.caughtFish.map(oneFish => {
         return <CaughtFishCard key={oneFish.id}
+            removeFromCaught={this.removeFromCaught} 
+            removeFromCaughtBackend={this.removeFromCaughtBackend}
             oneFish={oneFish}/>
-    }
-})
+    })
 
+    removeFromCaught= (oneFish) => {
+        const filtered = this.state.caughtFish.filter(activeFish => activeFish.id !== oneFish.id )
+            this.setState(
+                {caughtFish: filtered}
+            )
+        }
 
+        removeFromCaughtBackend =(oneFish) => {
+            if (oneFish.caught === true) {
+                oneFish.caught = false
+            } else oneFish.caught = false 
+                fetch(`http://localhost:3000/fish/${oneFish.id}`, {
+                    method: 'PATCH',
+                    headers: {
+                    "Content-Type": "application/json"
+                     },
+                    body: JSON.stringify(oneFish)
+                    })
+        }
+
+    
     render(){
 
     return  (
@@ -63,10 +113,10 @@ showCaught = () => this.state.allFish.map(oneFish => {
                     <h2 className='CaughtTitle'>CAUGHT</h2>
                     <ul className='caught-list'>
                         {this.showCaught()}
-                    </ul>
+                     </ul>
                 </div>
 
-            </div>
+            </div> 
             </div>
     </div>
     )
