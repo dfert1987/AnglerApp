@@ -11,8 +11,23 @@
  width: 35%;
  justify-content: space-between;
 
-
 }
+
+.caught-fishContainer{
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    right: 740px;
+    flex-flow: row;
+    flex-direction: row;
+    margin-bottom: 80px;
+    height: '100%';
+    width: 100%;
+    padding-bottom: 50px;
+    justify-content: space-between;
+   
+   }
 .fish-list {
     flex-flow: column;
     padding-bottom: 40px;
@@ -47,13 +62,14 @@ div.flippy-card.flippy-back{
 }
 
 .FishPic {
-    width: 70%;
+    width: 400px;
     position: relative;
     /* right: 75px; */
     top: -5px;
     border-radius: 3px;
     box-shadow:5px 5px 13px;
     align-self: center;
+    right: 5px
 
 }
 .FishName {
@@ -63,20 +79,26 @@ div.flippy-card.flippy-back{
     color: white
 
 }
+.all-fish{
+    display: flex;
+    align-content: center;
+}
 .FishCardContainer {
-    /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
     justify-content: space-between;
     margin-bottom: 10px;
     padding-bottom: 5px;
     position: relative;
     top: 50px;
     z-index: 1;
-
-
+    right: 0px;
+    height: 370px;
 }
+
+
+
 .NotCaughtTitle {
     position: absolute;
-    right: -850px;
+    right: -785px;
     text-align: center;
     font-family: aventura;
     top: 10px;
@@ -110,11 +132,17 @@ div.flippy-card.flippy-back{
     color: white;
     border-radius: 5px;
     right: 150px;
-    top: -10px
+    top: 20px
 }
-.Card-Back {
-    
+
+.CaughtTitle {
+    position: relative;
+    font-family: aventura;
+    top: 10px;
+    font-size: 30px;
+    right: -1230px
 }
+
 .Card-Back-Content {
     color: white;
     text-align: left;
@@ -125,5 +153,12 @@ div.flippy-card.flippy-back{
 .fishparagraph {
     background-color: 'rgba(52, 52, 52, 0.8)';
     padding: 2px
+}
+
+.caught-list {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    padding-bottom: 40px;
 }
 
