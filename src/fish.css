@@ -26,7 +26,7 @@
     background-color: darkgreen;
     color: white;
     border-radius: 5px;
-    right: 0px
+    right: 6px
 }
 .caught-fishContainer{
     align-self: center;
@@ -169,7 +169,6 @@ div.flippy-card.flippy-back{
     font-size: 30px;
     right: -1230px
 }
-
 .Card-Back-Content {
     color: white;
     text-align: left;

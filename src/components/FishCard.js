@@ -1,10 +1,19 @@
 import React, { Component } from 'react'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
+import PRPoint from './PRPoint.js'
 
 
 
 class  FishCard extends Component {
-
+    addPR =() => {
+        if(this.props.oneFish.caught === true) {
+            return(
+            <PRPoint 
+            fish = {this.props.oneFish}
+            />
+            )
+        }
+    }
     
     render() {
         const handleClick = () =>{
@@ -34,10 +43,12 @@ class  FishCard extends Component {
                                 <div className="Button-Container">
                                     <button className='Button-Flip'>SEE INFO</button>
                                 </div>
+                                <div>
+                                    {this.addPR()}
+                                </div>
                             </div>
                         </div>
                     </FrontSide>
-                    <button className='AddCaughtButton' onClick={handleClick}>TOGGLE CAUGHT</button>
                     <BackSide>
                         <div className="Card-Back">
                             <div className="Card-Back-Content">
@@ -48,6 +59,8 @@ class  FishCard extends Component {
                         </div>
                     </BackSide>
                 </Flippy>
+                <button className='AddCaughtButton' onClick={handleClick}>TOGGLE CAUGHT</button>
+
             </div>
         )
     }
