@@ -18,15 +18,16 @@
 .AddCaughtButton {
     position: relative;
     top: 0px;
-    width: 429px;
+    width: 427px;
     align-self: center;
     height: 35px;
     font-family: aventura;
     text-shadow: 2px 2px 1px black;
     background-color: darkgreen;
     color: white;
-    border-radius: 5px;
-    right: 6px
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0;
+    right: 9px
 }
 .caught-fishContainer{
     align-self: center;
@@ -62,9 +63,13 @@
     width: '100%';
     height: '100%';
 }
+.PR {
+    position: relative;
+    top: 20px
+}
 div.flippy-card.flippy-front{
     background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
-    box-shadow:3px 3px 7px;
+    /* box-shadow:3px 0px 7px; */
     border: 2px solid;
     display: flex;
     justify-self: center;
@@ -76,7 +81,7 @@ div.flippy-card.flippy-front{
 }
 div.flippy-card.flippy-back{
     background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
-    box-shadow:3px 3px 7px ;
+    /* box-shadow:3px 0px 7px ; */
     border: 2px solid;
     padding-bottom: 20px;
 
@@ -109,13 +114,19 @@ div.flippy-card.flippy-back{
 }
 .FishCardContainer {
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     padding-bottom: 5px;
     position: relative;
     top: 50px;
     z-index: 1;
     right: 0px;
-    height: 300px;
+    height: 350px;
+    box-shadow:3px 3px 7px;
+
+}
+.addPRForm {
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -186,6 +197,39 @@ div.flippy-card.flippy-back{
     display: flex;
     flex-flow: column;
     height: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
+}
+.pr-title {
+    position: relative;
+    top: 17px;
+    left: 20px
+}
+.PR {
+    color: white;
+    text-shadow: 2px 2px black;}
+
+.inputPR {
+    position: relative;
+    right: -40px;
+    width: 80px;
+    z-index: 80;
+    height: 40px;
+    top: 3px
 }
 
+.submitPR {
+    width: 142px;
+    height: 50px;
+    z-index: 90;
+    font-family: "canter bold";
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    position: relative;
+    right: -69px
+}
+.addPRForm {
+    background-image: url('https://adwallpapers.xyz/uploads/posts/419-distressed-white-wood-texture-background.jpg');
+    z-index: -400;
+    border: 2px solid;
+    width: 420px
+}
