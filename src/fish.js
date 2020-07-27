@@ -33,7 +33,6 @@ setCaughtFish = () => {
     this.setState({
         caughtFish:setCF
       })
-      console.log(this.state.caughtFish)
 }
 
 
@@ -64,7 +63,7 @@ caughtBackend = (oneFish) => {
         }
 
 showCaught = () => this.state.caughtFish.map(oneFish => {
-        return <CaughtFishCard key={oneFish.id}
+        return <FishCard key={oneFish.id}
             removeFromCaught={this.removeFromCaught} 
             removeFromCaughtBackend={this.removeFromCaughtBackend}
             oneFish={oneFish}/>
@@ -103,7 +102,7 @@ showCaught = () => this.state.caughtFish.map(oneFish => {
         </div> 
         <div className="all-fish">
             <div className="fishContainer">
-                <h2 className='NotCaughtTitle'>STILL FISHIN'</h2>
+                <h2 className='NotCaughtTitle'>ALL FISH</h2>
                 <ul className="fish-list">
                     {this.showFish()}
                 </ul>

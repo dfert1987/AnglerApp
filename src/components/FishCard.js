@@ -6,18 +6,9 @@ import PRForm from './PRForm.js';
 
 
 class  FishCard extends Component {
-    showPR = () => {
-        if(this.props.oneFish.caught === true) {
-            return(
-            <PRPoint 
-            fish = {this.props.oneFish}
-            />
-            )
-        }
-    }
-    
+  
     prForm = () => {
-        if(this.props.oneFish.caught === true) {
+        if(this.props.removeFromCaught) {
             return(
                 <PRForm
                     oneFish = {this.props.oneFish}
@@ -25,6 +16,18 @@ class  FishCard extends Component {
             )
         }
     }
+
+    caughtInfo = () => {
+        if(this.props.removeFromCaught) {
+            return (
+            <PRPoint
+            fish = {this.props.oneFish}
+            />
+            )
+        }
+    }
+
+
 
     render() {
         const handleClick = () =>{
@@ -37,6 +40,8 @@ class  FishCard extends Component {
               this.props.removeFromCaughtBackend(this.props.oneFish)
               }
           }
+
+       
         return (
             <div className="FishCardContainer">
                 <Flippy className='flippy'
@@ -55,7 +60,7 @@ class  FishCard extends Component {
                                     <button className='Button-Flip'>SEE INFO</button>
                                 </div>
                                 <div>
-                                    {this.showPR()}
+                                    {this.caughtInfo()}
                                 </div>
                             </div>
                         </div>
