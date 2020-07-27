@@ -33,8 +33,6 @@ class TackleBox extends Component {
         this.setState({
             tacklebox:setTB
           })
-          console.log(this.state.caughtFish)
-
     }
     
     showLures = () => this.state.lures.map(lure => {
