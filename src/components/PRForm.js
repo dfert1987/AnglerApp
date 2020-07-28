@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class PRForm extends Component {
 
 state = {
-    pr: 0
+    pr: this.props.oneFish.pr
 }
 
 handleChange = (event) => {
@@ -15,7 +15,15 @@ handleChange = (event) => {
 handleSubmit = (event) => {
     event.preventDefault();
     this.prBackend()
+    this.prFrontend(event)
 }
+
+prFrontend = (event) => {
+    this.setState({
+        [event.target.name]:event.target.value
+    })
+}
+
 
 prBackend = () => {
     this.props.oneFish.pr = this.state.pr
@@ -30,9 +38,11 @@ prBackend = () => {
 }
 
     render() {
-        console.log(this.state)
         return (
             <div>
+                <div>
+                    <h3 className='PR'>Biggest Catch: {this.state.pr} in. </h3>
+                </div>
                 <form onSubmit={this.handleSubmit} className="addPRForm">
                     <h4 className="pr-title">BIGGEST CATCH</h4>
                     <input className="inputPR" type="text" name='pr' placeholder="0 in" value={this.state.pr} onChange={this.handleChange}/>
@@ -41,7 +51,6 @@ prBackend = () => {
             </div>
         )
     }
-
 }
 
 export default PRForm
