@@ -40,9 +40,12 @@
     margin-bottom: 80px;
     height: '100%';
     width: 100%;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
     justify-content: space-between;
    
+   }
+   .prForm{
+    height: 55px
    }
 .fish-list {
     flex-flow: column;
@@ -206,7 +209,11 @@ div.flippy-card.flippy-back{
 }
 .PR {
     color: white;
-    text-shadow: 2px 2px black;}
+    text-shadow: 2px 2px black;
+    position: relative;
+    top: -60px
+}
+
 
 .inputPR {
     position: relative;
@@ -231,5 +238,7 @@ div.flippy-card.flippy-back{
     background-image: url('https://adwallpapers.xyz/uploads/posts/419-distressed-white-wood-texture-background.jpg');
     z-index: -400;
     border: 2px solid;
-    width: 420px
+    width: 420px;
+    position: relative;
+    top: -50px
 }

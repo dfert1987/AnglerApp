@@ -17,15 +17,8 @@ class  FishCard extends Component {
         }
     }
 
-    caughtInfo = () => {
-        if(this.props.removeFromCaught) {
-            return (
-            <PRPoint
-            fish = {this.props.oneFish}
-            />
-            )
-        }
-    }
+  
+    
 
 
 
@@ -59,9 +52,7 @@ class  FishCard extends Component {
                                 <div className="Button-Container">
                                     <button className='Button-Flip'>SEE INFO</button>
                                 </div>
-                                <div>
-                                    {this.caughtInfo()}
-                                </div>
+                                
                             </div>
                         </div>
                     </FrontSide>
