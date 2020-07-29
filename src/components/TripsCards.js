@@ -29,6 +29,7 @@ export default function TripsCards({trip}) {
                 <p className="time">STARTING TIME: {trip.time_start}</p>
                 <p className="duration"> HOURS FISHED: {trip.duration}</p>
                 <p className="weather">WEATHER: {trip.weather}</p>
+                <p className="temperature">TEMPERATURE: {trip.temperature}</p>
                 <p className="trip-description">Description: {trip.description}</p>
             </div>
         </div>

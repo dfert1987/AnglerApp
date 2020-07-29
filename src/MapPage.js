@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './navbar.js';
 import MarkerImage from './images/clearfishsmall.png';
-
 import './map.css';
 
 
@@ -20,7 +19,6 @@ class MapPage extends Component {
 
     controllerFunction = (result) => {
         this.setLocations(result)
-        console.log(result)
     }
 
     setLocations =(result) => {
@@ -58,10 +56,13 @@ class MapPage extends Component {
         
         marker.addListener('click', function() {
             window.location.href = `/tripspage/${location.id}`
-     
         })
 
+
+
          marker.addListener('mouseover', function() {
+
+            console.log(location)
 
             infowindow.setContent(contentString)
 

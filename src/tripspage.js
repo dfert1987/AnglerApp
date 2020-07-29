@@ -11,8 +11,8 @@ class TripsPage extends Component {
     state = {
        trips: [],
        locations: [] 
-
     }
+    
     componentDidMount(){
         this.fetchLocations()
         this.fetchTrips()
@@ -21,7 +21,8 @@ class TripsPage extends Component {
     fetchLocations = () => {
         fetch(`http://localhost:3000/locations/${this.props.match.params.locationId}`)
             .then(response => response.json())
-            .then(location => this.setLocation(location));
+            .then(location => this.setLocation(location)
+            )
         }
     
     fetchTrips = () => {
@@ -42,11 +43,13 @@ class TripsPage extends Component {
             {trips: trips}
         
         )
-        console.log(this.state.trips)
+        // console.log(this.state.trips)
     }
 
     showLocation = () => {
+        console.log(this.state.locations)
         return <LocationCard location={this.state.locations} />
+        
     }
     
     showTrips = () => {
@@ -61,6 +64,7 @@ class TripsPage extends Component {
     }
     
     render(){
+       
     return(  
         <div className = "trip container">
             <div className="nav-bar">
