@@ -18,7 +18,7 @@ class  FishCard extends Component {
     }
 
   
-
+    
 
 
 
@@ -52,6 +52,7 @@ class  FishCard extends Component {
                                 <div className="Button-Container">
                                     <button className='Button-Flip'>SEE INFO</button>
                                 </div>
+                                
                             </div>
                         </div>
                     </FrontSide>

@@ -39,7 +39,7 @@ prBackend = () => {
 
     render() {
         return (
-            <div>
+            <div className='prForm'>
                 <div>
                     <h3 className='PR'>Biggest Catch: {this.state.pr} in. </h3>
                 </div>
