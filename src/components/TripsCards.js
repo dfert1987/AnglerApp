@@ -26,11 +26,13 @@ export default function TripsCards({trip}) {
             <h4 className="date">Trip: {trip.date}</h4>
             <button type="button" className="collapsible">View Details</button>
             <div className="content">
+                <p className="species">TARGETED SPECIES: {trip.fish_id.species}</p>
                 <p className="time">STARTING TIME: {trip.time_start}</p>
                 <p className="duration"> HOURS FISHED: {trip.duration}</p>
                 <p className="weather">WEATHER: {trip.weather}</p>
                 <p className="temperature">TEMPERATURE: {trip.temperature}</p>
-                <p className="trip-description">Description: {trip.description}</p>
+                <p className="trip-description">DESCRITPION: {trip.description}</p>
+                <p className="bestLure">BEST LURE: {trip.lure_id.name}</p>
             </div>
         </div>
         </div>
