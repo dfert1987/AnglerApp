@@ -10,9 +10,10 @@ class TripsPage extends Component {
 
     state = {
        trips: [],
-       locations: [] 
-
+       locations: [],
+       show: false
     }
+    
     componentDidMount(){
         this.fetchLocations()
         this.fetchTrips()
@@ -21,7 +22,8 @@ class TripsPage extends Component {
     fetchLocations = () => {
         fetch(`http://localhost:3000/locations/${this.props.match.params.locationId}`)
             .then(response => response.json())
-            .then(location => this.setLocation(location));
+            .then(location => this.setLocation(location)
+            )
         }
     
     fetchTrips = () => {
@@ -42,11 +44,13 @@ class TripsPage extends Component {
             {trips: trips}
         
         )
-        console.log(this.state.trips)
+        // console.log(this.state.trips)
     }
 
     showLocation = () => {
+        console.log(this.state.locations)
         return <LocationCard location={this.state.locations} />
+        
     }
     
     showTrips = () => {
@@ -55,12 +59,36 @@ class TripsPage extends Component {
             return trip.location_id === urlID
         })
         if(foundTrip) {
-        return <TripsCards trip={foundTrip}/>
+        return(
+            <div>
+                <button onClick={e => {
+                    this.showModal();
+                }}
+                > Show Trip Details</button>
+                <h3>{foundTrip.date}</h3>
+                <TripsCards 
+                    trip={foundTrip}
+                    show={this.state.show}     
+                />
+            </div>
+            )
         }
+    }
 
+    showModal = e => {
+        if(this.state.show === false){
+            this.setState({
+                show: true
+            })
+        } else {
+            this.setState({
+                show: false
+            })
+        } 
     }
     
     render(){
+       
     return(  
         <div className = "trip container">
             <div className="nav-bar">

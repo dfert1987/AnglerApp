@@ -33,6 +33,9 @@ h3 {
     background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
     height: 120px;
     position: relative;
+    justify-items: center;
+    text-justify: center;
+    justify-content: center;
     top: 10px;
     right: -556px;
     width:330px;
@@ -41,13 +44,15 @@ h3 {
 }
 .description {
     font-family: "canter bold";
-    font-size: 21px;
+    font-size: 31px;
     width: 300px;
     text-align: center;
     position: relative;
+    justify-items: center;
     right:-15px;
+    justify-content: center;
     text-shadow: 2px 2px 3px black;
-    top: 10px;
+    top: 14px;
     color: white;
 }
 
@@ -97,11 +102,11 @@ h3 {
 
   .content {
     padding: 0 18px;
-    display: none;
-    overflow: hidden;
+    /* display: none; */
+    /* overflow: hidden; */
     right:-430px;
     position: relative;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
   }
 
   .trips-card {
