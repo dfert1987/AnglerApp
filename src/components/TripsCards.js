@@ -1,42 +1,56 @@
-import React from 'react'
+import React, { Component } from 'react'
+import TargetSpecies from './TargetSpecies'
+import BestLure from './BestLure'
 
 
-export default function TripsCards({trip}) {
-
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                    content.style.display = "none";
-            } else {
-                content.style.display = "block";
-                    }
-            });
-    }
-
-//    const eachTrip = trips.forEach(trip => {
-
+class TripsCards extends Component {
+ 
+ 
+    render() {
+        if(!this.props.show){
+            return null;
+        }
+        const fishID = this.props.trip.fish_id
+        const lureID = this.props.trip.lure_id
+    
+     
     return (
         <div className="trips-card">
-        <div className="trip-wrapper">
-            <h4 className="date">Trip: {trip.date}</h4>
-            <button type="button" className="collapsible">View Details</button>
-            <div className="content">
-                <p className="species">TARGETED SPECIES: {trip.fish_id.species}</p>
-                <p className="time">STARTING TIME: {trip.time_start}</p>
-                <p className="duration"> HOURS FISHED: {trip.duration}</p>
-                <p className="weather">WEATHER: {trip.weather}</p>
-                <p className="temperature">TEMPERATURE: {trip.temperature}</p>
-                <p className="trip-description">DESCRITPION: {trip.description}</p>
-                <p className="bestLure">BEST LURE: {trip.lure_id.name}</p>
+            <div className="trip-wrapper">
+                <h4 className="date">Trip: {this.props.trip.date}</h4>
+                <div className="species">
+                    <h4 className="speciesHeader">TARGETED SPECIES:</h4>
+                    <div className="speciesNameContainer"> 
+                        <TargetSpecies 
+                        fishID = {fishID}
+                        /> 
+                    </div>
+                    
+                </div>
+
+                <div className="content">
+                    <p className="time">STARTING TIME: {this.props.trip.time_start}</p>
+                    <p className="duration"> HOURS FISHED: {this.props.trip.duration}</p>
+                    <p className="weather">WEATHER: {this.props.trip.weather}</p>
+                    <p className="temperature">TEMPERATURE: {this.props.trip.temperature}</p>
+                    <p className="trip-description">DESCRITPION: {this.props.trip.description}</p>
+                    <BestLure
+                    lureID = {lureID}
+                     />
+                    <button
+                        onClose={e => {
+                        this.onClose(e);
+                        }}
+                    >
+                    Close
+                    </button>
+                </div>
             </div>
         </div>
-        </div>
         )
-}   
+    }
+}
+
+export default TripsCards;
 //     })
 // }

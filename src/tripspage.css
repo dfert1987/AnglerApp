@@ -102,11 +102,11 @@ h3 {
 
   .content {
     padding: 0 18px;
-    display: none;
-    overflow: hidden;
+    /* display: none; */
+    /* overflow: hidden; */
     right:-430px;
     position: relative;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
   }
 
   .trips-card {

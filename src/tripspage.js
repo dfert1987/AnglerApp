@@ -10,7 +10,8 @@ class TripsPage extends Component {
 
     state = {
        trips: [],
-       locations: [] 
+       locations: [],
+       show: false
     }
     
     componentDidMount(){
@@ -58,9 +59,32 @@ class TripsPage extends Component {
             return trip.location_id === urlID
         })
         if(foundTrip) {
-        return <TripsCards trip={foundTrip}/>
+        return(
+            <div>
+                <button onClick={e => {
+                    this.showModal();
+                }}
+                > Show Trip Details</button>
+                <h3>{foundTrip.date}</h3>
+                <TripsCards 
+                    trip={foundTrip}
+                    show={this.state.show}     
+                />
+            </div>
+            )
         }
+    }
 
+    showModal = e => {
+        if(this.state.show === false){
+            this.setState({
+                show: true
+            })
+        } else {
+            this.setState({
+                show: false
+            })
+        } 
     }
     
     render(){
