@@ -29,8 +29,7 @@ class TripsPage extends Component {
     fetchTrips = () => {
         fetch('http://localhost:3000/trips/')
             .then(response => response.json())
-            .then(trips => this.setTrips(trips));
-        
+            .then(trips => this.setTrips(trips));     
     }
 
     setLocation =(location) => {
@@ -42,9 +41,7 @@ class TripsPage extends Component {
     setTrips = (trips) => {
         this.setState(
             {trips: trips}
-        
         )
-        // console.log(this.state.trips)
     }
 
     showLocation = () => {
@@ -60,16 +57,17 @@ class TripsPage extends Component {
         })
         if(foundTrip) {
         return(
-            <div>
-                <button onClick={e => {
+            <div className="tripWithModal">
+                <div className="tripNoModal">
+                <h3 className="tripDate">{foundTrip.date}</h3>
+                <button className="tripButton" onClick={e => {
                     this.showModal();
                 }}
-                > Show Trip Details</button>
-                <h3>{foundTrip.date}</h3>
+                > Show/Hide Details</button>
+                </div>
                 <TripsCards 
                     trip={foundTrip}
-                    show={this.state.show}
-                     
+                    show={this.state.show}     
                 />
             </div>
             )

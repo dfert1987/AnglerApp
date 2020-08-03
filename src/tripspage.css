@@ -79,7 +79,24 @@ h3 {
 
 }
 
+.tripDate {
+    position: relative;
+    right: 10px;
+    top: 5px
+}
 
+.tripButton {
+    position: relative;
+    right: -20px;
+    width: 150px;
+    font-family: "canter bold" ;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
 .collapsible {
     background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
     color: white;
@@ -123,10 +140,21 @@ h3 {
       text-shadow: 2px 2px 3px black;
       
   }
+  .tripNoModal {
+      display: inline-flex;
+      padding-right: 40%;
+      position: relative;
+      top: 30px;
+      justify-content: space-between;
+    
+  }
 
   .formcontainer {
       position: absolute;
       top: 300px;
       left: 1100px;
 
+  }
+  .tripWithModal {
+      align-items: center;
   }

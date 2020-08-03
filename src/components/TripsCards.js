@@ -5,10 +5,6 @@ import BestLure from './BestLure'
 
 class TripsCards extends Component {
  
-    onClose = e => {
-        this.props.show = false
-      };
- 
     render() {
         if(!this.props.show == true){
             return null;
@@ -40,13 +36,6 @@ class TripsCards extends Component {
                     <BestLure
                     lureID = {lureID}
                      />
-                    <button class="closeButton"
-                        onClick={
-                        this.onClose()
-                        }
-                    >
-                    Close
-                    </button>
                 </div>
             </div>
         </div>
