@@ -68,7 +68,8 @@ class TripsPage extends Component {
                 <h3>{foundTrip.date}</h3>
                 <TripsCards 
                     trip={foundTrip}
-                    show={this.state.show}     
+                    show={this.state.show}
+                     
                 />
             </div>
             )

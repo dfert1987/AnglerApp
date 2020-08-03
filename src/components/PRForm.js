@@ -7,8 +7,9 @@ state = {
 }
 
 handleChange = (event) => {
+    console.log(event)
     this.setState({
-        [event.target.name]:event.target.value
+        [event.target.name]: event.target.value
     })
 }
 
@@ -20,7 +21,7 @@ handleSubmit = (event) => {
 
 prFrontend = (event) => {
     this.setState({
-        [event.target.name]:event.target.value
+        [event.target.name]: event.target.value
     })
 }
 
@@ -38,6 +39,7 @@ prBackend = () => {
 }
 
     render() {
+        console.log(this.state.pr)
         return (
             <div className='prForm'>
                 <div>
@@ -45,8 +47,19 @@ prBackend = () => {
                 </div>
                 <form onSubmit={this.handleSubmit} className="addPRForm">
                     <h4 className="pr-title">BIGGEST CATCH</h4>
-                    <input className="inputPR" type="text" name='pr' placeholder="0 in" value={this.state.pr} onChange={this.handleChange}/>
-                    <input className="submitPR" type="submit" value="Submit Size" />
+                    <input 
+                        className="inputPR" 
+                        type="text" 
+                        name='pr' 
+                        placeholder="0 in" 
+                        value= {this.state.pr} 
+                        onChange={this.handleChange}
+                    />
+                    <input 
+                        className="submitPR" 
+                        type="submit" 
+                        value="Submit Size"
+                    />
                 </form>
             </div>
         )
