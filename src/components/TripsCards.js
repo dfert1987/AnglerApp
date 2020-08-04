@@ -14,11 +14,11 @@ class TripsCards extends Component {
     
      
     return (
-        <div className="trips-card">
+        <div className="tripscard">
             <div className="trip-wrapper">
-                <h4 className="date">Trip: {this.props.trip.date}</h4>
+                <h4 className="date">Date: {this.props.trip.date}</h4>
                 <div className="species">
-                    <h4 className="speciesHeader">TARGETED SPECIES:</h4>
+                    <h4 className="speciesHeader">TARGETED SPECIES:  </h4>
                     <div className="speciesNameContainer"> 
                         <TargetSpecies 
                         fishID = {fishID}

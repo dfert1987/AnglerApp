@@ -18,6 +18,7 @@ h3 {
 
 .Image-container {
     text-align: center;
+    
 }
 .Location-header img {
     width: 300px;
@@ -62,7 +63,7 @@ h3 {
     color: black;
     text-shadow: 2px 2px 3px white;
     font-size: 30px;
-    top: 40px;
+    top: 30px;
     right: -70px;
     z-index: 10000;
     padding: 0;
@@ -121,13 +122,40 @@ h3 {
     padding: 0 18px;
     /* display: none; */
     /* overflow: hidden; */
-    right:-430px;
+    right:-80px;
     position: relative;
+    top:5px;
+    width: 380px;
+    text-align: left;
+    font-size: 18px;
     /* background-color: #f1f1f1; */
   }
-
-  .trips-card {
+  .date {
+        position: relative;
+        left: 170px;
+        top: 5px;
+        font-size: 40px;
+  }
+  .content p {
+      margin-top: 10px;
+  }
+  .tripscard {
       text-align: center;
+      background-image: url('https://i.imgur.com/gMHAOqo.jpg');
+      width: 40%;
+      height: 400px;
+      position: relative;
+      top: -450px;
+      align-self: center;
+      margin-left: 430px;
+      border-radius: 8px;
+      border: solid black 2px;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
   }
   .trip-wrapper {
       width: 40%;
@@ -148,7 +176,20 @@ h3 {
       justify-content: space-between;
     
   }
-
+  .species {
+    display: inline-flex;
+    flex-direction: row;
+    width: 500px;
+    right: 150px;
+    margin-top: 10px;
+  }
+  .speciesHeader {
+      position: relative;
+      right: -140px
+  }
+  .speciesName {
+      margin-left: 160px
+  }
   .formcontainer {
       position: absolute;
       top: 300px;
