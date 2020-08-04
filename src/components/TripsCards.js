@@ -5,9 +5,8 @@ import BestLure from './BestLure'
 
 class TripsCards extends Component {
  
- 
     render() {
-        if(!this.props.show){
+        if(!this.props.show == true){
             return null;
         }
         const fishID = this.props.trip.fish_id
@@ -15,11 +14,11 @@ class TripsCards extends Component {
     
      
     return (
-        <div className="trips-card">
+        <div className="tripscard">
             <div className="trip-wrapper">
-                <h4 className="date">Trip: {this.props.trip.date}</h4>
+                <h4 className="date">Date: {this.props.trip.date}</h4>
                 <div className="species">
-                    <h4 className="speciesHeader">TARGETED SPECIES:</h4>
+                    <h4 className="speciesHeader">TARGETED SPECIES:  </h4>
                     <div className="speciesNameContainer"> 
                         <TargetSpecies 
                         fishID = {fishID}
@@ -37,13 +36,6 @@ class TripsCards extends Component {
                     <BestLure
                     lureID = {lureID}
                      />
-                    <button
-                        onClose={e => {
-                        this.onClose(e);
-                        }}
-                    >
-                    Close
-                    </button>
                 </div>
             </div>
         </div>
@@ -52,5 +44,3 @@ class TripsCards extends Component {
 }
 
 export default TripsCards;
-//     })
-// }

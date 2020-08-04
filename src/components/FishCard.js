@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
-import PRPoint from './PRPoint.js';
 import PRForm from './PRForm.js';
 
 
@@ -18,9 +17,6 @@ class  FishCard extends Component {
     }
 
   
-    
-
-
 
     render() {
         const handleClick = () =>{

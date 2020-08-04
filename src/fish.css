@@ -45,7 +45,9 @@
    
    }
    .prForm{
-    height: 55px
+    height: 55px;
+   
+
    }
 .fish-list {
     flex-flow: column;
@@ -219,7 +221,6 @@ div.flippy-card.flippy-back{
     position: relative;
     right: -40px;
     width: 80px;
-    z-index: 80;
     height: 40px;
     top: 3px
 }
@@ -236,7 +237,7 @@ div.flippy-card.flippy-back{
 }
 .addPRForm {
     background-image: url('https://adwallpapers.xyz/uploads/posts/419-distressed-white-wood-texture-background.jpg');
-    z-index: -400;
+    z-index: 0;
     border: 2px solid;
     width: 420px;
     position: relative;

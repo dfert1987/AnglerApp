@@ -27,11 +27,7 @@ class BestLure extends Component {
         return(
             <p className="bestLure">BEST LURE: {this.state.lureName} </p>
         )
-
     }
-
-
-
 }
 
 export default BestLure

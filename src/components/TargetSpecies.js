@@ -30,7 +30,7 @@ render() {
 
 
 return (
-        <h4>{this.state.species}</h4>
+        <h4 className="speciesName">{this.state.species}</h4>
         )
     }
 }
