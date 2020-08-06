@@ -22,6 +22,12 @@ export default class TripForm extends Component {
         });
     };
 
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]:event.target.value
+        })
+    }
+
     onChange = time => this.setState({ time })
 
     render(){ 
@@ -30,7 +36,7 @@ export default class TripForm extends Component {
             <form class="addtripform">
             <h2 className="log">LOG YOUR TRIP!</h2>
             <div>
-                <p>Date:</p>
+                <label>Date:</label>
                 <DatePicker
                     className="date"
                     selected={this.state.startDate} 
@@ -41,22 +47,56 @@ export default class TripForm extends Component {
                 <TargetedSpeciesDropDown />
             </div>
             <div>
-                <p>Time:</p>
+                <label>Time:</label>
                 <TimePicker 
                     onChange={this.onChange}
                     value={this.state.time}
                 />
             </div>
+            <div className="length">
+                <label>Hours Fished: </label>
+                <input
+                    type="number"
+                    name="length"
+                    placeholder="0"
+                    value={this.state.length}
+                    onChange={this.handleChange}
+                >
+                </input>
+            </div>
+            <div className="temperature">
+                <label>Temperature: </label> 
+                <input 
+                    type="number"
+                    name="temperature"
+                    placeholder="Degreees Farenheidt"
+                    value={this.state.temperature}
+                    onChange={this.handleChange}
+                >    
+                </input>
+            </div>
             <div className="weather">
-                <p>Weather: </p>
-                <input type="text"></input>
+                <label>Weather: </label>
+                <input 
+                    type="text" 
+                    name="weather" 
+                    placeholder="Sunny, rainy, etc." 
+                    value={this.state.weather} 
+                    onChange={this.handleChange}>
+                </input>
             </div>
             <div>
                 <BestLureDropDown />
             </div>
             <div className="descriptionWrapper">
                 <p>Description: </p>
-                <p type="Description:"><input placeholder="Describe your day fishing..."></input></p>
+                <p type="Description:">
+                <input name="description"
+                    placeholder="Describe your day fishing..." 
+                    value={this.state.description} 
+                    onChange={this.handleChange}>
+                </input>
+                </p>
             </div>
             <button>Log It!</button>
             <div>
