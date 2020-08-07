@@ -139,6 +139,14 @@ h3 {
   .content p {
       margin-top: 10px;
   }
+  .pastTrips {
+      text-align: center;
+      font-family: Aventura;
+      color: green;
+      text-shadow:  black 2px 2px;
+      position: relative;
+      top: 170px
+  }
   .tripscard {
       text-align: center;
       background-image: url('https://i.imgur.com/gMHAOqo.jpg');
@@ -165,17 +173,58 @@ h3 {
   .log {
       font-family: aventura;
       color: green;
-      text-shadow: 2px 2px 3px black;
-      
+      text-shadow: 2px 2px black;
+      text-align: center;
+      position: relative;
+      top: -75px
+  }
+  .dateSection {
+    display: inline-flex
+  }
+ 
+  .top-row {
+      display: inline-flex;
+      position: relative;
+      left: -350px;
+      top: -70px
+  }
+
+  .react-datepicker__input-container {
+      display: inline-flex;
+      margin-left: 0px;
+  }
+  input.datePicker {
+      margin-right: 8px;
+      font-size: 15px;
+      height: 25px
+  }
+  .dateLabel {
+      margin-right: 5px
+  }
+  select.targetedSpecies {
+      margin-right: 8px;
+      height:30px;
+      font-size: 15px;
+  }
+  .timeLabel {
+      margin-right: 5px;
+  }
+  .timeCont {
+      position: relative;
+    top: 0px
+  }
+
+  .react-time-picker {
+      background-color: white;
   }
   .tripNoModal {
       display: inline-flex;
       padding-right: 40%;
       position: relative;
-      top: 30px;
+      top: 170px;
       justify-content: space-between;
-    
   }
+
   .species {
     display: inline-flex;
     flex-direction: row;
@@ -194,7 +243,6 @@ h3 {
       position: absolute;
       top: 300px;
       left: 1100px;
-
   }
   .tripWithModal {
       align-items: center;
