@@ -13,7 +13,11 @@ export default class TripForm extends Component {
         weather: '',
         temperature: 0,
         length: 0,
-        description: ''
+        description: '',
+        bestLure: '',
+        allLures: [],
+        tackleBox: [],
+    
     }
 
     handleSelect = date => {
@@ -30,8 +34,35 @@ export default class TripForm extends Component {
 
     onChange = time => this.setState({ time })
 
+
+    componentDidMount() {
+        fetch(`http://localhost:3000/lures`)
+            .then(response => response.json())
+            .then(response => this.setLures(response)
+            )
+        }
+    
+    setLures = (lures) => {
+        this.setState(
+            {allLures: lures}
+        )
+        this.setTackleBox(lures)
+    }
+    
+    setTackleBox = () => {
+        const setTB = this.state.allLures.filter(lure => lure.favorited !== false)
+            this.setState(
+            { tackleBox:setTB }
+        )
+    }
+
+    lureDropDown = () => this.state.tackleBox.map(lure => {
+            return <option value = {lure.name}>{lure.name}</option>    
+        })
+
     render(){ 
         return (
+    <form className="addTripForm">
         <div className="formcont">
             <form class="addtripform">
             <h2 className="log">LOG YOUR TRIP!</h2>
@@ -86,7 +117,12 @@ export default class TripForm extends Component {
                 </input>
             </div>
             <div>
-                <BestLureDropDown />
+            <label>Best Lure:</label>
+                <select className="lureChoice" name='lureType' value={this.state.lure} onChange={this.handleChange}>
+                 
+                    {this.lureDropDown()}
+                    
+                </select>
             </div>
             <div className="descriptionWrapper">
                 <p>Description: </p>
@@ -103,6 +139,7 @@ export default class TripForm extends Component {
             </div>
           </form>
         </div>
+        </form>
         )
     }
 }
