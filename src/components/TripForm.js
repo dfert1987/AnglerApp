@@ -86,10 +86,11 @@ export default class TripForm extends Component {
             <form className="addTripForm">
                 <div className="formcont">
                     <h2 className="log">LOG YOUR TRIP!</h2>
-                    <div>
-                        <label>Date:</label>
+                    <div className="top-row">
+                    <div clasName="dateSection">
+                        <label className ="dateLabel">Date:</label>
                         <DatePicker
-                            className="date"
+                            className="datePicker"
                             selected={this.state.startDate} 
                             onSelect={this.handleSelect}
                         />
@@ -105,12 +106,13 @@ export default class TripForm extends Component {
                             {this.getFishOptions()}
                         </select>
                     </div>
-                    <div>
-                        <label>Time:</label>
+                    <div className="timeCont">
+                        <label className="timeLabel">Time:</label>
                         <TimePicker 
                             onChange={this.onChange}
                             value={this.state.time}
                         />
+                    </div>
                     </div>
                     <div className="length">
                         <label>Hours Fished: </label>
