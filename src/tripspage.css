@@ -74,7 +74,25 @@ h3 {
 .weather {
     font: helvetica;
 }
-
+.weather input {
+    margin-right: 8px;
+    font-size: 14px;
+    height: 25px
+}
+div.row2 input {
+    height: 25px
+}
+select.lureChoice {
+    height: 25px;
+}
+.lureCont {
+top: 5px;
+position: relative
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 14px;
+  }
+input .placeHolder
 .time {
     font: helvetica;
 
@@ -231,6 +249,19 @@ h3 {
     width: 500px;
     right: 150px;
     margin-top: 10px;
+  }
+  .row2 {
+      display: inline-flex;
+      position: relative;
+      top: -65px;
+      right: 250px
+
+  }
+  .length input {
+      margin-right: 8px;
+  }
+  .temperature input {
+      margin-right: 8px;
   }
   .speciesHeader {
       position: relative;
