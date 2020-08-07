@@ -47,6 +47,7 @@ addToCaught= (oneFish) => {
         this.setState({
             caughtFish:[...this.state.caughtFish, oneFish]
           })
+          
         }
     }  
 caughtBackend = (oneFish) => {
