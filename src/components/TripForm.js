@@ -114,6 +114,7 @@ export default class TripForm extends Component {
                         />
                     </div>
                     </div>
+                    <div className="row2">
                     <div className="length">
                         <label>Hours Fished: </label>
                         <input
@@ -142,11 +143,13 @@ export default class TripForm extends Component {
                             type="text" 
                             name="weather" 
                             placeholder="Sunny, rainy, etc." 
+                            placeholderStyle={{fontSize: 12}}
                             value={this.state.weather} 
-                            onChange={this.handleChange}>
+                            onChange={this.handleChange}
+                            >
                         </input>
                     </div>
-                    <div>
+                    <div className="lureCont">
                         <label>Best Lure:</label>
                         <select 
                             className="lureChoice" 
@@ -156,6 +159,7 @@ export default class TripForm extends Component {
                         >
                             {this.lureDropDown()}
                         </select>
+                    </div>
                     </div>
                     <div className="descriptionWrapper">
                         <p>Description: </p>
