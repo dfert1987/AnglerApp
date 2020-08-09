@@ -56,7 +56,18 @@ h3 {
     top: 14px;
     color: white;
 }
-
+.descriptionInput {
+    height:80px;
+    width: 600px;
+    position: relative;
+    right: -420px
+}
+.descriptionWrapper {
+    position: relative;
+    top: -30px;
+    right: 520px;
+    display: inline-flex;
+}
 .date {
     font-family: "canter bold";
     position: relative;
@@ -131,6 +142,18 @@ input .placeHolder
     right: -430px;
     font-size: 35px;
 }
+.addTripForm {
+    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+    position: relative;
+    border-radius: 5px;
+    padding-top: 50px;
+    box-shadow: 2px 2px 3px black;;
+    padding-bottom: 40px;
+    width: 70%;
+    margin-right: -200px;
+    right: -210px;
+    top: -50px;
+}
 
 .active, .collapsible:hover {
     background-color: green;
@@ -163,7 +186,8 @@ input .placeHolder
       color: green;
       text-shadow:  black 2px 2px;
       position: relative;
-      top: 170px
+      top: 320px;
+      right: 5px
   }
   .tripscard {
       text-align: center;
@@ -171,10 +195,11 @@ input .placeHolder
       width: 40%;
       height: 400px;
       position: relative;
-      top: -450px;
+      top: -300px;
       align-self: center;
       margin-left: 430px;
       border-radius: 8px;
+      z-index:900000000000 ;
       border: solid black 2px;
 
       /* Center and scale the image nicely */
@@ -187,6 +212,10 @@ input .placeHolder
       width: 40%;
       align-content: center;
   }
+  label {
+      color: white;
+      text-shadow: 2px 2px black;
+  }
 
   .log {
       font-family: aventura;
@@ -194,7 +223,7 @@ input .placeHolder
       text-shadow: 2px 2px black;
       text-align: center;
       position: relative;
-      top: -75px
+      top: -50px
   }
   .dateSection {
     display: inline-flex
@@ -203,8 +232,8 @@ input .placeHolder
   .top-row {
       display: inline-flex;
       position: relative;
-      left: -350px;
-      top: -70px
+      left: -130px;
+      top: -40px
   }
 
   .react-datepicker__input-container {
@@ -239,10 +268,19 @@ input .placeHolder
       display: inline-flex;
       padding-right: 40%;
       position: relative;
-      top: 170px;
+      top: 320px;
       justify-content: space-between;
   }
-
+  .buttonLog {
+      height: 40px;
+      width: 80px;
+      border-radius: 8px;
+      font-size: 25px;
+      font-family: canter-bold;
+      position: relative;
+      top: 70px;
+      right: 450px
+  }
   .species {
     display: inline-flex;
     flex-direction: row;
@@ -253,9 +291,18 @@ input .placeHolder
   .row2 {
       display: inline-flex;
       position: relative;
-      top: -65px;
-      right: 250px
+      top: -30px;
+      right: 50px
 
+  }
+  .descriptionHeader{
+      position: relative;
+      top:40px;
+      font-size: 20px;
+      margin-right: 5px;
+      right: -410px;
+      text-shadow: 2px 2px black;
+      color: white;
   }
   .length input {
       margin-right: 8px;
@@ -274,6 +321,9 @@ input .placeHolder
       position: absolute;
       top: 300px;
       left: 1100px;
+      z-index: 0;
+      background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+
   }
   .tripWithModal {
       align-items: center;

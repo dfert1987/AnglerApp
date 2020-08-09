@@ -97,7 +97,7 @@ class TripsPage extends Component {
                 <div className="location-card"> 
                     {this.showLocation()}  
                 </div>
-                <h2 className="pastTrips">- PAST TRIPS -</h2>
+                <h2 className="pastTrips">- PAST TRIPS-</h2>
                 <div>
                     {this.showTrips()}
                     <div className="addTrip">
