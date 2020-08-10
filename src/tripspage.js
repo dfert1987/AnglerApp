@@ -85,7 +85,23 @@ class TripsPage extends Component {
             })
         } 
     }
-    
+
+    addTrip = (newTrip) => {
+        this.setState({
+            trips: [...this.state.trips, newTrip]
+        })
+        const trip = {
+            trip: newTrip
+    }
+    fetch('http://localhost:3000/trips', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+       body: JSON.stringify(trip) 
+    })
+}
+
     render(){
        
     return(  
@@ -101,7 +117,7 @@ class TripsPage extends Component {
                 <div>
                     {this.showTrips()}
                     <div className="addTrip">
-                        <TripForm />
+                        <TripForm addTrip={this.addTrip}/>
                     </div>
                 </div>
             </div>

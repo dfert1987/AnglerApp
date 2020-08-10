@@ -7,6 +7,7 @@ import "react-datepicker/dist/react-datepicker.css";
 export default class TripForm extends Component {
 
     state = {
+        id: 1,
         startDate: new Date(),
         time: '06:00',
         weather: '',
@@ -74,16 +75,30 @@ export default class TripForm extends Component {
     }
 
     getFishOptions = () => this.state.allFish.map(fish => {
-        return <option value = {fish.species}>{fish.species}</option>
+        return <option value = {fish.id}>{fish.species}</option>
     })
 
     lureDropDown = () => this.state.tackleBox.map(lure => {
-            return <option value = {lure.name}>{lure.name}</option>    
+            return <option value = {lure.id}>{lure.name}</option>    
         })
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addTrip(
+            this.state.id,
+            this.state.startDate,
+            this.state.weather,
+            this.state.temperature,
+            this.state.length,
+            this.state.description,
+            this.state.bestLure,
+            this.state.targetedSpecies
+            )
+    }
 
     render(){ 
         return (
-            <form className="addTripForm">
+            <form className="addTripForm" onSubmit={this.handleSubmit}>
                 <div className="formcont">
                     <h2 className="log">LOG YOUR TRIP!</h2>
                     <div className="top-row">
@@ -174,7 +189,7 @@ export default class TripForm extends Component {
                         </input>
                         </p>
                     </div>
-                    <button className="buttonLog">Log It!</button>
+                    <input className="submit" type="submit" />
                 </div>
             </form>
             )

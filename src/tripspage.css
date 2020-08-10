@@ -271,7 +271,7 @@ input .placeHolder
       top: 320px;
       justify-content: space-between;
   }
-  .buttonLog {
+  .submit {
       height: 40px;
       width: 80px;
       border-radius: 8px;
