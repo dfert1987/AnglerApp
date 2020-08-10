@@ -9,7 +9,7 @@ export default class TripForm extends Component {
     state = {
         id: 1,
         startDate: new Date(),
-        time: '06:00',
+        time: '',
         weather: '',
         temperature: 0,
         length: 0,
@@ -130,10 +130,15 @@ export default class TripForm extends Component {
                     </div>
                     <div className="timeCont">
                         <label className="timeLabel">Time:</label>
-                        <TimePicker 
-                            onChange={this.onChange}
+                        <input
+                            className="timeInput"
+                            type="text"
+                            name="time"
+                            placeholder="6:00 am"
+                            onChange={this.handleChange}
                             value={this.state.time}
-                        />
+                        >
+                        </input>
                     </div>
                     </div>
                     <div className="row2">
