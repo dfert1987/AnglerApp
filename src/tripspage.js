@@ -117,7 +117,10 @@ class TripsPage extends Component {
                 <div>
                     {this.showTrips()}
                     <div className="addTrip">
-                        <TripForm addTrip={this.addTrip}/>
+                        <TripForm 
+                        location={this.state.locations[0]}
+                        addTrip={this.addTrip}
+                        />
                     </div>
                 </div>
             </div>

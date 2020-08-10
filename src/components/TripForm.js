@@ -15,6 +15,7 @@ export default class TripForm extends Component {
         length: 0,
         description: '',
         bestLure: '',
+        location: this.props.location,
         allLures: [],
         tackleBox: [],
         allFish: [],
@@ -84,15 +85,17 @@ export default class TripForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        console.log(this.state.startDate)
         this.props.addTrip(
-            this.state.id,
             this.state.startDate,
             this.state.weather,
             this.state.temperature,
             this.state.length,
             this.state.description,
             this.state.bestLure,
-            this.state.targetedSpecies
+            this.state.location,
+            this.state.targetedSpecies,
+            this.state.id
             )
     }
 
@@ -104,11 +107,15 @@ export default class TripForm extends Component {
                     <div className="top-row">
                     <div clasName="dateSection">
                         <label className ="dateLabel">Date:</label>
-                        <DatePicker
-                            className="datePicker"
-                            selected={this.state.startDate} 
-                            onSelect={this.handleSelect}
-                        />
+                        <input
+                            className="dateInput"
+                            type="text"
+                            name="date"
+                            placeholder="mm/dd/yyyy"
+                            value={this.state.date}
+                            onChange={this.handleChange}
+                        >
+                        </input>
                     </div>
                     <div className="TargetedSpeciesContainer">
                         <label>Targeted Species: </label>
