@@ -114,6 +114,11 @@ input .placeHolder
     right: 10px;
     top: 5px
 }
+.dateInput {
+    height: 25px;
+    margin-right: 5px;
+    width: 150px;
+}
 
 .tripButton {
     position: relative;
