@@ -11,7 +11,8 @@ class TripsPage extends Component {
     state = {
        trips: [],
        locations: [],
-       show: false
+       show: false,
+       foundTrips: []
     }
     
     componentDidMount(){
@@ -42,20 +43,27 @@ class TripsPage extends Component {
         this.setState(
             {trips: trips}
         )
+        console.log(this.state.trips)
+        this.setFoundTrips()
     }
 
     showLocation = () => {
-        console.log(this.state.locations.id)
         return <LocationCard location={this.state.locations} />
         
     }
     
-    showTrips = () => {
+    setFoundTrips = () => {
         const urlID = parseInt(this.props.match.params.locationId)
-        const foundTrip = this.state.trips.find(trip => {
-            return trip.location_id === urlID
+        const allFoundTrips = this.state.trips.filter(foundTrip => {
+            return foundTrip.location_id === urlID
         })
-        if(foundTrip) {
+            this.setState(
+                {foundTrips: allFoundTrips}
+        )
+        this.displayTripCards()
+    }
+
+    displayTripCards = () => this.state.foundTrips.map(foundTrip => {
         return(
             <div className="tripWithModal">
                 <div className="tripNoModal">
@@ -71,8 +79,9 @@ class TripsPage extends Component {
                 />
             </div>
             )
-        }
-    }
+        })
+    
+    
 
     showModal = e => {
         if(this.state.show === false){
@@ -87,15 +96,13 @@ class TripsPage extends Component {
     }
 
     addTrip = (newTrip) => {
-
-        // event.preventDefault()
-        console.log(newTrip)
         this.setState({
-            trips: [...this.state.trips, newTrip]
+            foundTrips: [...this.state.foundTrips, newTrip]
         })
         const trip = {
             trip: newTrip
     }
+    console.log(this.state.trips)
     fetch('http://localhost:3000/trips', {
         method: 'POST',
         headers: {
@@ -103,12 +110,11 @@ class TripsPage extends Component {
         },
        body: JSON.stringify(trip) 
     })
-    this.showTrips()
+    this.displayTripCards()
 }
 
 
     render(){
-       
     return(  
         <div className = "trip container">
             <div className="nav-bar">
@@ -120,7 +126,7 @@ class TripsPage extends Component {
                 </div>
                 <h2 className="pastTrips">- PAST TRIPS -</h2>
                 <div>
-                    {this.showTrips()}
+                    {this.displayTripCards()}
                     <div className="addTrip">
                         <TripForm 
                         location={this.state.locations.id}
