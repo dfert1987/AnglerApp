@@ -6,7 +6,7 @@ import BestLure from './BestLure'
 class TripsCards extends Component {
  
     render() {
-        if(!this.props.show == true){
+        if(!this.props.show === true){
             return null;
         }
         const fishID = this.props.trip.fish_id

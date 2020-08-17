@@ -1,6 +1,4 @@
 import React, {Component } from 'react'
-import DatePicker from "react-datepicker";
-import TimePicker from 'react-time-picker';
 import TargetedSpeciesDropDown from './TargetedSpeciesDropDown';
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -8,33 +6,26 @@ export default class TripForm extends Component {
 
     state = {
         id: 1,
-        startDate: new Date(),
+        date: '',
         time: '',
         weather: '',
         temperature: 0,
-        length: 0,
+        length: '',
         description: '',
-        bestLure: '',
-        location: this.props.location,
+        bestLure: 0,
         allLures: [],
         tackleBox: [],
         allFish: [],
-        targetedSpecies: ''
+        targetedSpecies: 0
     }
 
-    handleSelect = date => {
-        this.setState({
-            startDate: date
-        });
-    };
+   
 
     handleChange = (event) => {
         this.setState({
             [event.target.name]:event.target.value
         })
     }
-
-    onChange = time => this.setState({ time })
 
     componentDidMount() {
         this.fetchLures()
@@ -84,19 +75,32 @@ export default class TripForm extends Component {
         })
 
     handleSubmit = (event) => {
+        let duration = this.state.length
+        let time_start = this.state.time
+        let date = this.state.date
+        let weather = this.state.weather
+        let temperature = this.state.temperature
+        let description = this.state.description
+        let lure_id = this.state.bestLure
+        let location_id = this.props.location
+        let fish_id = this.state.targetedSpecies
+
+        let addedTrip = {
+            duration, 
+            time_start,
+            date, 
+            weather, 
+            temperature, 
+            description, 
+            lure_id, 
+            location_id,
+            fish_id
+        }
+
+       console.log(addedTrip)
+       console.log(this.props.location)
         event.preventDefault()
-        console.log(this.state.startDate)
-        this.props.addTrip(
-            this.state.startDate,
-            this.state.weather,
-            this.state.temperature,
-            this.state.length,
-            this.state.description,
-            this.state.bestLure,
-            this.state.location,
-            this.state.targetedSpecies,
-            this.state.id
-            )
+        this.props.addTrip( addedTrip )
     }
 
     render(){ 
@@ -114,6 +118,7 @@ export default class TripForm extends Component {
                             placeholder="mm/dd/yyyy"
                             value={this.state.date}
                             onChange={this.handleChange}
+                            
                         >
                         </input>
                     </div>
@@ -122,8 +127,8 @@ export default class TripForm extends Component {
                         <select
                             className="targetedSpecies"
                             name="targetedSpecies"
-                            value={this.state.targetedSpecies}
                             onChange={this.handleChange}
+                            value={this.state.targetedSpecies}
                         >
                             {this.getFishOptions()}
                         </select>
@@ -145,7 +150,7 @@ export default class TripForm extends Component {
                     <div className="length">
                         <label>Hours Fished: </label>
                         <input
-                            type="number"
+                            type="text"
                             name="length"
                             placeholder="0"
                             value={this.state.length}

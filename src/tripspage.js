@@ -45,7 +45,7 @@ class TripsPage extends Component {
     }
 
     showLocation = () => {
-        console.log(this.state.locations)
+        console.log(this.state.locations.id)
         return <LocationCard location={this.state.locations} />
         
     }
@@ -87,6 +87,9 @@ class TripsPage extends Component {
     }
 
     addTrip = (newTrip) => {
+
+        // event.preventDefault()
+        console.log(newTrip)
         this.setState({
             trips: [...this.state.trips, newTrip]
         })
@@ -100,7 +103,9 @@ class TripsPage extends Component {
         },
        body: JSON.stringify(trip) 
     })
+    this.showTrips()
 }
+
 
     render(){
        
@@ -113,12 +118,12 @@ class TripsPage extends Component {
                 <div className="location-card"> 
                     {this.showLocation()}  
                 </div>
-                <h2 className="pastTrips">- PAST TRIPS-</h2>
+                <h2 className="pastTrips">- PAST TRIPS -</h2>
                 <div>
                     {this.showTrips()}
                     <div className="addTrip">
                         <TripForm 
-                        location={this.state.locations[0]}
+                        location={this.state.locations.id}
                         addTrip={this.addTrip}
                         />
                     </div>
