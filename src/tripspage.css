@@ -157,6 +157,7 @@ input .placeHolder
     padding-top: 50px;
     box-shadow: 2px 2px 3px black;;
     padding-bottom: 40px;
+    z-index: 1;
     width: 70%;
     margin-right: -200px;
     right: -210px;
@@ -177,6 +178,7 @@ input .placeHolder
     width: 380px;
     text-align: left;
     font-size: 18px;
+    
     /* background-color: #f1f1f1; */
   }
   .date {
@@ -193,8 +195,8 @@ input .placeHolder
       font-family: Aventura;
       color: green;
       text-shadow:  black 2px 2px;
-      position: relative;
-      top: 320px;
+      position: absolute;
+      top: 15px;
       right: 5px
   }
   .tripscard {
@@ -202,12 +204,12 @@ input .placeHolder
       background-image: url('https://i.imgur.com/gMHAOqo.jpg');
       width: 40%;
       height: 400px;
-      position: relative;
-      top: -300px;
+      position: absolute;
+      top: -500px;
       align-self: center;
+      z-index: 90000;
       margin-left: 430px;
       border-radius: 8px;
-      z-index:900000000000 ;
       border: solid black 2px;
 
       /* Center and scale the image nicely */
@@ -276,8 +278,12 @@ input .placeHolder
       display: inline-flex;
       padding-right: 40%;
       position: relative;
-      top: 320px;
+      /* top: 320px; */
       justify-content: space-between;
+  }
+  .pastTripCards {
+      position: relative;
+      top: 20px
   }
   .submit {
       height: 40px;
