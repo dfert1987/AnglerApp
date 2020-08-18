@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import TripsModal from './TripsModal';
 
-
-
 class TripCards extends Component {
 
     state = {
