@@ -94,7 +94,8 @@ h3 {
     height: 25px
 }
 div.row2 input {
-    height: 25px
+    height: 25px;
+ 
 }
 select.lureChoice {
     height: 25px;
@@ -135,6 +136,40 @@ input .placeHolder
     cursor: pointer;
     border-radius: 8px;
 }
+    .tripButton:after {
+        font-weight: 400;
+        position: absolute;
+        left: 85%;
+        top: 31%;
+        text-align: center;
+        right: 5%;
+        bottom: 0;
+        opacity: 0;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+
+    }
+
+    .tripButton:hover {
+        background: green;
+        transition: all 0.5s;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 6px 15px black;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+        .tripButton:after {
+            opacity: 1;
+            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+            transition: all 0.5s;
+
+        
+    }
+
+
+.tripButton:focus {
+    background-color: green;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
 .collapsible {
     background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
     color: white;
@@ -161,7 +196,9 @@ input .placeHolder
     width: 70%;
     margin-right: -200px;
     right: -210px;
-    top: -50px;
+    top: 40px;
+    margin-bottom: 15px;
+
 }
 
 .active, .collapsible:hover {
@@ -196,8 +233,8 @@ input .placeHolder
       color: green;
       text-shadow:  black 2px 2px;
       position: absolute;
-      top: 15px;
-      right: 5px
+      top: 600px;
+      right: 605px
   }
   .tripscard {
       text-align: center;
@@ -205,7 +242,7 @@ input .placeHolder
       width: 40%;
       height: 400px;
       position: absolute;
-      top: -500px;
+      top: -410px;
       align-self: center;
       z-index: 90000;
       margin-left: 430px;
@@ -278,8 +315,9 @@ input .placeHolder
       display: inline-flex;
       padding-right: 40%;
       position: relative;
-      /* top: 320px; */
+     top: 35px; 
       justify-content: space-between;
+      margin-bottom: 10px;
   }
   .pastTripCards {
       position: relative;
@@ -306,7 +344,7 @@ input .placeHolder
       display: inline-flex;
       position: relative;
       top: -30px;
-      right: 50px
+      right: 20px
 
   }
   .descriptionHeader{

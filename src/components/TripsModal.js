@@ -18,22 +18,16 @@ class TripsModal extends Component {
                 <div className="species">
                     <h4 className="speciesHeader">TARGETED SPECIES:  </h4>
                     <div className="speciesNameContainer"> 
-                        <TargetSpecies 
-                        fishID = {fishID}
-                        /> 
+                        <TargetSpecies fishID = {fishID}/> 
                     </div>
-                    
                 </div>
-
                 <div className="content">
                     <p className="time">STARTING TIME: {this.props.trip.time_start}</p>
                     <p className="duration"> HOURS FISHED: {this.props.trip.duration}</p>
                     <p className="weather">WEATHER: {this.props.trip.weather}</p>
                     <p className="temperature">TEMPERATURE: {this.props.trip.temperature}</p>
                     <p className="trip-description">DESCRITPION: {this.props.trip.description}</p>
-                    <BestLure
-                    lureID = {lureID}
-                     />
+                    <BestLure lureID = {lureID}/>
                 </div>
             </div>
         </div>

@@ -48,7 +48,6 @@ class TripsPage extends Component {
 
     showLocation = () => {
         return <LocationCard location={this.state.locations} />
-        
     }
     
     setFoundTrips = () => {
@@ -63,24 +62,7 @@ class TripsPage extends Component {
     }
 
     displayTripCards = () => this.state.foundTrips.map(foundTrip => {
-        return(
-            <TripCards 
-                trip={foundTrip}
-            />
-        )
-    })
-    
-    showModal = e => {
-        if(this.state.show === false){
-            this.setState({
-                show: true
-            })
-        } else {
-            this.setState({
-                show: false
-            })
-        } 
-    }
+        return( <TripCards trip={foundTrip} />)})
 
     addTrip = (newTrip) => {
         this.setState({
