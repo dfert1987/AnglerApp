@@ -161,7 +161,7 @@ input .placeHolder
     width: 70%;
     margin-right: -200px;
     right: -210px;
-    top: -50px;
+    top: 40px;
 }
 
 .active, .collapsible:hover {
@@ -196,8 +196,8 @@ input .placeHolder
       color: green;
       text-shadow:  black 2px 2px;
       position: absolute;
-      top: 15px;
-      right: 5px
+      top: 600px;
+      right: 605px
   }
   .tripscard {
       text-align: center;
@@ -205,7 +205,7 @@ input .placeHolder
       width: 40%;
       height: 400px;
       position: absolute;
-      top: -500px;
+      top: -410px;
       align-self: center;
       z-index: 90000;
       margin-left: 430px;
@@ -278,7 +278,7 @@ input .placeHolder
       display: inline-flex;
       padding-right: 40%;
       position: relative;
-      /* top: 320px; */
+     top: 35px; 
       justify-content: space-between;
   }
   .pastTripCards {
