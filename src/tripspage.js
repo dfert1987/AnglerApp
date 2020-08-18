@@ -8,7 +8,6 @@ import TripCards from './components/TripCards';
 
 class TripsPage extends Component {
 
-
     state = {
        trips: [],
        locations: [],
@@ -71,8 +70,6 @@ class TripsPage extends Component {
         )
     })
     
-    
-
     showModal = e => {
         if(this.state.show === false){
             this.setState({
@@ -115,7 +112,7 @@ class TripsPage extends Component {
                     {this.showLocation()}  
                 </div>
                 <h2 className="pastTrips">- PAST TRIPS -</h2>
-                <div>
+                <div className="pastTripCards">
                     {this.displayTripCards()}
                     <div className="addTrip">
                         <TripForm 
