@@ -12,9 +12,6 @@ export default function LureCard({lure, addToTackleBox, removeFromTackleBox, fav
         unfavoriteBackend(lure)
         }
     }
-    // on click, the function will check to see if addToTackleBox is on the card, if it is then it adds it, if it isn't then it will run remove.
-    
-    
     
         return (
             <li className="lure-card" >

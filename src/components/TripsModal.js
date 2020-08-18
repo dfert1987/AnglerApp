@@ -3,16 +3,14 @@ import TargetSpecies from './TargetSpecies'
 import BestLure from './BestLure'
 
 
-class TripsCards extends Component {
- 
+class TripsModal extends Component {
+
     render() {
-        if(!this.props.show == true){
-            return null;
-        }
+       
+        console.log(this.props)
         const fishID = this.props.trip.fish_id
         const lureID = this.props.trip.lure_id
     
-     
     return (
         <div className="tripscard">
             <div className="trip-wrapper">
@@ -43,4 +41,4 @@ class TripsCards extends Component {
     }
 }
 
-export default TripsCards;
+export default TripsModal;

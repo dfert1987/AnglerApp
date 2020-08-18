@@ -28,7 +28,10 @@ h3 {
     border-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2') 30 round;
     border-radius: 5px;
 }
-
+.timeInput{
+    height: 25px;
+    width: 150px
+}
 .Info-Section{
     text-align: center;
     background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');

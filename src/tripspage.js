@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from './navbar.js'
+import Navbar from './navbar.js';
 import './tripspage.css';
-import LocationCard from './components/LocationCard'
-import TripsCards from './components/TripsCards';
+import LocationCard from './components/LocationCard';
+import TripsModal from './components/TripsModal';
 import TripForm from './components/TripForm';
+import TripCards from './components/TripCards';
 
 class TripsPage extends Component {
 
@@ -11,7 +12,8 @@ class TripsPage extends Component {
     state = {
        trips: [],
        locations: [],
-       show: false
+       show: false,
+       foundTrips: []
     }
     
     componentDidMount(){
@@ -42,37 +44,34 @@ class TripsPage extends Component {
         this.setState(
             {trips: trips}
         )
+        this.setFoundTrips()
     }
 
     showLocation = () => {
-        console.log(this.state.locations)
         return <LocationCard location={this.state.locations} />
         
     }
     
-    showTrips = () => {
+    setFoundTrips = () => {
         const urlID = parseInt(this.props.match.params.locationId)
-        const foundTrip = this.state.trips.find(trip => {
-            return trip.location_id === urlID
+        const allFoundTrips = this.state.trips.filter(foundTrip => {
+            return foundTrip.location_id === urlID
         })
-        if(foundTrip) {
-        return(
-            <div className="tripWithModal">
-                <div className="tripNoModal">
-                <h3 className="tripDate">{foundTrip.date}</h3>
-                <button className="tripButton" onClick={e => {
-                    this.showModal();
-                }}
-                > Show/Hide Details</button>
-                </div>
-                <TripsCards 
-                    trip={foundTrip}
-                    show={this.state.show}     
-                />
-            </div>
-            )
-        }
+            this.setState(
+                {foundTrips: allFoundTrips}
+        )
+        this.displayTripCards()
     }
+
+    displayTripCards = () => this.state.foundTrips.map(foundTrip => {
+        return(
+            <TripCards 
+                trip={foundTrip}
+            />
+        )
+    })
+    
+    
 
     showModal = e => {
         if(this.state.show === false){
@@ -88,11 +87,12 @@ class TripsPage extends Component {
 
     addTrip = (newTrip) => {
         this.setState({
-            trips: [...this.state.trips, newTrip]
+            foundTrips: [...this.state.foundTrips, newTrip]
         })
         const trip = {
             trip: newTrip
     }
+    console.log(this.state.trips)
     fetch('http://localhost:3000/trips', {
         method: 'POST',
         headers: {
@@ -100,10 +100,11 @@ class TripsPage extends Component {
         },
        body: JSON.stringify(trip) 
     })
+    this.displayTripCards()
 }
 
+
     render(){
-       
     return(  
         <div className = "trip container">
             <div className="nav-bar">
@@ -113,12 +114,12 @@ class TripsPage extends Component {
                 <div className="location-card"> 
                     {this.showLocation()}  
                 </div>
-                <h2 className="pastTrips">- PAST TRIPS-</h2>
+                <h2 className="pastTrips">- PAST TRIPS -</h2>
                 <div>
-                    {this.showTrips()}
+                    {this.displayTripCards()}
                     <div className="addTrip">
                         <TripForm 
-                        location={this.state.locations[0]}
+                        location={this.state.locations.id}
                         addTrip={this.addTrip}
                         />
                     </div>
