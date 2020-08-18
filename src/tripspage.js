@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from './navbar.js'
+import Navbar from './navbar.js';
 import './tripspage.css';
-import LocationCard from './components/LocationCard'
-import TripsCards from './components/TripsCards';
+import LocationCard from './components/LocationCard';
+import TripsModal from './components/TripsModal';
 import TripForm from './components/TripForm';
+import TripCards from './components/TripCards';
 
 class TripsPage extends Component {
 
@@ -43,7 +44,6 @@ class TripsPage extends Component {
         this.setState(
             {trips: trips}
         )
-        console.log(this.state.trips)
         this.setFoundTrips()
     }
 
@@ -65,21 +65,11 @@ class TripsPage extends Component {
 
     displayTripCards = () => this.state.foundTrips.map(foundTrip => {
         return(
-            <div className="tripWithModal">
-                <div className="tripNoModal">
-                <h3 className="tripDate">{foundTrip.date}</h3>
-                <button className="tripButton" onClick={e => {
-                    this.showModal();
-                }}
-                > Show/Hide Details</button>
-                </div>
-                <TripsCards 
-                    trip={foundTrip}
-                    show={this.state.show}     
-                />
-            </div>
-            )
-        })
+            <TripCards 
+                trip={foundTrip}
+            />
+        )
+    })
     
     
 
