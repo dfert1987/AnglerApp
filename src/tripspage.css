@@ -127,9 +127,9 @@ input .placeHolder
 .tripButton {
     position: relative;
     right: -20px;
-    width: 150px;
+    width: 300px;
     font-family: "canter bold" ;
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     vertical-align: center;
     justify-content: center;
@@ -311,18 +311,22 @@ input .placeHolder
   .react-time-picker {
       background-color: white;
   }
+
   .tripNoModal {
       display: inline-flex;
       padding-right: 40%;
       position: relative;
-     top: 35px; 
+      top: 35px; 
+      right:-70px;
       justify-content: space-between;
       margin-bottom: 10px;
   }
+
   .pastTripCards {
       position: relative;
       top: 20px
   }
+  
   .submit {
       height: 40px;
       width: 80px;

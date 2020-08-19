@@ -19,20 +19,27 @@ class Home extends Component{
             <div class="button-container">
                 <div class="button-card" id="button-tb">
                     <img class="button-image" src="https://i.imgur.com/ppK33JO.jpg" alt="TackleBox"></img>
-                    <a class="link"  href="/tacklebox">
-                        <button id="tbbutton" class="btn">TackleBox</button>
-                    </a>
+                        <a class="tblink" href="/tacklebox">
+                            <div className="tbButton" align="center">
+                                <p class="tbtext">TackleBox</p>
+                            </div>
+                        </a>
+
                 </div>
                 <div class="button-card" id="button-map">
                     <img class="button-image" src="https://i.imgur.com/215fMsA.jpg" alt="Map"></img>
-                    <a class="link" href="/mappage">
-                        <button id="mapbutton" class="btn">Map</button>
+                    <a class="mapLink" href="/mappage">
+                        <div className="mapButton" align="center">
+                            <p class="mapText">Map</p>
+                        </div>
                     </a>
                 </div>
                 <div class="button-card" id="button-fish">
                     <img class="button-image" src="https://i.imgur.com/z7FjF2V.jpg" alt="Fish"></img>
-                    <a class="link"  href="/fish">
-                        <button id="fishbutton" class="btn">Fish-dex</button>
+                    <a class="fishLink"  href="/fish">
+                        <div class="fishButton" align="center">
+                            <p class="fishText">Fish-Dex</p>
+                        </div>
                     </a>
                 </div>
             </div>

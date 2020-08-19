@@ -66,9 +66,10 @@ body{
 
 .button-section .enter-button:hover {
     border-radius: 22px 6px;
-    background: rgb(46, 204, 113);
+    background: rgb(120, 183, 255);
     cursor: pointer;
   }
+  
 .fish {
 z-index: 1000;
 position: absolute;
