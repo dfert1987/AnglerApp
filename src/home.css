@@ -65,22 +65,102 @@ button.btn {
     align-content: center;
 }
 
-.link {
+.tblink {
     text-decoration: none;
     text-align: center;
     align-content: center;
-
+    color: black;
+    font-family: canter-bold;
+    font-size: 50px;
+    position: relative;
+    top: -150px;
+    right: -125px;
+    
+}
+.mapLink {
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
+    color: black;
+    font-family: canter-bold;
+    font-size: 50px;
+    position: relative;
+    top: -150px;
+    right: -140px;
 }
 
-#fishbutton{
+.fishButton{
     padding: 18px 5px 5px 20px;
+    position: relative;
+    box-shadow: 0 10px 20px -5px black;
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: lightgray;
+    transition: all 0.4s ease 0s;
+    border: 2px solid #494949;
+}
+.fishButton:hover{
+    color: #ffffff !important;
+    background: green;
+    border-color:lightgrey !important;
+    transition: all 0.4s ease 0s;
+}
+.fishLink {
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
+    color: black;
+    font-family: canter-bold;
+    font-size: 50px;
+    position: relative;
+    top: -150px;
+    right: -126px; 
+}
+.fishText {
+    font-size: 40px;
 }
 
-#mapbutton{
+.mapButton{
     padding: 18px 5px 5px 45px;
+    position: relative;
+    box-shadow: 0 10px 20px -5px black;
+    font-size: 40px;
+    width: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: lightgray;
+    transition: all 0.4s ease 0s;
+    border: 2px solid #494949;
 }
 
-#tbbutton{
-    padding: 18px 5px 5px 8px;
+.mapButton:hover {
+    color: #ffffff !important;
+    background: green;
+    border-color:lightgrey !important;
+    transition: all 0.4s ease 0s;
+}
+.mapText{
+    padding-right: 40px;
 }
 
+
+.tbButton{
+    padding: 18px 5px 5px 15px;
+    position: relative;
+    font-size: 40px;
+    width: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: lightgray;
+    transition: all 0.4s ease 0s;
+    border: 2px solid #494949;
+    box-shadow: 0 10px 20px -5px black;
+}
+.tbButton:hover{
+    color: #ffffff !important;
+background: green;
+border-color:lightgrey !important;
+transition: all 0.4s ease 0s;
+}
