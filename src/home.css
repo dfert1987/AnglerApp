@@ -97,7 +97,7 @@ button.btn {
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
-    background-color: lightgray;
+    background-color: white;
     transition: all 0.4s ease 0s;
     border: 2px solid #494949;
 }
@@ -130,7 +130,7 @@ button.btn {
     width: 150px;
     border-radius: 8px;
     cursor: pointer;
-    background-color: lightgray;
+    background-color: white;
     transition: all 0.4s ease 0s;
     border: 2px solid #494949;
 }
@@ -153,7 +153,7 @@ button.btn {
     width: 200px;
     border-radius: 8px;
     cursor: pointer;
-    background-color: lightgray;
+    background-color: white;
     transition: all 0.4s ease 0s;
     border: 2px solid #494949;
     box-shadow: 0 10px 20px -5px black;

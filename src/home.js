@@ -27,7 +27,7 @@ class Home extends Component{
 
                 </div>
                 <div class="button-card" id="button-map">
-                    <img class="button-image" src="https://i.imgur.com/215fMsA.jpg" alt="Map"></img>
+                    <img class="button-image" src="https://i.imgur.com/p0GSOT5.png" alt="Map"></img>
                     <a class="mapLink" href="/mappage">
                         <div className="mapButton" align="center">
                             <p class="mapText">Map</p>
@@ -35,7 +35,7 @@ class Home extends Component{
                     </a>
                 </div>
                 <div class="button-card" id="button-fish">
-                    <img class="button-image" src="https://i.imgur.com/z7FjF2V.jpg" alt="Fish"></img>
+                    <img class="button-image" src="https://i.imgur.com/mjExIDw.png" alt="Fish"></img>
                     <a class="fishLink"  href="/fish">
                         <div class="fishButton" align="center">
                             <p class="fishText">Fish-Dex</p>
