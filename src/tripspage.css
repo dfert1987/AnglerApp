@@ -327,7 +327,7 @@ input .placeHolder
       top: 20px
   }
   
-  .submit {
+  .tripsubmit {
       height: 40px;
       width: 80px;
       border-radius: 8px;
@@ -335,7 +335,12 @@ input .placeHolder
       font-family: canter-bold;
       position: relative;
       top: 70px;
-      right: 450px
+      right: 450px;
+      transition: all 0.4s ease 0s;
+  }
+  .tripsubmit:hover{
+    transition: all 0.4s ease 0s;
+    background-color: green
   }
   .species {
     display: inline-flex;

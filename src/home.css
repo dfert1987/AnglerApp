@@ -97,6 +97,11 @@ button.btn {
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
+    animation: bubbles 5s linear infinite both;
+    background:
+    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
     background-color: white;
     transition: all 0.4s ease 0s;
     border: 2px solid #494949;

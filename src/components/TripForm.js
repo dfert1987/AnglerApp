@@ -206,7 +206,7 @@ export default class TripForm extends Component {
                         </input>
                         </p>
                     </div>
-                    <input className="submit" type="submit" />
+                    <input className="tripsubmit" type="submit" />
                 </div>
             </form>
             )

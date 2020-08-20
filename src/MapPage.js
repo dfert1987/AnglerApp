@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Navbar from './navbar.js';
 import MarkerImage from './images/clearfishsmall.png';
+import AddressForm from './components/AddressForm.js'
+import NameForm from './components/NameForm.js'
+import LongLatForm from './components/LongLatForm.js'
 import './map.css';
 
 
@@ -72,6 +75,7 @@ class MapPage extends Component {
     }
     render(){
         return  (
+            <div>
             <div className="Main Render">
                 <div className="nav-bar">
                     <Navbar />
@@ -82,7 +86,14 @@ class MapPage extends Component {
                     <div id="map"></div>
                 </div>
             </div>
-            
+            <div className="mapFormContainer">
+                <h2 className="addMarkerTitle">Add A Fishing Spot</h2>
+                <h4 className="addMarkerOnBoard">Enter location by Name, Address or Coordinates.</h4>
+                <AddressForm />
+                <NameForm />
+                <LongLatForm />
+            </div>
+            </div>
         )
     }
 }
