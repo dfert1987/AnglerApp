@@ -8,7 +8,10 @@ Geocode.setApiKey("AIzaSyDYaZrPGmzfTjvWMW9uQAeJopq1UflPhvw")
 class AddressForm extends Component {
 
     state = {
-        address:""
+        address:"",
+        longitude:0,
+        latitude:0,
+        show: false
     }
 
     handleChange = (event) => {
@@ -26,11 +29,33 @@ class AddressForm extends Component {
         Geocode.fromAddress(this.state.address).then(
             response => {
                 const { lat, lng } = response.results[0].geometry.location;
-                console.log(lat, lng);
-              }
+                this.setLong(lng)
+                this.setLat(lat)
+                this.showStateChange()
+            }
         )
     }
 
+    setLong = (lng) => {
+        this.setState({
+            longitude:lng
+        })
+    }
+
+    setLat = (lat) => {
+        this.setState({
+            latitude:lat
+        })
+    }
+
+    showStateChange = () => {
+            this.setState({
+                show: true
+            })
+            console.log(this.state.show)
+        } 
+    
+    
     render(){
         return(
             <div>
