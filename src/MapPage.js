@@ -61,8 +61,6 @@ class MapPage extends Component {
             window.location.href = `/tripspage/${location.id}`
         })
 
-
-
          marker.addListener('mouseover', function() {
 
             console.log(location)
