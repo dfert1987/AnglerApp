@@ -30,7 +30,7 @@ html, body {
     padding: 0;
 }
 .addMarkerFormLongLat {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .addMarkerFormName {
@@ -38,6 +38,15 @@ html, body {
 }
 .addMarkerFormAddress {
     margin-bottom: 10px;
+    margin-right: 100px
+}
+.or {
+    color: white;
+    font-family: canter bold;
+    margin-right: 280px;
+    font-size: 30px;
+
+    text-shadow: 2px 2px black;
 }
 
 .mapFormContainer {
@@ -49,13 +58,13 @@ html, body {
     box-shadow: 2px 2px 3px black;
 }
 .addMarkerTitle {
-    margin-right: 250px;
+    margin-right: 260px;
     font-family: Aventura;
     color: green;
     text-shadow: 2px 2px black;
 }
 .addMarkerOnBoard {
-    margin-right: 210px;
+    margin-right: 240px;
     color: white;
     font-family: "canter bold";
     font-size: 30px;
@@ -96,7 +105,8 @@ html, body {
     margin-right: 5px;
 }
 .addressInput {
-    margin-right: 5px
+    margin-right: 5px;
+    margin-bottom: 15px;
 }
 .formInputs {
     position: relative;
