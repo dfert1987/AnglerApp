@@ -59,7 +59,32 @@ html, body {
     color: white;
     font-family: "canter bold";
     font-size: 30px;
+    text-shadow: 2px 2px black
 
+}
+.longitudeLabel {
+    font-family: canter bold;
+    position: relative;
+    top: 2px;
+    font-size: 25px
+}
+.latitudeLabel {
+    font-family: canter bold;
+    position: relative;
+    top: 2px;
+    font-size: 25px
+}
+.nameLabel {
+    font-family: canter bold;
+    position: relative;
+    top: 2px;
+    font-size: 25px
+}
+.addressLabel {
+    font-family: canter bold;
+    position: relative;
+    top: 2px;
+    font-size: 25px
 }
 .latitudeInput {
     margin-right: 5px;
