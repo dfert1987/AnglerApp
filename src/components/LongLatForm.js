@@ -1,6 +1,9 @@
 import React,  { Component } from 'react';
 import Geocode from "react-geocode";
 
+Geocode.setLanguage("en")
+Geocode.setRegion("US")
+
 class LongLatForm extends Component {
 
     state = {

@@ -1,6 +1,10 @@
 import React,  { Component } from 'react';
 import Geocode from "react-geocode";
 
+Geocode.setLanguage("en")
+Geocode.setRegion("us")
+Geocode.setApiKey("AIzaSyDYaZrPGmzfTjvWMW9uQAeJopq1UflPhvw") 
+
 class AddressForm extends Component {
 
     state = {
@@ -15,7 +19,16 @@ class AddressForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state)
+        this.convertAddress()
+    }
+
+    convertAddress = () => {
+        Geocode.fromAddress(this.state.address).then(
+            response => {
+                const { lat, lng } = response.results[0].geometry.location;
+                console.log(lat, lng);
+              }
+        )
     }
 
     render(){
