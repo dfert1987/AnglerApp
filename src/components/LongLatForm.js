@@ -8,7 +8,8 @@ class LongLatForm extends Component {
 
     state = {
         longitude: 0,
-        latitude: 0
+        latitude: 0,
+        show: false
     }
 
     handleChange = (event) => {
@@ -19,8 +20,14 @@ class LongLatForm extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state)
+        this.showStateChange()
     }
+
+    showStateChange = () => {
+        this.setState({
+            show: true
+        })
+    } 
 
     render(){
         return(
