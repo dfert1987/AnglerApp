@@ -4,6 +4,7 @@ import MarkerImage from './images/clearfishsmall.png';
 import AddressForm from './components/AddressForm.js'
 import NameForm from './components/NameForm.js'
 import LongLatForm from './components/LongLatForm.js'
+import AddLocationModal from './components/AddLocationModal'
 import './map.css';
 
 
@@ -71,32 +72,29 @@ class MapPage extends Component {
         })
     })
     }
+
     render(){
         return  (
-            <div>
-            <div className="Main Render">
-                <div className="nav-bar">
-                    <Navbar />
-                    <h1 className="maptitle">YOUR FISHING SPOTS</h1>
-                    <h3 className="mapsubtitle">- Click a Marker to See Past Trips-</h3>
+                 <div className="Main Render">
+                    <div className="nav-bar">
+                        <Navbar />
+                    </div>
+                    <div className="titleContainer">
+                        <h1 className="maptitle">YOUR FISHING SPOTS</h1>
+                        <h3 className="mapsubtitle">- Click a Marker to See Past Trips-</h3>
+                    </div>
+                    <div className="map-wrapper">
+                        <div id="map"></div>
+                    </div>
+                    <div className="formandmodalcontain">
+                        <div className="formInputs">
+                            <LongLatForm />
+                        </div> 
+                    </div>
                 </div>
-                <div className="map-wrapper">
-                    <div id="map"></div>
-                </div>
-            </div>
-            <div className="mapFormContainer">
-                <h2 className="addMarkerTitle">ADD A FISHING SPOT</h2>
-                <h4 className="addMarkerOnBoard">- Enter location by Coordinates or Address  -</h4>
-                <div className="formInputs">
-                    <LongLatForm />
-                    <h4 className="or">or</h4>
-                    <AddressForm />
-                </div>
-            </div>
-        </div>
-        )
+            )
+        }
     }
-}
 
 function loadScript(url) {
     var index  = window.document.getElementsByTagName("script")[0]
