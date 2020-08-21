@@ -87,12 +87,14 @@ class MapPage extends Component {
                 </div>
             </div>
             <div className="mapFormContainer">
-                <h2 className="addMarkerTitle">Add A Fishing Spot</h2>
-                <h4 className="addMarkerOnBoard">Enter location by Name, Address or Coordinates.</h4>
-                <AddressForm />
-                <NameForm />
-                <LongLatForm />
-            </div>
+                <h2 className="addMarkerTitle">ADD A FISHING SPOT</h2>
+                <h4 className="addMarkerOnBoard">- Enter location by Name, Address or Coordinates -</h4>
+                <div className="formInputs">
+                    <LongLatForm />
+                    <AddressForm />
+                    <NameForm />
+                </div>
+\            </div>
             </div>
         )
     }
