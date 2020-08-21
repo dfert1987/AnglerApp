@@ -16,6 +16,7 @@ handleSubmit = (event) => {
     event.preventDefault();
     this.prBackend()
     this.prFrontend(event)
+  
 }
 
 prFrontend = (event) => {
@@ -23,7 +24,6 @@ prFrontend = (event) => {
         [event.target.name]: event.target.value
     })
 }
-
 
 prBackend = () => {
     this.props.oneFish.pr = this.state.pr

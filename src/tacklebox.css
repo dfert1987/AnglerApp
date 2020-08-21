@@ -40,6 +40,8 @@
 .Add-remove {
     height:40px;
     width: 100px;
+    transition: all 0.4s ease 0s;
+
     border-radius: 8px;
     cursor: pointer;
     font-family: "canter bold";
@@ -155,6 +157,7 @@ justify-content: space-between;
     /* text-align: center; */
     align-content: center;
     position: relative;
+    transition: all 0.4s ease 0s;
     right: -255px;
     font-family: Aventura;
     text-shadow: 2px 2px 3px black;
@@ -174,6 +177,10 @@ justify-content: space-between;
     color: white;
     text-align: center;
     padding: 30px;
+}
+.Add-remove:hover {
+    transition: all 0.4s ease 0s;
+    background-color: rgb(3, 179, 167);;
 }
 
 textarea:focus, input:focus {
@@ -197,9 +204,9 @@ textarea:focus, input:focus {
     top: 2px;
 }
 
-.submit {
+input.submit {
     height: 40px;
-    width: 90px;
+    width: 120px;
     font-family: "canter bold";
     font-size: 25px;
     cursor: pointer;
@@ -207,8 +214,15 @@ textarea:focus, input:focus {
     border-radius: 10px;
     border-style: outset;
     position: relative;
-    top: 15px;
-    -webkit-appearance: button;
+    top: 10px;
+    right: 0px;
+    transition: all 0.4s ease 0s;
+
+}
+
+input.submit:hover {
+    background-color: rgb(3, 179, 167);
+    transition: all 0.4s ease 0s;
 
 }
 /* 
