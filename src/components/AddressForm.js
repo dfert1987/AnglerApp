@@ -1,5 +1,6 @@
 import React,  { Component } from 'react';
 import Geocode from "react-geocode";
+import AddLocationModal from './AddLocationModal'
 
 Geocode.setLanguage("en")
 Geocode.setRegion("us")
@@ -52,9 +53,14 @@ class AddressForm extends Component {
             this.setState({
                 show: true
             })
-            console.log(this.state.show)
-        } 
-    
+            this.modal()
+        }
+        
+    modal = () => {
+        if(this.state.show === true) {
+            this.props.locationModal(this.state.longitude, this.state.latitude)
+        }
+    }
     
     render(){
         return(
