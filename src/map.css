@@ -146,3 +146,7 @@ html, body {
 .modalContainer {
     z-index: 300;
 }
+.locationSubmit {
+    position: relative;
+    top: -300px
+}
