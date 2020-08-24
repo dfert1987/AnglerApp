@@ -143,3 +143,6 @@ html, body {
     top: 2px;
     cursor: pointer;
 }
+.modalContainer {
+    z-index: 300;
+}
