@@ -62,6 +62,12 @@ class LongLatForm extends Component {
         console.log(this.state)
     } 
 
+    closeModal = () => {
+        this.setState({
+            show: false
+        })
+    }
+
     showModal = () => {
         if(this.state.show == true){
             
@@ -69,6 +75,7 @@ class LongLatForm extends Component {
                 <AddLocationModal 
                     lat={this.state.latitude}
                     lng={this.state.longitude}
+                    showModal = {this.closeModal}
                 />
             )
         }

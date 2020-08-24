@@ -8,7 +8,8 @@ class AddLocationModal extends Component {
         body: "",
         description: "",
         lng: this.props.lng,
-        lat: this.props
+        lat: this.props,
+        show: true
     }
 
     handleChange = (event) => {
@@ -20,6 +21,14 @@ class AddLocationModal extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         console.log(this.state)
+    }
+
+    handleClick = (event) => {
+        event.preventDefault()
+        this.setState({
+            show: false
+        })
+         this.props.showModal()   
     }
 
     render(){
@@ -45,6 +54,7 @@ class AddLocationModal extends Component {
                     <input className="descriptionInput" name="description" placeholder="Small lake in a residential neighborhood" value={this.state.description} onChange={this.handleChange}></input>
                     <input className="locationSubmit" type="submit"/>
                 </form>
+                <button className="closeModalButton" value={this.state.show} onClick={this.handleClick}>CLOSE</button>
             </div>
         )
     }
