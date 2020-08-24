@@ -67,7 +67,7 @@ class AddLocationModal extends Component {
                     <input className="locationSubmit" type="submit"/>
                     </div>
                 </form>
-                <button className="closeModalButton" value={this.state.show} onClick={this.handleClick}>CLOSE</button>
+                <button className="closeModalButton" value={this.state.show} onClick={this.handleClick}>Close</button>
             </div>
         )
     }
