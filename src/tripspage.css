@@ -232,8 +232,8 @@ input .placeHolder
       font-family: Aventura;
       color: green;
       text-shadow:  black 2px 2px;
-      position: absolute;
-      top: 600px;
+      margin-bottom: 0px;
+      margin-top: 20px;
       right: 605px
   }
   .tripscard {
@@ -316,10 +316,11 @@ input .placeHolder
       display: inline-flex;
       padding-right: 40%;
       position: relative;
-      top: 35px; 
+      top: 0px; 
+    
       right:-70px;
-      justify-content: space-between;
-      margin-bottom: 10px;
+      /* justify-content: space-between; */
+      margin-bottom: 5px;
   }
 
   .pastTripCards {
