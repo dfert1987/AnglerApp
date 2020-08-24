@@ -49,16 +49,31 @@ html, body {
 }
 .modalContainer{
     position: relative;
-    top: -700px;
-    margin-right: 400px
+    top: -750px;
+    margin-right: 400px;
+    box-shadow: 2px 2px 8px black;
+    border-radius: 5px;
+    background-image: url("https://ae01.alicdn.com/kf/HTB1UZdOKXXXXXXqXpXXq6xXFXXXT/5X7ft-White-wood-Texture-seamless-Floordrop-Wood-Distressed-Newborns-photo-studios-background-D-3516.jpg");
 }
 .ModalTitle{
     font-family: aventura;
-    color: green;
+    color: rgb(3, 179, 3);
     margin-right: 30px;
+    margin-top: 30px;
+    position: relative;
+    top: 10px;
     text-shadow: 2px 2px black;
 }
-
+.spotPictureLabel {
+    color:rgb(3, 179, 3);
+    font-family: aventura;
+    text-shadow: 2px 2px 1px black;
+}
+.fishingHoleLabel {
+    color:rgb(3, 179, 3);
+    font-family: aventura;
+    text-shadow: 2px 2px 1px black;
+}
 .mapFormContainer {
     margin-top: 50px;
     margin-right: 300px;
@@ -160,6 +175,12 @@ html, body {
 }
 .modalContainer {
     z-index: 300;
+    background-color: green;
+    margin-left: 380px;
+    padding-right: 70px;
+    position: relative;
+    right: -67px;
+    
 }
 .locationSubmit {
    margin-top: 10px;
@@ -167,40 +188,79 @@ html, body {
    font-family: canter-bold;
    font-size: 25px;
    height: 40px;
-   margin-right: 150px;
+   margin-right: 130px;
    cursor: pointer;
    border-radius: 8px;
+   transition: all 0.4s ease 0s;
 }
+.locationSubmit:hover {
+    transition: all 0.4s ease 0s;
+    background-color: green
+}
+.locationSubmit:active {
+    transition: all 0.1s ease 0s;
+    background-color: rgb(131, 236, 131);
+    opacity: 1;
+}
+
 .spot{
-    margin-top: 30px
+    margin-top: 30px;
+    margin-right: -30px
 }
 .pic{
     margin-top: 10px;
-    margin-right: 110px
+    margin-right: 100px
 }
 .body {
     margin-top: 10px;
     margin-bottom: 5px;
-    margin-right: 140px
+    margin-right: 110px
 }
 .descriptionLabel {
-    margin-right: 247px;
+    margin-right: 237px;
     margin-top: 10px;
+    font-family: aventura;
+    color: rgb(3, 179, 3);
+    text-shadow: 2px 2px 1px black;
+}
+.bodyInput {
+    height: 25px
 }
 .locationDescriptionInput {
     height:60px;
     width: 300px;
     margin-top:5px;
-    margin-right: 55px
+    margin-right: 25px
 }
 
 .closeModalButton {
 font-family: canter-bold;
-height: 25px;
-width: 50px;
+height: 40px;
+width: 100px;
 cursor: pointer;
-font-size: 17px;
-border-radius: 5px;
+font-size: 25px;
+border-radius: 9px;
 margin-top:50px;
-margin-left:30px
+margin-left:80px;
+margin-bottom: 10px;
+margin-right:0px;
+position: relative;
+right: -50px;
+transition: all 0.4s ease 0s;
+}
+.closeModalButton:hover{
+    transition: all 0.4s ease 0s;
+    background-color: green
+}
+
+.closeModalButton:active{
+    transition: all 0.1s ease 0s;
+    background-color: rgb(131, 236, 131);
+    opacity: 1;
+}
+
+.bodyLabel {
+    font-family: aventura;
+    color: rgb(3, 179, 3);
+    text-shadow: 2px 2px 1px black;
 }
