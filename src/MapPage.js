@@ -11,8 +11,7 @@ import './map.css';
 class MapPage extends Component {
 
     state = {
-        locations: [],
-        newLocation: []
+        locations: []
       }
 
     componentDidMount() {
@@ -24,9 +23,11 @@ class MapPage extends Component {
 
     addLocation = (newLocation) => {
         this.setState({
-            newLocation: newLocation
+            locations:[...this.state.locations, newLocation]
         })
-       
+        const location = {
+            location: newLocation
+        }
         fetch('http://localhost:3000/locations', {
         method: 'POST',
         headers: {
@@ -34,7 +35,7 @@ class MapPage extends Component {
         },
        body: JSON.stringify(newLocation) 
     })
-    console.log(newLocation)
+    this.renderMap()
 }
 
     controllerFunction = (result) => {
