@@ -7,10 +7,12 @@ class AddLocationModal extends Component {
         image: "",
         body: "",
         description: "",
-        lng: this.props.lng,
-        lat: this.props,
+        lng: 0,
+        lat: 0,
         show: true
     }
+
+
 
     handleChange = (event) => {
         this.setState({
@@ -20,7 +22,32 @@ class AddLocationModal extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        console.log(this.state)
+        this.setState({
+            lng:this.props.lng
+        })
+        this.setState({
+            lat:this.props.lat
+        })
+        this.toMapPage()
+    }
+
+    toMapPage = () => {
+        let name = this.state.name
+        let image = this.state.image
+        let body = this.state.body
+        let description = this.state.description
+        let lng = this.props.lng
+        let lat = this.props.lat
+        let newLocation = {
+            lat,
+            lng,
+            name,
+            image,
+            description,
+            body
+        }
+        console.log(newLocation)
+        this.props.addLocation(newLocation)
     }
 
     handleClick = (event) => {
@@ -30,6 +57,8 @@ class AddLocationModal extends Component {
         })
          this.props.showModal()   
     }
+
+
 
     render(){
         return(

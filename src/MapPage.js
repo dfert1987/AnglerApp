@@ -11,7 +11,8 @@ import './map.css';
 class MapPage extends Component {
 
     state = {
-        locations: []
+        locations: [],
+        newLocation: []
       }
 
     componentDidMount() {
@@ -20,6 +21,21 @@ class MapPage extends Component {
             .then(result => this.controllerFunction(result)
         )
     }
+
+    addLocation = (newLocation) => {
+        this.setState({
+            newLocation: newLocation
+        })
+       
+        fetch('http://localhost:3000/locations', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+       body: JSON.stringify(newLocation) 
+    })
+    console.log(newLocation)
+}
 
     controllerFunction = (result) => {
         this.setLocations(result)
@@ -88,7 +104,9 @@ class MapPage extends Component {
                     </div>
                     <div className="formandmodalcontain">
                         <div className="formInputs">
-                            <LongLatForm />
+                            <LongLatForm 
+                                addLocation = {this.addLocation}
+                            />
                         </div> 
                     </div>
                 </div>

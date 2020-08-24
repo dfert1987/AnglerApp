@@ -10,8 +10,8 @@ class LongLatForm extends Component {
 
     state = {
         address: "",
-        longitude: 0,
-        latitude: 0,
+        longitude: "",
+        latitude: "",
         show: false
     }
 
@@ -38,6 +38,7 @@ class LongLatForm extends Component {
                 const { lat, lng } = response.results[0].geometry.location;
                 this.setLong(lng)
                 this.setLat(lat)
+                console.log(lat)
                 this.showStateChange()
             }
         )
@@ -47,6 +48,7 @@ class LongLatForm extends Component {
         this.setState({
             longitude:lng
         })
+        console.log(this.state.longitude)
     }
 
     setLat = (lat) => {
@@ -76,6 +78,7 @@ class LongLatForm extends Component {
                     lat={this.state.latitude}
                     lng={this.state.longitude}
                     showModal = {this.closeModal}
+                    addLocation = {this.props.addLocation}
                 />
             )
         }
