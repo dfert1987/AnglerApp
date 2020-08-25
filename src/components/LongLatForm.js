@@ -79,6 +79,7 @@ class LongLatForm extends Component {
                     lng={this.state.longitude}
                     showModal = {this.closeModal}
                     addLocation = {this.props.addLocation}
+                    locations = {this.props.locations}
                 />
             )
         }

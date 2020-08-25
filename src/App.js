@@ -29,7 +29,7 @@ function App() {
         <Route path ='/fish'>
           <Fish />
         </Route>
-        <Route path='/tripspage/:locationId' component={TripsPage} /> 
+        <Route path='/tripspage/:locationId' component={TripsPage} />
   </Router>
   ) 
 }

@@ -22,9 +22,11 @@ class MapPage extends Component {
     }
 
     addLocation = (newLocation) => {
+        console.log(newLocation)
         this.setState({
-            locations:[...this.state.locations, newLocation]
+            locations: [...this.state.locations, newLocation]
         })
+        console.log(this.state.locations)
         const location = {
             location: newLocation
         }
@@ -33,9 +35,10 @@ class MapPage extends Component {
         headers: {
             'Content-Type': 'application/json'
         },
-       body: JSON.stringify(newLocation) 
+       body: JSON.stringify(location) 
     })
     this.renderMap()
+    console.log(this.state.locations)
 }
 
     controllerFunction = (result) => {
@@ -45,8 +48,8 @@ class MapPage extends Component {
     setLocations =(result) => {
         this.setState(
             {locations: result},
-            this.renderMap()
           )
+          this.renderMap()
         }
 
     renderMap = () => {
@@ -77,11 +80,10 @@ class MapPage extends Component {
         
         marker.addListener('click', function() {
             window.location.href = `/tripspage/${location.id}`
+            console.log(this.state.locations)
         })
 
          marker.addListener('mouseover', function() {
-
-            console.log(location)
 
             infowindow.setContent(contentString)
 
@@ -107,6 +109,7 @@ class MapPage extends Component {
                         <div className="formInputs">
                             <LongLatForm 
                                 addLocation = {this.addLocation}
+                                locations = {this.state.locations}
                             />
                         </div> 
                     </div>
