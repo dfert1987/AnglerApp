@@ -47,6 +47,7 @@ class TripsPage extends Component {
     }
 
     showLocation = () => {
+        console.log(this.state.locations)
         return <LocationCard location={this.state.locations} />
     }
     

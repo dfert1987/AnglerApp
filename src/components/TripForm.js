@@ -96,9 +96,6 @@ export default class TripForm extends Component {
             location_id,
             fish_id
         }
-
-       console.log(addedTrip)
-       console.log(this.props.location)
         event.preventDefault()
         this.props.addTrip( addedTrip )
     }
@@ -117,8 +114,7 @@ export default class TripForm extends Component {
                             name="date"
                             placeholder="mm/dd/yyyy"
                             value={this.state.date}
-                            onChange={this.handleChange}
-                            
+                            onChange={this.handleChange}     
                         >
                         </input>
                     </div>

@@ -9,6 +9,7 @@ class AddLocationModal extends Component {
         description: "",
         lng: 0,
         lat: 0,
+        id: ((this.props.locations).length)+1,
         show: true
     }
 
@@ -29,6 +30,7 @@ class AddLocationModal extends Component {
             lat:this.props.lat
         })
         this.toMapPage()
+        console.log(this.state.id)
     }
 
     toMapPage = () => {
@@ -38,15 +40,16 @@ class AddLocationModal extends Component {
         let description = this.state.description
         let lng = this.props.lng
         let lat = this.props.lat
+        let id = this.state.id
         let newLocation = {
             lat,
             lng,
             name,
             image,
             description,
-            body
+            body,
+            id
         }
-        console.log(newLocation)
         this.props.addLocation(newLocation)
     }
 
@@ -95,6 +98,7 @@ class AddLocationModal extends Component {
                     <br></br>
                     <input className="locationSubmit" type="submit"/>
                     </div>
+                    <input type="hidden" name="id" value = {(this.state.id + 1)}/>
                 </form>
                 <button className="closeModalButton" value={this.state.show} onClick={this.handleClick}>Close</button>
             </div>
