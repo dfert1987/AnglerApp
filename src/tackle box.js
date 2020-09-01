@@ -23,13 +23,13 @@ class TackleBox extends Component {
 
     setLures =(result) => {
         this.setState(
-            {lures: result}
+            { lures: result }
           )
           this.setTackleBox(result)
         }
 
     setTackleBox =() => {
-    const setTB = this.state.lures.filter(lure => lure.favorited !== false)
+        const setTB = this.state.lures.filter(lure => lure.favorited !== false)
         this.setState({
             tacklebox:setTB
           })
@@ -37,19 +37,18 @@ class TackleBox extends Component {
     
     showLures = () => this.state.lures.map(lure => {
         return <LureCard key={lure.id} 
-        addToTackleBox={this.addToTackleBox}
-        favoriteBackend={this.tackleBoxBackend} 
-        lure={lure}/> 
+            addToTackleBox={this.addToTackleBox}
+            favoriteBackend={this.tackleBoxBackend} 
+            lure={lure}/> 
       })
     
     showTackleBox = () => this.state.tacklebox.map(lure => {
         return <LureCard key={lure.id} 
-        removeFromTackleBox={this.removeFromTackleBox} 
-        unfavoriteBackend={this.unfavoriteBackend}
-        lure={lure}/>
+            removeFromTackleBox={this.removeFromTackleBox} 
+            unfavoriteBackend={this.unfavoriteBackend}
+            lure={lure}/>
         })
 
-        
     addToTackleBox = (lure) => {
         if(!this.state.tacklebox.find(activeLure => lure.id === activeLure.id)){
             this.setState({
@@ -57,6 +56,7 @@ class TackleBox extends Component {
               })
             }
         }   
+
     tackleBoxBackend = (lure) => {
         if (lure.favorited === false) {
             lure.favorited = true
@@ -69,6 +69,7 @@ class TackleBox extends Component {
                 body: JSON.stringify(lure)
                 })
             }
+
     removeFromTackleBox = (lure) => {
         const filtered = this.state.tacklebox.filter(activeLure => activeLure.id !== lure.id )
             this.setState(
@@ -86,17 +87,16 @@ class TackleBox extends Component {
                 "Content-Type": "application/json"
                  },
                 body: JSON.stringify(lure)
-                })
+            })
     }
+
     addLure = (newLure) => {
         this.setState({
             lures: [...this.state.lures, newLure]
         })
-
         const lure = {
             lure: newLure
         }
-
         fetch('http://localhost:3000/lures', {
             method: 'POST',
             headers: {
@@ -105,6 +105,7 @@ class TackleBox extends Component {
            body: JSON.stringify(lure) 
         })
     }
+    
     render(){
         console.log(...this.state.lures)
         return  (
