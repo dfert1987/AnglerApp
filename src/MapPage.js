@@ -26,20 +26,18 @@ class MapPage extends Component {
         this.setState({
             locations: [...this.state.locations, newLocation]
         })
-        console.log(this.state.locations)
         const location = {
             location: newLocation
         }
         fetch('http://localhost:3000/locations', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-       body: JSON.stringify(location) 
-    })
-    this.renderMap()
-    console.log(this.state.locations)
-}
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(location) 
+            })
+            this.renderMap()
+    }
 
     controllerFunction = (result) => {
         this.setLocations(result)
@@ -47,7 +45,7 @@ class MapPage extends Component {
 
     setLocations =(result) => {
         this.setState(
-            {locations: result},
+            {locations: result}
           )
           this.renderMap()
         }
@@ -62,13 +60,11 @@ class MapPage extends Component {
             center: {lat:39.113014, lng: -105.358887},
             zoom: 8
             })
-    var infowindow = new window.google.maps.InfoWindow()
+        var infowindow = new window.google.maps.InfoWindow()
 
-    
-    this.state.locations.map(location => {
+        this.state.locations.map(location => {
 
         var contentString = `${location.name}`
-
         var marker = new window.google.maps.Marker({
             position: {lat: parseFloat(location.lat), 
                     lng: parseFloat(location.lng)},
@@ -77,19 +73,15 @@ class MapPage extends Component {
             icon:  MarkerImage,
             id: location.id      
         })
-        
         marker.addListener('click', function() {
             window.location.href = `/tripspage/${location.id}`
             console.log(this.state.locations)
         })
-
          marker.addListener('mouseover', function() {
-
             infowindow.setContent(contentString)
-
             infowindow.open(map, marker)
+            })
         })
-    })
     }
 
     render(){
@@ -126,6 +118,5 @@ function loadScript(url) {
     script.defer = true
     index.parentNode.insertBefore(script, index)
   }
-
 
 export default MapPage;
