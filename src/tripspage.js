@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navbar from './navbar.js';
 import './tripspage.css';
 import LocationCard from './components/LocationCard';
-import TripsModal from './components/TripsModal';
 import TripForm from './components/TripForm';
 import TripCards from './components/TripCards';
 
@@ -47,7 +46,6 @@ class TripsPage extends Component {
     }
 
     showLocation = () => {
-        console.log(this.state.locations)
         return <LocationCard location={this.state.locations} />
     }
     
@@ -72,7 +70,6 @@ class TripsPage extends Component {
         const trip = {
             trip: newTrip
     }
-    console.log(this.state.trips)
     fetch('http://localhost:3000/trips', {
         method: 'POST',
         headers: {
@@ -99,8 +96,8 @@ class TripsPage extends Component {
                     {this.displayTripCards()}
                     <div className="addTrip">
                         <TripForm 
-                        location={this.state.locations.id}
-                        addTrip={this.addTrip}
+                            location={this.state.locations.id}
+                            addTrip={this.addTrip}
                         />
                     </div>
                 </div>
