@@ -1,68 +1,91 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Angler
 
-## Available Scripts
+<img src="./src/images/logo.png">
 
-In the project directory, you can run:
+### Log Every Cast
 
-### `yarn start`
+## Description
+* Users can Log past fishing trips to improve future success
+* Keep track of what worked at different times of year, in different weather and at different locations
+* Use Google Maps API to add new fishing holes to your map
+* Keep track of all your lures
+* Keep track of which species of fish you've caught and your personal records for each
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
+* Clone down this repo
+* Clone down rails backend <a href="https://github.com/dfert1987/Angler_Backend">HERE</a>
+* Open rails backend by typing 'rails s' into termninal
+* Expo is required to open frontend. If expo is installed use 'expo start' to open frontend.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Demo 
 
-### `yarn test`
+### Watch demo below
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a href="https://streamable.com/d9x1q5"> CLICK HERE TO WATCH!</a>
 
-### `yarn build`
+## Walkthrough
+<img src="intro.png">
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Choose a Category
+<img src="allstadiums.png">
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* Choose the Stadium you are at (Currently only Wrigley Field is up and working for presentation purposes)
+* Stadium cards organized by division
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### Choose Section
+<img src="main.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Choose map to see a map of fishing spots
+* Choose fish-dex to see all the fish you've caught
+* Choose Tackle Box to keep track of your lures
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tackle Box
+<img src="TB.png">
+ 
+* Toggle lures to and from Tackle Box (so you can add them to recorded trips)
+* Import New lures to the page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Fish-Dex
+<img src="fish.png">
 
-## Learn More
+* Flip fish cards to see more info
+* Add fish to your caught list
+* Save the size of your biggest catch of each species
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Map
+<img src="map.png">
 
-### Code Splitting
+* Click marker on map to explore fishing hole
+* Uses Google Maps API
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+### Location Page
+<img src="location.png">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* See info about location
+* click on past trips to see info about what worked that day
+* add new trips to location
 
-### Making a Progressive Web App
+### Add Location
+<img src="addlocation.png">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+* add location to map
+* user either coordinates, address or location name
 
-### Advanced Configuration
+<img src="modal.png">
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+* update new location with your description of the spot
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Notes
 
-### `yarn build` fails to minify
+* Still looking to add a login feature
+* Want pictures to be added locally too
+* Still a work in progress
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Thanks for reading!
+
+
