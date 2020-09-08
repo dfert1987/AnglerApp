@@ -22,6 +22,6 @@ export default function LureCard({lure, addToTackleBox, removeFromTackleBox, fav
               <h4>COLOR: {lure.color}</h4>
               <h4>SIZE: {lure.size}</h4>
               <button className="Add-remove" onClick={handleClick}>Add/Remove</button>
-          </li>
+            </li>
           )
         }
