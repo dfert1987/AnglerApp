@@ -71,8 +71,7 @@ class LongLatForm extends Component {
     }
 
     showModal = () => {
-        if(this.state.show == true){
-            
+        if(this.state.show == true){  
             return(
                 <AddLocationModal 
                     lat={this.state.latitude}

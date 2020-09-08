@@ -16,7 +16,6 @@ function App() {
       <Route exact path='/'>
         <Title />
       </Route>
-
       <Route exact path='/home'>
           <Home />
         </Route>
@@ -33,7 +32,5 @@ function App() {
   </Router>
   ) 
 }
-
-
 
 export default App;

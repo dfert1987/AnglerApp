@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navbar from './navbar.js';
 import './tripspage.css';
 import LocationCard from './components/LocationCard';
-import TripsModal from './components/TripsModal';
 import TripForm from './components/TripForm';
 import TripCards from './components/TripCards';
 
@@ -47,17 +46,16 @@ class TripsPage extends Component {
     }
 
     showLocation = () => {
-        console.log(this.state.locations)
         return <LocationCard location={this.state.locations} />
     }
     
     setFoundTrips = () => {
         const urlID = parseInt(this.props.match.params.locationId)
         const allFoundTrips = this.state.trips.filter(foundTrip => {
-            return foundTrip.location_id === urlID
+        return foundTrip.location_id === urlID
         })
-            this.setState(
-                {foundTrips: allFoundTrips}
+        this.setState(
+            { foundTrips: allFoundTrips }
         )
         this.displayTripCards()
     }
@@ -71,43 +69,41 @@ class TripsPage extends Component {
         })
         const trip = {
             trip: newTrip
+        }
+        fetch('http://localhost:3000/trips', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(trip) 
+        })
+        this.displayTripCards()
     }
-    console.log(this.state.trips)
-    fetch('http://localhost:3000/trips', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-       body: JSON.stringify(trip) 
-    })
-    this.displayTripCards()
-}
 
 
     render(){
-    return(  
-        <div className = "trip container">
-            <div className="nav-bar">
-                <Navbar />
-            </div>
-            <div className="trip-main">
-                <div className="location-card"> 
-                    {this.showLocation()}  
+        return(  
+            <div className = "trip container">
+                <div className="nav-bar">
+                    <Navbar />
                 </div>
-                <h2 className="pastTrips">- PAST TRIPS -</h2>
-                <div className="pastTripCards">
-                    {this.displayTripCards()}
-                    <div className="addTrip">
-                        <TripForm 
-                        location={this.state.locations.id}
-                        addTrip={this.addTrip}
-                        />
+                <div className="trip-main">
+                    <div className="location-card"> 
+                        {this.showLocation()}  
+                    </div>
+                    <h2 className="pastTrips">- PAST TRIPS -</h2>
+                    <div className="pastTripCards">
+                        {this.displayTripCards()}
+                        <div className="addTrip">
+                            <TripForm 
+                                location={this.state.locations.id}
+                                addTrip={this.addTrip}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        )
+            )
+        }  
     }
-    
-}
 export default TripsPage;
