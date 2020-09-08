@@ -1,6 +1,5 @@
 import React,  { Component } from 'react';
 import Geocode from "react-geocode";
-import AddLocationModal from './AddLocationModal'
 
 Geocode.setLanguage("en")
 Geocode.setRegion("us")
@@ -67,7 +66,10 @@ class AddressForm extends Component {
             <div>
                 <form className="addMarkerFormAddress" onSubmit={this.handleSubmit}>
                     <label className="addressLabel">Adress: </label>
-                    <input className="addressInput" type="text" name="address" placeholder="255 Fishy Road, Fishville, CO 80205" onChange={this.handleChange}></input>
+                    <input className="addressInput" type="text" name="address" 
+                        placeholder="255 Fishy Road, Fishville, CO 80205" 
+                        onChange={this.handleChange}>
+                    </input>
                     <input className="addressSubmit" type="submit"></input>
                 </form>
             </div>

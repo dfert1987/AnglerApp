@@ -52,10 +52,10 @@ class TripsPage extends Component {
     setFoundTrips = () => {
         const urlID = parseInt(this.props.match.params.locationId)
         const allFoundTrips = this.state.trips.filter(foundTrip => {
-            return foundTrip.location_id === urlID
+        return foundTrip.location_id === urlID
         })
-            this.setState(
-                {foundTrips: allFoundTrips}
+        this.setState(
+            { foundTrips: allFoundTrips }
         )
         this.displayTripCards()
     }
@@ -69,42 +69,41 @@ class TripsPage extends Component {
         })
         const trip = {
             trip: newTrip
+        }
+        fetch('http://localhost:3000/trips', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(trip) 
+        })
+        this.displayTripCards()
     }
-    fetch('http://localhost:3000/trips', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-       body: JSON.stringify(trip) 
-    })
-    this.displayTripCards()
-}
 
 
     render(){
-    return(  
-        <div className = "trip container">
-            <div className="nav-bar">
-                <Navbar />
-            </div>
-            <div className="trip-main">
-                <div className="location-card"> 
-                    {this.showLocation()}  
+        return(  
+            <div className = "trip container">
+                <div className="nav-bar">
+                    <Navbar />
                 </div>
-                <h2 className="pastTrips">- PAST TRIPS -</h2>
-                <div className="pastTripCards">
-                    {this.displayTripCards()}
-                    <div className="addTrip">
-                        <TripForm 
-                            location={this.state.locations.id}
-                            addTrip={this.addTrip}
-                        />
+                <div className="trip-main">
+                    <div className="location-card"> 
+                        {this.showLocation()}  
+                    </div>
+                    <h2 className="pastTrips">- PAST TRIPS -</h2>
+                    <div className="pastTripCards">
+                        {this.displayTripCards()}
+                        <div className="addTrip">
+                            <TripForm 
+                                location={this.state.locations.id}
+                                addTrip={this.addTrip}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        )
+            )
+        }  
     }
-    
-}
 export default TripsPage;

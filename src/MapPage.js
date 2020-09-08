@@ -22,7 +22,6 @@ class MapPage extends Component {
     }
 
     addLocation = (newLocation) => {
-        console.log(newLocation)
         this.setState({
             locations: [...this.state.locations, newLocation]
         })

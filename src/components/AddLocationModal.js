@@ -30,7 +30,6 @@ class AddLocationModal extends Component {
             lat:this.props.lat
         })
         this.toMapPage()
-        console.log(this.state.id)
     }
 
     toMapPage = () => {
@@ -75,8 +74,6 @@ class AddLocationModal extends Component {
                     <br></br>
                     <div className="pic">
                     <label className="spotPictureLabel">IMAGE: </label>
-                    {/* <input className="spotPictureFile" name="image" type="file" value={this.state.image} onChange={this.handleChange}/>
-                    <p className="modalOr">OR</p> */}
                     <input className="spotPictureLink" name="image" type="text" value={this.state.image} onChange={this.handleChange} placeholder="https://cdn.5280.com/2017/06/lake-effect_john-lebya-getty-images.jpg"></input>
                     </div>
                     <br></br>

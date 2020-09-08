@@ -22,19 +22,16 @@ class TripCards extends Component {
     modal = () => {
         if(this.state.show === true) {
             return(
-                <TripsModal 
-                    trip={this.props.trip}
-                />
+                <TripsModal trip={this.props.trip}/>
             )
         }
     }
 
     render(){
-
         return(
             <div className="tripWithModal">
                 <div className="tripNoModal">
-                     <h3 className="tripDate">{this.props.trip.date}</h3>
+                    <h3 className="tripDate">{this.props.trip.date}</h3>
                     <button className="tripButton" 
                         onClick={e => {this.showStateChange();}}
                     > Show/Hide Details</button>
@@ -44,4 +41,5 @@ class TripCards extends Component {
         )
     }
 }
+
 export default TripCards;
