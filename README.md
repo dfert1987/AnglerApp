@@ -27,11 +27,8 @@
 <img src="intro.png">
 
 ### Choose a Category
-<img src="allstadiums.png">
 
-* Choose the Stadium you are at (Currently only Wrigley Field is up and working for presentation purposes)
-* Stadium cards organized by division
-
+* Choose between the tacklebox (lure organizer), fishing map (with marked fishing spots), and the fish-dex (to keep track of all your catches)
 
 ### Choose Section
 <img src="main.png">
