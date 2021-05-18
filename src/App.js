@@ -6,7 +6,7 @@ import TackleBox from  './tackle box.js';
 import MapPage from './MapPage.js';
 import TripsPage from './TripsPage.js';
 import Fish from './fish.js';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 
 
