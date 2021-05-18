@@ -108,7 +108,6 @@ class TackleBox extends Component {
     }
     
     render(){
-        console.log(...this.state.lures)
         return  (
             <div className="main-tb">
                 <div className="nav-bar">
