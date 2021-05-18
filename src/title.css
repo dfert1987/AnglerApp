@@ -85,9 +85,9 @@ body {
 
 .fish {
   position: relative;
-  bottom: 0.6em;
+  bottom: 0.5em;
   transition: all 0.2s ease;
-  width: 70px;
+  width: 60px;
 }
 
 .enter-button:active {
