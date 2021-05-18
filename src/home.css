@@ -1,8 +1,5 @@
 body{
     background: url('https://i.imgur.com/SotcQ8h.jpg') no-repeat center center fixed; 
-    /* -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover; */
     background-size: cover;
     height: 100%;
     width: auto;
@@ -48,7 +45,6 @@ body{
 }
 button.btn {
     z-index: 1000;
-    /* padding: 0 5px 5px 20px; */
     display: flex;
     position: relative;
     top: -240px;
