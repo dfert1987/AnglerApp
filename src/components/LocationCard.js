@@ -1,25 +1,24 @@
-import React from 'react'
-
+import React from 'react';
+import '../tripspage.css';
 
 export default function LocationCard({location}) {
+  let name = `${location.name}`;
+  let upper = name.toUpperCase();
 
-    let name = `${location.name}`
-    let upper = name.toUpperCase()
-   
-
-    return (
-    <div className="Location-Card">
-        <div className="Location-header">
-            <h1>WELCOME TO {upper}</h1>
-            <h3>- {location.body} -</h3>
-            <div className="Image-container">
-                <img src={location.image} />
-            </div>
+  return (
+    <div className='location-card'>
+      <div className='location-header'>
+        <h1>WELCOME TO {upper}</h1>
+        <h3 className='location-type'>- {location.body} -</h3>
+        <div className='Image-container'>
+          <img src={location.image} alt='location' />
         </div>
-        <div className="Info-Section">
-            <p className="description">{location.description}</p>
+      </div>
+      <div className='info-section'>
+        <div className='info'>
+          {location.description}
         </div>
+      </div>
     </div>
-    )
-
+  );
 }

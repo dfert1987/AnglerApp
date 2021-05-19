@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TripsModal from './TripsModal';
+import '../tripspage.css'
 
 class TripCards extends Component {
 

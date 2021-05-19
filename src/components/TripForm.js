@@ -102,7 +102,7 @@ export default class TripForm extends Component {
                 <div className="formcont">
                     <h2 className="log">LOG YOUR TRIP!</h2>
                     <div className="top-row">
-                        <div clasName="dateSection">
+                        <div className="dateSection">
                             <label className ="dateLabel">Date:</label>
                             <input
                                 className="dateInput"
@@ -115,7 +115,7 @@ export default class TripForm extends Component {
                             </input>
                         </div>
                         <div className="TargetedSpeciesContainer">
-                            <label>Targeted Species: </label>
+                            <label className='speciesLabel'>Targeted Species: </label>
                             <select
                                 className="targetedSpecies"
                                 name="targetedSpecies"
@@ -167,7 +167,6 @@ export default class TripForm extends Component {
                                 type="text" 
                                 name="weather" 
                                 placeholder="Sunny, rainy, etc." 
-                                placeholderStyle={{fontSize: 12}}
                                 value={this.state.weather} 
                                 onChange={this.handleChange}
                             >

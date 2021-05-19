@@ -13,17 +13,15 @@ class TripsPage extends Component {
        show: false,
        foundTrips: []
     }
-    
     componentDidMount(){
         this.fetchLocations()
         this.fetchTrips()
     }
 
     fetchLocations = () => {
-        fetch(`http://localhost:3000/locations/${this.props.match.params.locationId}`)
+        fetch(`http://localhost:3000/locations/`)
             .then(response => response.json())
-            .then(location => this.setLocation(location)
-            )
+            .then(locations => this.setLocation(locations[this.props.match.params.locationId - 1]))
         }
     
     fetchTrips = () => {
@@ -32,10 +30,12 @@ class TripsPage extends Component {
             .then(trips => this.setTrips(trips));     
     }
 
-    setLocation =(location) => {
+    setLocation = (location) => {
+        console.log(location);
         this.setState(
             {locations: location}
           )
+          console.log(this.state.locations);
         }
     
     setTrips = (trips) => {

@@ -1,392 +1,408 @@
 body {
-    font-family: helvetica;
+  font-family: helvetica;
 }
 
 h1 {
-    font-family: Aventura;
-    font-size: 50px;
-    color: green;
-    text-shadow: black 2px 2px;
-    text-align: center;
+  font-family: Aventura;
+  font-size: 50px;
+  color: green;
+  text-shadow: black 2px 2px;
+  text-align: center;
 }
 
 h3 {
-    font-family: "canter bold";
-    text-align: center;
-    font-size: 50px;
+  font-family: Gliford Demo;
+  text-align: center;
+  font-size: 50px;
 }
 
 .Image-container {
-    text-align: center;
-    
+  text-align: center;
 }
-.Location-header img {
-    width: 300px;
-    border: 20px solid transparent;
-    box-shadow: 2px 2px 3px black;
-    /* padding: 15px; */
-    border-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2') 30 round;
-    border-radius: 5px;
-}
-.timeInput{
-    height: 25px;
-    width: 150px
-}
-.Info-Section{
-    text-align: center;
-    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
-    height: 120px;
-    position: relative;
-    justify-items: center;
-    text-justify: center;
-    justify-content: center;
-    top: 10px;
-    right: -556px;
-    width:330px;
-    box-shadow: 2px 2px 3px black;
 
+.location-card {
+  display: flex;
+  flex-direction: column;
 }
+
+.locaiton-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-header img {
+  width: 300px;
+  border: 20px solid transparent;
+  box-shadow: 2px 2px 3px black;
+  border-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2')
+    30 round;
+  border-radius: 5px;
+}
+
+.timeInput {
+  height: 25px;
+  width: 150px;
+}
+
+.info-section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.info {
+  background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+  box-shadow: 2px 2px 3px black;
+  color: white;
+  font-family: 'Gliford Demo';
+  font-size: 33px;
+  height: 180px;
+  justify-content: center;
+  justify-items: center;
+  padding: 0.5em;
+  text-align: center;
+  text-shadow: 2px 5px 3px black;
+  width: 330px;
+}
+
 .description {
-    font-family: "canter bold";
-    font-size: 31px;
-    width: 300px;
-    text-align: center;
-    position: relative;
-    justify-items: center;
-    right:-15px;
-    justify-content: center;
-    text-shadow: 2px 2px 3px black;
-    top: 14px;
-    color: white;
+  font-family: 'Gliford Demo';
+  font-size: 30px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  justify-items: center;
+  right: -15px;
+  justify-content: center;
+  text-shadow: 2px 2px 3px black;
+  top: 14px;
+  color: white;
 }
 .descriptionInput {
-    height:80px;
-    width: 600px;
-    position: relative;
-    right: -420px
+  height: 80px;
+  width: 600px;
 }
 .descriptionWrapper {
-    position: relative;
-    top: -30px;
-    right: 520px;
-    display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1em;
+  text-align: center;
 }
 .date {
-    font-family: "canter bold";
-    position: relative;
-    color: black;
-    text-shadow: 2px 2px 3px white;
-    font-size: 30px;
-    top: 30px;
-    right: -70px;
-    z-index: 10000;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.weather {
-    font: helvetica;
-}
-.weather input {
-    margin-right: 8px;
-    font-size: 14px;
-    height: 25px
-}
-div.row2 input {
-    height: 25px;
- 
-}
-select.lureChoice {
-    height: 25px;
-}
-.lureCont {
-top: 5px;
-position: relative
-}
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    font-size: 14px;
-  }
-input .placeHolder
-.time {
-    font: helvetica;
-
+  font-family: 'Impact';
+  position: relative;
+  color: black;
+  text-shadow: 2px 2px 3px white;
+  font-size: 30px;
+  top: 30px;
+  right: -70px;
+  z-index: 10000;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .tripDate {
-    position: relative;
-    right: 10px;
-    top: 5px
+  font-family: Impact;
+}
+
+.weather {
+  font: helvetica;
+}
+.weather input {
+  margin-right: 8px;
+  font-size: 14px;
+  height: 25px;
+}
+div.row2 input {
+  height: 25px;
+}
+select.lureChoice {
+  height: 25px;
+}
+.lureCont {
+  top: 5px;
+  position: relative;
+}
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 14px;
+}
+input .placeHolder .time {
+  font: helvetica;
+}
+
+.tripDate {
+  position: relative;
+  right: 10px;
+  top: 5px;
 }
 .dateInput {
-    height: 25px;
-    margin-right: 5px;
-    width: 150px;
+  height: 25px;
+  margin-right: 5px;
+  width: 150px;
 }
 
 .tripButton {
-    position: relative;
-    right: -20px;
-    width: 300px;
-    font-family: "canter bold" ;
-    font-size: 35px;
-    text-align: center;
-    vertical-align: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 8px;
+  position: relative;
+  right: -20px;
+  width: 300px;
+  font-family: 'Gliford Demo';
+  font-size: 35px;
+  text-align: center;
+  vertical-align: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
 }
-    .tripButton:after {
-        font-weight: 400;
-        position: absolute;
-        left: 85%;
-        top: 31%;
-        text-align: center;
-        right: 5%;
-        bottom: 0;
-        opacity: 0;
-        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+.tripButton:after {
+  font-weight: 400;
+  position: absolute;
+  left: 85%;
+  top: 31%;
+  text-align: center;
+  right: 5%;
+  bottom: 0;
+  opacity: 0;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
 
-    }
-
-    .tripButton:hover {
-        background: green;
-        transition: all 0.5s;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0px 6px 15px black;
-        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-    }
-        .tripButton:after {
-            opacity: 1;
-            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-            transition: all 0.5s;
-
-        
-    }
-
+.tripButton:hover {
+  background: green;
+  transition: all 0.5s;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 6px 15px black;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+.tripButton:after {
+  opacity: 1;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  transition: all 0.5s;
+}
 
 .tripButton:focus {
-    background-color: green;
-    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  background-color: green;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 .collapsible {
-    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
-    color: white;
-    text-shadow:2px 2px 3px black; ;
-    font-family: "canter bold";
-    cursor: pointer;
-    padding: 4px;
-    width: 100%;
-    border: none;
-    text-align: center;
-    outline: none;
-    position: relative;
-    right: -430px;
-    font-size: 35px;
+  background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  font-family: Gliford Demo;
+  cursor: pointer;
+  padding: 4px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  position: relative;
+  right: -430px;
+  font-size: 35px;
 }
+
+.addTrip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  text-align: center;
+}
+
 .addTripForm {
-    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
-    position: relative;
-    border-radius: 5px;
-    padding-top: 50px;
-    box-shadow: 2px 2px 3px black;;
-    padding-bottom: 40px;
-    z-index: 1;
-    width: 70%;
-    margin-right: -200px;
-    right: -210px;
-    top: 40px;
-    margin-bottom: 15px;
-
+  background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px black;
+  padding-bottom: 40px;
+  padding-top: 1em;
 }
 
-.active, .collapsible:hover {
-    background-color: green;
-  }
+.collapsible:hover {
+  background-color: green;
+}
 
-  .content {
-    padding: 0 18px;
-    /* display: none; */
-    /* overflow: hidden; */
-    right:-80px;
-    position: relative;
-    top:5px;
-    width: 380px;
-    text-align: left;
-    font-size: 18px;
-    
-    /* background-color: #f1f1f1; */
-  }
-  .date {
-        position: relative;
-        left: 170px;
-        top: 5px;
-        font-size: 40px;
-  }
-  .content p {
-      margin-top: 10px;
-  }
-  .pastTrips {
-      text-align: center;
-      font-family: Aventura;
-      color: green;
-      text-shadow:  black 2px 2px;
-      margin-bottom: 0px;
-      margin-top: 20px;
-      right: 605px
-  }
-  .tripscard {
-      text-align: center;
-      background-image: url('https://i.imgur.com/gMHAOqo.jpg');
-      width: 40%;
-      height: 400px;
-      position: absolute;
-      top: -410px;
-      align-self: center;
-      z-index: 90000;
-      margin-left: 430px;
-      border-radius: 8px;
-      border: solid black 2px;
+.content {
+  padding: 0 18px;
+  right: -80px;
+  position: relative;
+  top: 5px;
+  width: 380px;
+  text-align: left;
+  font-size: 18px;
+}
 
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+.date {
+  position: relative;
+  left: 170px;
+  top: 5px;
+  font-size: 40px;
+}
+.content p {
+  margin-top: 10px;
+}
+.pastTrips {
+  text-align: center;
+  font-family: Aventura;
+  color: green;
+  text-shadow: black 2px 2px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  right: 605px;
+}
+.tripscard {
+  text-align: center;
+  background-image: url('https://i.imgur.com/gMHAOqo.jpg');
+  width: 40%;
+  height: 400px;
+  position: absolute;
+  top: -410px;
+  align-self: center;
+  z-index: 90000;
+  margin-left: 430px;
+  border-radius: 8px;
+  border: solid black 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.trip-wrapper {
+  width: 40%;
+  align-content: center;
+}
+label {
+  color: white;
+  text-shadow: 2px 2px black;
+}
 
-  }
-  .trip-wrapper {
-      width: 40%;
-      align-content: center;
-  }
-  label {
-      color: white;
-      text-shadow: 2px 2px black;
-  }
+.log {
+  color: green;
+  font-family: aventura;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+.dateSection {
+  display: inline-flex;
+}
 
-  .log {
-      font-family: aventura;
-      color: green;
-      text-shadow: 2px 2px black;
-      text-align: center;
-      position: relative;
-      top: -50px
-  }
-  .dateSection {
-    display: inline-flex
-  }
- 
-  .top-row {
-      display: inline-flex;
-      position: relative;
-      left: -130px;
-      top: -40px
-  }
+.top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1em;
+}
 
-  .react-datepicker__input-container {
-      display: inline-flex;
-      margin-left: 0px;
-  }
-  input.datePicker {
-      margin-right: 8px;
-      font-size: 15px;
-      height: 25px
-  }
-  .dateLabel {
-      margin-right: 5px
-  }
-  select.targetedSpecies {
-      margin-right: 8px;
-      height:30px;
-      font-size: 15px;
-  }
-  .timeLabel {
-      margin-right: 5px;
-  }
-  .timeCont {
-      position: relative;
-    top: 0px
-  }
+.react-datepicker__input-container {
+  display: inline-flex;
+  margin-left: 0px;
+}
+input.datePicker {
+  margin-right: 8px;
+  font-size: 15px;
+  height: 25px;
+}
+.dateLabel {
+  font-family: Gliford Demo;
+  font-size: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
+}
+select.targetedSpecies {
+  margin-right: 8px;
+  height: 30px;
+  font-size: 15px;
+}
+.timeLabel {
+  margin-right: 5px;
+}
 
-  .react-time-picker {
-      background-color: white;
-  }
+.speciesLabel {
+font-family: Gliford Demo;
+font-size: 20px;
+}
+.timeCont {
+  position: relative;
+  top: 0px;
+}
 
-  .tripNoModal {
-      display: inline-flex;
-      padding-right: 40%;
-      position: relative;
-      top: 0px; 
-    
-      right:-70px;
-      /* justify-content: space-between; */
-      margin-bottom: 5px;
-  }
+.react-time-picker {
+  background-color: white;
+}
 
-  .pastTripCards {
-      position: relative;
-      top: 20px
-  }
-  
-  .tripsubmit {
-      height: 40px;
-      width: 80px;
-      border-radius: 8px;
-      font-size: 25px;
-      font-family: canter-bold;
-      position: relative;
-      top: 70px;
-      right: 450px;
-      transition: all 0.4s ease 0s;
-  }
-  .tripsubmit:hover{
-    transition: all 0.4s ease 0s;
-    background-color: green
-  }
-  .species {
-    display: inline-flex;
-    flex-direction: row;
-    width: 500px;
-    right: 150px;
-    margin-top: 10px;
-  }
-  .row2 {
-      display: inline-flex;
-      position: relative;
-      top: -30px;
-      right: 20px
+.tripNoModal {
+  display: inline-flex;
+  padding-right: 40%;
+  position: relative;
+  top: 0px;
+  right: -70px;
+  margin-bottom: 5px;
+}
 
-  }
-  .descriptionHeader{
-      position: relative;
-      top:40px;
-      font-size: 20px;
-      margin-right: 5px;
-      right: -410px;
-      text-shadow: 2px 2px black;
-      color: white;
-  }
-  .length input {
-      margin-right: 8px;
-  }
-  .temperature input {
-      margin-right: 8px;
-  }
-  .speciesHeader {
-      position: relative;
-      right: -140px
-  }
-  .speciesName {
-      margin-left: 160px
-  }
-  .formcontainer {
-      position: absolute;
-      top: 300px;
-      left: 1100px;
-      z-index: 0;
-      background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+.pastTripCards {
+  position: relative;
+  top: 20px;
+}
 
-  }
-  .tripWithModal {
-      align-items: center;
-  }
+.tripsubmit {
+  height: 40px;
+  width: 80px;
+  border-radius: 8px;
+  font-size: 25px;
+  font-family: Gliford Demo;
+  position: relative;
+  top: 70px;
+  right: 450px;
+  transition: all 0.4s ease 0s;
+}
+.tripsubmit:hover {
+  transition: all 0.4s ease 0s;
+  background-color: green;
+}
+.species {
+  display: inline-flex;
+  flex-direction: row;
+  width: 500px;
+  right: 150px;
+  margin-top: 10px;
+}
+.row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1em;
+}
+.descriptionHeader {
+  position: relative;
+  top: 40px;
+  font-size: 20px;
+  margin-right: 5px;
+  text-shadow: 2px 2px black;
+  color: white;
+}
+.length input {
+  margin-right: 8px;
+}
+.temperature input {
+  margin-right: 8px;
+}
+.speciesHeader {
+  position: relative;
+  right: -140px;
+}
+.speciesName {
+  margin-left: 160px;
+}
+.formcontainer {
+  position: absolute;
+  top: 300px;
+  left: 1100px;
+  z-index: 0;
+  background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+}
+.tripWithModal {
+  align-items: center;
+}
