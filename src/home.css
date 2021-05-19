@@ -1,166 +1,140 @@
-body{
-    background: url('https://i.imgur.com/SotcQ8h.jpg') no-repeat center center fixed; 
-    background-size: cover;
-    height: 100%;
-    width: auto;
-  }
+body {
+  background: url('https://i.imgur.com/SotcQ8h.jpg') no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
 
 .welcome {
-    font-size: 60px;
-    font-family: Aventura;
-    color: green;
-    position: relative;
-    top: 40px;
-    text-align: center;
-    text-shadow: black 3px 2px;
-    
+  color: green;
+  font-family: Aventura;
+  font-size: 60px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+  text-shadow: black 3px 2px;
 }
 
 .button-container {
-    display: flex;
-    text-align: center;
-    align-content: center;
-    position: relative;
-    text-decoration: none;
-
-    top: 70px;
-   
-    height: 450px;
-
+  display: flex;
+  flex-direction: row;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .button-card {
-    flex: 33.33%;
-    text-align: center;
-    text-decoration: none;
-
+  margin-left: 3em;
+  margin-right: 3em;
 }
 
-.button-image{
-    height: 100%;
-    width: 270px;
-    border-radius: 8px;
-    border: solid 1px black;
-    box-shadow: 0 8px 6px -6px black;
-}
-button.btn {
-    z-index: 1000;
-    display: flex;
-    position: relative;
-    top: -240px;
-    right: -180px;
-    cursor: pointer;
-    width: 140px;
-    text-align: center;
-    text-decoration: none;
-    font-family: "canter bold";
-    font-size: 45px;
-    height: 80px;
-    border-radius: 20px;
-    align-content: center;
+.button-image {
+  border: solid 1px black;
+  border-radius: 8px;
+  box-shadow: 0 8px 6px -6px black;
+  height: 100%;
+  width: 270px;
 }
 
 .tblink {
-    text-decoration: none;
-    text-align: center;
-    align-content: center;
-    color: black;
-    font-family: canter-bold;
-    font-size: 50px;
-    position: relative;
-    top: -150px;
-    right: -125px;
-    
+  bottom: 3em;
+  color: black;
+  font-family: Gliford Demo;
+  font-size: 50px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
 }
+
 .mapLink {
-    text-decoration: none;
-    text-align: center;
-    align-content: center;
-    color: black;
-    font-family: canter-bold;
-    font-size: 50px;
-    position: relative;
-    top: -150px;
-    right: -140px;
+  bottom: 3em;
+  color: black;
+  font-family: Gliford Demo;
+  font-size: 50px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
 }
 
-.fishButton{
-    padding: 18px 5px 5px 20px;
-    position: relative;
-    box-shadow: 0 10px 20px -5px black;
-    width: 200px;
-    height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
-    animation: bubbles 5s linear infinite both;
-    background:
-    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
-    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
-    radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
-    background-color: white;
-    transition: all 0.4s ease 0s;
-    border: 2px solid #494949;
+.fishButton {
+  background-color: white;
+  border: 2px solid #494949;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px -5px black;
+  cursor: pointer;
+  font-size: 40px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 18px 5px 5px 20px;
+  transition: all 0.4s ease 0s;
+  width: 200px;
 }
-.fishButton:hover{
-    color: #ffffff !important;
-    background: green;
-    border-color:lightgrey !important;
-    transition: all 0.4s ease 0s;
+
+.fishButton:hover {
+  color: #ffffff !important;
+  background: green;
+  border-color: lightgrey !important;
+  transition: all 0.4s ease 0s;
 }
+
 .fishLink {
-    text-decoration: none;
-    text-align: center;
-    align-content: center;
-    color: black;
-    font-family: canter-bold;
-    font-size: 50px;
-    position: relative;
-    top: -150px;
-    right: -126px; 
-}
-.fishText {
-    font-size: 40px;
+  bottom: 3em;
+  color: black;
+  font-family: Gliford Demo;
+  font-size: 50px;
+  position: relative;
+  justify-content: center;
+  text-decoration: none;
 }
 
-.mapButton{
-    padding: 18px 5px 5px 45px;
-    position: relative;
-    box-shadow: 0 10px 20px -5px black;
-    font-size: 40px;
-    width: 150px;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: white;
-    transition: all 0.4s ease 0s;
-    border: 2px solid #494949;
+.mapButton {
+  background-color: white;
+  border: 2px solid #494949;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px -5px black;
+  cursor: pointer;
+  font-size: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 18px 5px 5px 30px;
+  transition: all 0.4s ease 0s;
+  width: 150px;
 }
 
 .mapButton:hover {
-    color: #ffffff !important;
-    background: green;
-    border-color:lightgrey !important;
-    transition: all 0.4s ease 0s;
-}
-.mapText{
-    padding-right: 40px;
+  background: green;
+  border-color: lightgrey !important;
+  color: #ffffff !important;
+  transition: all 0.4s ease 0s;
 }
 
-
-.tbButton{
-    padding: 18px 5px 5px 15px;
-    position: relative;
-    font-size: 40px;
-    width: 200px;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: white;
-    transition: all 0.4s ease 0s;
-    border: 2px solid #494949;
-    box-shadow: 0 10px 20px -5px black;
+.mapText {
+  padding-right: 20px;
 }
-.tbButton:hover{
-    color: #ffffff !important;
-background: green;
-border-color:lightgrey !important;
-transition: all 0.4s ease 0s;
+
+.tbButton {
+  background-color: white;
+  border: 2px solid #494949;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px -5px black;
+  cursor: pointer;
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 5px 5px 15px;
+  transition: all 0.4s ease 0s;
+  width: 200px;
+}
+.tbButton:hover {
+  background: green;
+  border-color: lightgrey !important;
+  color: #ffffff !important;
+  transition: all 0.4s ease 0s;
 }

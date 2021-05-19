@@ -37,7 +37,7 @@ class Home extends Component{
                             <img class="button-image" src="https://i.imgur.com/mjExIDw.png" alt="Fish"></img>
                             <a class="fishLink"  href="/fish">
                                 <div class="fishButton" align="center">
-                                    <p class="fishText">Fish-Dex</p>
+                                    <p class="fishText">FishDex</p>
                                 </div>
                             </a>
                         </div>
