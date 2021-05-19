@@ -104,7 +104,7 @@ class LongLatForm extends Component {
                     </div>
                     <div>
                         <form className="addMarkerFormAddress" onSubmit={this.handleSubmitAddress}>
-                            <label className="addressLabel">Adress: </label>
+                            <label className="addressLabel">Address: </label>
                             <input className="addressInput" type="text" name="address" placeholder="255 Fishy Road, Fishville, CO 80205" onChange={this.handleChange}></input>
                             <input className="addressSubmit" type="submit"></input>
                         </form>
