@@ -22,21 +22,18 @@ h3 {
   width: 40%;
 }
 
-.locaiton-header {
+.location-header {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
+  width: 100%;
 }
 
 .image {
-  border: 20px solid transparent;
   box-shadow: 2px 2px 3px black;
   border-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2')
     30 round;
   border-radius: 5px;
-  width: 92%;
+  width: 100%;
 }
 
 .input {
@@ -103,15 +100,9 @@ h3 {
 
 .date {
   font-family: 'Impact';
-  position: relative;
   color: black;
   text-shadow: 2px 2px 3px white;
-  font-size: 30px;
-  top: 30px;
-  right: -70px;
-  padding: 0;
-  margin: 0;
-  text-align: center;
+  font-size: 35px;
 }
 
 .tripDate {
@@ -165,8 +156,6 @@ input .placeHolder .time {
   vertical-align: center;
   width: 300px;
 }
-
-
 
 .tripButton:hover {
   background: green;
@@ -224,21 +213,10 @@ input .placeHolder .time {
 }
 
 .content {
-  padding: 0 18px;
-  right: -80px;
-  position: relative;
-  top: 5px;
-  width: 380px;
-  text-align: left;
-  font-size: 18px;
+
+  text-align: center;
 }
 
-.date {
-  position: relative;
-  left: 170px;
-  top: 5px;
-  font-size: 40px;
-}
 .content p {
   margin-top: 10px;
 }
@@ -252,25 +230,22 @@ input .placeHolder .time {
   right: 605px;
 }
 .tripscard {
-  text-align: center;
   background-image: url('https://i.imgur.com/gMHAOqo.jpg');
-  width: 40%;
-  height: 400px;
-  position: absolute;
-  top: -410px;
-  align-self: center;
-  z-index: 90000;
-  margin-left: 430px;
-  border-radius: 8px;
-  border: solid black 2px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border: solid black 2px;
+  border-radius: 8px;
+  bottom: 40em;
+  height: 30em;
+  margin-left: 10em;
+  margin-right: 10em;
+  position: relative;
+  z-index: 100;
 }
 
 .trip-wrapper {
-  width: 40%;
-  align-content: center;
+  height: 100%;
 }
 
 label {
@@ -351,6 +326,11 @@ input.datePicker {
   text-align: left;
 }
 
+.time {
+  font-family: Gliford Demo;
+  font-size: 30px;
+}
+
 .speciesLabel {
   font-family: Gliford Demo;
   font-size: 25px;
@@ -361,6 +341,31 @@ input.datePicker {
   display: flex;
   flex-direction: column;
   margin-right: 1em;
+}
+
+.duration {
+  font-family: Gliford Demo;
+  font-size: 30px;
+}
+
+.weather {
+  font-family: Gliford Demo;
+  font-size: 30px;
+}
+
+.temperature {
+  font-family: Gliford Demo;
+  font-size: 30px;
+}
+
+.bestLure {
+  font-family: Gliford Demo;
+  font-size: 30px;
+}
+
+.trip-description {
+  font-family: Gliford Demo;
+  font-size: 30px;
 }
 
 .react-time-picker {
@@ -407,11 +412,21 @@ input.datePicker {
 }
 
 .species {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
-  width: 500px;
-  right: 150px;
-  margin-top: 10px;
+  justify-content: center;
+  font-family: Gliford Demo;
+  font-size: 30px;
+  margin-top: 1em;
+}
+
+.no-target {
+  position: relative;
+  bottom: 0.2em;
+}
+
+.speciesHeader {
+  margin-right: 1em;
 }
 
 .length {
@@ -454,14 +469,6 @@ input.datePicker {
   text-align: left;
 }
 
-.speciesHeader {
-  position: relative;
-  right: -140px;
-}
-
-.speciesName {
-  margin-left: 160px;
-}
 .formcontainer {
   position: absolute;
   top: 300px;
