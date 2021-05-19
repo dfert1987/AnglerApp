@@ -16,38 +16,45 @@ h3 {
   font-size: 50px;
 }
 
-.Image-container {
-  text-align: center;
-}
-
 .location-card {
   display: flex;
   flex-direction: column;
+  width: 40%;
 }
 
 .locaiton-header {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
-.location-header img {
-  width: 300px;
+.image {
   border: 20px solid transparent;
   box-shadow: 2px 2px 3px black;
   border-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2')
     30 round;
   border-radius: 5px;
+  width: 92%;
 }
 
-.timeInput {
-  height: 25px;
-  width: 150px;
+.input {
+  background-color: white;
+  height: 40px;
+  width: 200px;
+}
+
+.select {
+  background-color: white;
+  border-radius: 5px;
+  height: 43px;
+  width: 200px;
 }
 
 .info-section {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 1em;
+  width: 100%;
 }
 
 .info {
@@ -56,13 +63,12 @@ h3 {
   color: white;
   font-family: 'Gliford Demo';
   font-size: 33px;
-  height: 180px;
   justify-content: center;
   justify-items: center;
+
   padding: 0.5em;
   text-align: center;
   text-shadow: 2px 5px 3px black;
-  width: 330px;
 }
 
 .description {
@@ -78,17 +84,23 @@ h3 {
   top: 14px;
   color: white;
 }
+
 .descriptionInput {
-  height: 80px;
-  width: 600px;
+  border-radius: 5px;
+  height: 120px;
+  width: 100%;
 }
+
 .descriptionWrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  margin-left: 1em;
+  margin-right: 1em;
   margin-top: 1em;
   text-align: center;
 }
+
 .date {
   font-family: 'Impact';
   position: relative;
@@ -97,7 +109,6 @@ h3 {
   font-size: 30px;
   top: 30px;
   right: -70px;
-  z-index: 10000;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -108,84 +119,74 @@ h3 {
 }
 
 .weather {
-  font: helvetica;
+  display: flex;
+  flex-direction: column;
 }
-.weather input {
-  margin-right: 8px;
-  font-size: 14px;
-  height: 25px;
-}
+
 div.row2 input {
   height: 25px;
 }
+
 select.lureChoice {
-  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  height: 40px;
+  width: 200px;
 }
+
+.lureLabel {
+  font-family: Gliford Demo;
+  font-size: 25px;
+  text-align: left;
+}
+
 .lureCont {
-  top: 5px;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  top: 0.1em;
 }
+
 ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
   font-size: 14px;
 }
 input .placeHolder .time {
   font: helvetica;
 }
 
-.tripDate {
-  position: relative;
-  right: 10px;
-  top: 5px;
-}
-.dateInput {
-  height: 25px;
-  margin-right: 5px;
-  width: 150px;
-}
-
 .tripButton {
-  position: relative;
-  right: -20px;
-  width: 300px;
+  border-radius: 8px;
+  cursor: pointer;
   font-family: 'Gliford Demo';
   font-size: 35px;
+  justify-content: center;
+  margin-left: 2em;
   text-align: center;
   vertical-align: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 8px;
+  width: 300px;
 }
-.tripButton:after {
-  font-weight: 400;
-  position: absolute;
-  left: 85%;
-  top: 31%;
-  text-align: center;
-  right: 5%;
-  bottom: 0;
-  opacity: 0;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
-}
+
+
 
 .tripButton:hover {
   background: green;
-  transition: all 0.5s;
-  border-radius: 10px;
-  text-align: center;
+  border-radius: 8px;
   box-shadow: 0px 6px 15px black;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  color: white;
+  text-align: center;
+  transition: all 0.5s;
 }
+
 .tripButton:after {
   opacity: 1;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   transition: all 0.5s;
 }
 
 .tripButton:focus {
   background-color: green;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  color: white;
 }
+
 .collapsible {
   background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
   color: white;
@@ -205,11 +206,7 @@ input .placeHolder .time {
 .addTrip {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 2em;
-  padding-top: 1em;
+  padding-bottom: 1em;
   text-align: center;
 }
 
@@ -217,7 +214,8 @@ input .placeHolder .time {
   background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
   border-radius: 5px;
   box-shadow: 2px 2px 3px black;
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
   padding-top: 1em;
 }
 
@@ -269,10 +267,12 @@ input .placeHolder .time {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .trip-wrapper {
   width: 40%;
   align-content: center;
 }
+
 label {
   color: white;
   text-shadow: 2px 2px black;
@@ -284,14 +284,40 @@ label {
   text-align: center;
   text-shadow: 2px 2px black;
 }
+
 .dateSection {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
 }
 
 .top-row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.second-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.5em;
+  margin: 1em;
+}
+
+.third-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.fourth-row {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
   margin-top: 1em;
 }
 
@@ -299,34 +325,42 @@ label {
   display: inline-flex;
   margin-left: 0px;
 }
+
+.targetedSpeciesContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0.1em;
+}
+
 input.datePicker {
   margin-right: 8px;
   font-size: 15px;
   height: 25px;
 }
+
 .dateLabel {
   font-family: Gliford Demo;
-  font-size: 20px;
-  margin-right: 5px;
-  position: relative;
-  top: 5px;
+  font-size: 25px;
+  text-align: left;
 }
-select.targetedSpecies {
-  margin-right: 8px;
-  height: 30px;
-  font-size: 15px;
-}
+
 .timeLabel {
-  margin-right: 5px;
+  font-family: Gliford Demo;
+  font-size: 25px;
+  text-align: left;
 }
 
 .speciesLabel {
-font-family: Gliford Demo;
-font-size: 20px;
+  font-family: Gliford Demo;
+  font-size: 25px;
+  text-align: left;
 }
+
 .timeCont {
-  position: relative;
-  top: 0px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1em;
 }
 
 .react-time-picker {
@@ -334,34 +368,44 @@ font-size: 20px;
 }
 
 .tripNoModal {
-  display: inline-flex;
-  padding-right: 40%;
-  position: relative;
-  top: 0px;
-  right: -70px;
-  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .pastTripCards {
-  position: relative;
-  top: 20px;
+  margin: 1em;
+  padding-bottom: 3em;
 }
 
 .tripsubmit {
+  background-color: green;
+  color: white;
+  cursor: pointer;
   height: 40px;
-  width: 80px;
+  width: 100px;
   border-radius: 8px;
   font-size: 25px;
   font-family: Gliford Demo;
-  position: relative;
-  top: 70px;
-  right: 450px;
+  margin: 1em;
+  margin-left: auto;
   transition: all 0.4s ease 0s;
 }
+
 .tripsubmit:hover {
+  color: black;
+  background-color: white;
   transition: all 0.4s ease 0s;
-  background-color: green;
 }
+
+.location-and-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
 .species {
   display: inline-flex;
   flex-direction: row;
@@ -369,30 +413,52 @@ font-size: 20px;
   right: 150px;
   margin-top: 10px;
 }
-.row2 {
+
+.length {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 1em;
+  flex-direction: column;
 }
-.descriptionHeader {
+
+.lengthLabel {
+  font-family: Gliford Demo;
+  font-size: 25px;
+  text-align: left;
+}
+
+.temperatureLabel {
+  font-family: Gliford Demo;
+  font-size: 25px;
+  text-align: left;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  top: 40px;
-  font-size: 20px;
-  margin-right: 5px;
-  text-shadow: 2px 2px black;
+  top: 0.1em;
+}
+
+.weatherLabel {
+  font-family: Gliford Demo;
+  font-size: 25px;
+  position: relative;
+  text-align: left;
+  top: 0.1em;
+}
+
+.descriptionHeader {
   color: white;
+  font-family: Gliford Demo;
+  font-size: 25px;
+  text-shadow: 2px 2px black;
+  text-align: left;
 }
-.length input {
-  margin-right: 8px;
-}
-.temperature input {
-  margin-right: 8px;
-}
+
 .speciesHeader {
   position: relative;
   right: -140px;
 }
+
 .speciesName {
   margin-left: 160px;
 }
