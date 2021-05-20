@@ -1,277 +1,213 @@
 .fishContainer {
- align-self: center;
- justify-content: center;
- display: flex;
- position: relative;
- right: 800px;
- flex-flow: row;
- flex-direction: row;
- margin-bottom: 80px;
- height: '100%';
- width: 35%;
- justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: '100%';
+  width: 40%;
+  margin-bottom: 80px;
 }
 
-.Button-Container{
-    right: 5px
-}
 .AddCaughtButton {
-    position: relative;
-    top: 0px;
-    width: 427px;
-    align-self: center;
-    height: 35px;
-    font-family: aventura;
-    text-shadow: 2px 2px 1px black;
-    background-color: darkgreen;
-    color: white;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0;
-    right: 9px
+  background-color: darkgreen;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0;
+  box-shadow: 2px 2px 5px black;
+  color: white;
+  font-family: aventura;
+  height: 35px;
+  text-shadow: 2px 2px 1px black;
+  width: 100%;
 }
-.caught-fishContainer{
-    align-self: center;
-    justify-content: center;
-    display: flex;
-    position: relative;
-    right: 740px;
-    flex-flow: row;
-    flex-direction: row;
-    margin-bottom: 80px;
-    height: '100%';
-    width: 100%;
-    padding-bottom: 55px;
-    justify-content: space-between;
-   
-   }
-   .prForm{
-    height: 55px;
-   
 
-   }
+.caught-fishContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  height: '100%';
+  width: 40%;
+  padding-bottom: 55px;
+}
+
+.prForm {
+  height: 55px;
+}
+
 .fish-list {
-    flex-flow: column;
-    padding-bottom: 40px;
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 40px;
+  width: 100%;
 }
 
-.Card-Front{
-    /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
-    width: '100%';
-    height: '100%';
-    justify-content: center;
-    justify-items: center;
-
-}
-
-.Card-Back{
-    /* background-image: url('https://www.designyourway.net/blog/wp-content/uploads/2018/09/wood-_texture1584-1250x834.jpg'); */
-    width: '100%';
-    height: '100%';
+.Card-Back {
+  width: '100%';
+  height: '100%';
 }
 .PR {
-    position: relative;
-    top: 20px
+    font-size: 30px;
+  position: relative;
+  top: 20px;
 }
-div.flippy-card.flippy-front{
-    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
-    /* box-shadow:3px 0px 7px; */
-    border: 2px solid;
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    align-content: center;
-    justify-items: center;
-
-
+div.flippy-card.flippy-front {
+  background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
-div.flippy-card.flippy-back{
-    background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
-    /* box-shadow:3px 0px 7px ; */
-    border: 2px solid;
-    padding-bottom: 20px;
-
-
+div.flippy-card.flippy-back {
+  background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
+  border: 2px solid;
+  padding-bottom: 20px;
 }
 
 .FishPic {
-    width: 400px;
-    position: relative;
-    height: 150px;
-    top: 50%;
-    margin: 0px;
-    border-radius: 3px;
-    box-shadow:5px 5px 13px;
-    align-self: center;
-    right: 5px;
-    justify-self: center;
-
+  height: 150px;
+  margin: 0px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 13px;
 }
+
 .FishName {
-    position: relative;
-    left: 0px;
-    text-shadow: 2px 2px 5px black;
-    color: white
+  text-shadow: 2px 2px 5px black;
+  color: white;
+}
 
+.all-fish {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.all-fish{
-    display: flex;
-    align-content: center;
-}
+
 .FishCardContainer {
-    justify-content: center;
-    margin-bottom: 100px;
-    padding-bottom: 5px;
-    position: relative;
-    top: 50px;
-    z-index: 1;
-    right: 0px;
-    height: 350px;
-    box-shadow:3px 3px 7px;
-
+  box-shadow: 3px 3px 7px;
+  height: 350px;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  padding-bottom: 5px;
 }
+
 .addPRForm {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
-
-
 
 .NotCaughtTitle {
-    position: absolute;
-    right: -745px;
-    text-align: center;
-    font-family: aventura;
-    top: 10px;
-    font-size: 30px;
+  text-align: center;
+  font-family: aventura;
+  font-size: 30px;
 }
-.Front-Content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-}
 .Button-Flip {
-    position: relative;
-    top: 10px;
-    width: 200px;
-    align-self: center;
-    cursor: pointer;
-    height: 45px;
-    font-family: aventura;
-    text-shadow: 2px 2px 1px black;
-    background-color: darkgreen;
-    color: white;
-    border-radius: 5px;
-    right: 100px
-    
+  background-color: darkgreen;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: aventura;
+  height: 45px;
+  text-shadow: 2px 2px 1px black;
+  width: 100%;
 }
+
 .Button-Flip-Back {
-    position: relative;
-    top: 10px;
-    width: 200px;
-    height: 35px;
-    font-family: aventura;
-    text-shadow: 2px 2px 1px black;
-    background-color: darkgreen;
-    color: white;
-    border-radius: 5px;
-    right: 100px;
-    top: 20px
+  background-color: darkgreen;
+  border-radius: 5px;
+  color: white;
+  font-family: aventura;
+  height: 35px;
+  position: relative;
+  text-shadow: 2px 2px 1px black;
+  width: 200px;
 }
 
 .CaughtTitle {
-    position: relative;
-    font-family: aventura;
-    top: 10px;
-    font-size: 30px;
-    right: -1230px
+  font-family: aventura;
+  font-size: 30px;
+  text-align: center;
 }
+
 .Card-Back-Content {
-    color: white;
-    text-align: left;
-    top: -8px;
-    position: relative;
-    text-shadow: 2px 2px black;
+  color: white;
+  text-align: left;
+  top: -8px;
+  position: relative;
+  text-shadow: 2px 2px black;
 }
+
 .fishparagraph {
-    background-color: 'rgba(52, 52, 52, 0.8)';
-    padding: 2px;
-    justify-content: center;
+  font-size: 20px;
+  justify-content: center;
+  padding: 2px;
+  text-shadow: 2px 2px 8px black;
 }
 
 .caught-list {
-    display: flex;
-    flex-flow: column;
-    height: 100%;
-    padding-bottom: 100px;
+  display: flex;
+  flex-flow: column;
 }
 .pr-title {
-    position: relative;
-    top: 17px;
-    left: 20px
-}
-.PR {
-    color: white;
-    text-shadow: 2px 2px black;
-    position: relative;
-    top: -60px
+  position: relative;
+  top: 17px;
+  left: 20px;
 }
 
+.Card-Front {
+  text-align: center;
+}
+
+.PR {
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.pr-container {
+  display: flex;
+  flex-direction: row;
+  box-shadow: black;
+}
 
 .inputPR {
-    position: relative;
-    right: -40px;
-    width: 80px;
-    height: 40px;
-    top: 3px
+  position: relative;
+  width: 80px;
+  height: 40px;
+  margin-left: 1em;
+  top: 3px;
 }
 
 .submitPR {
-    width: 142px;
-    height: 50px;
-    z-index: 90;
-    font-family: "canter bold";
-    border-bottom: 2px solid black;
-    font-size: 20px;
-    position: relative;
-    right: -69px;
-    cursor: pointer;
-    transition: all 0.4s ease 0s;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'canter bold';
+  font-size: 20px;
+  height: 50px;
+  transition: all 0.4s ease 0s;
+  width: 142px;
+  z-index: 90;
 }
 
 .submitPR:hover {
-    transition: all 0.4s ease 0s;
-    background-color: green;
-
+  transition: all 0.4s ease 0s;
+  background-color: green;
 }
 .submitPR:active {
-    padding: 0;
-    margin: 0;
-    transition: all 0.1s ease 0s;
-    background-color: rgb(131, 236, 131);
-    opacity: 1;
-    
-    
-
-  }
-.submitPR:after {
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
+  padding: 0;
+  margin: 0;
+  transition: all 0.1s ease 0s;
+  background-color: rgb(131, 236, 131);
+  opacity: 1;
 }
-
-  
-
+.submitPR:after {
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
 
 .addPRForm {
-    background-image: url('https://adwallpapers.xyz/uploads/posts/419-distressed-white-wood-texture-background.jpg');
-    z-index: 0;
-    border: 2px solid;
-    width: 420px;
-    position: relative;
-    top: -50px
+  background-image: url('https://adwallpapers.xyz/uploads/posts/419-distressed-white-wood-texture-background.jpg');
+  border: 2px solid;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 0;
 }
-
-
- 
