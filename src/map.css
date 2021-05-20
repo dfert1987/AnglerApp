@@ -1,6 +1,7 @@
-.titleContainer {
+.title-container {
   display: flex;
   flex-direction: column;
+  margin-top: 1em;
 }
 
 .maptitle {
@@ -34,8 +35,23 @@
   margin-right: auto;
 }
 
+.map-page-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.addressContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
 .addMarkerFormLongLat {
-  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
 }
 
 .addMarkerFormName {
@@ -43,15 +59,15 @@
 }
 
 .addMarkerFormAddress {
-  padding-bottom: 1em;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .or {
   color: white;
   font-family: Gliford Demo;
   font-size: 30px;
-  margin-bottom: 0.5em;
   text-align: center;
   text-shadow: 2px 2px black;
 }
@@ -88,48 +104,65 @@
 }
 
 .mapFormContainer {
-  margin-top: 50px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 2em;
   background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
   box-shadow: 2px 2px 3px black;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .addMarkerTitle {
-  color: green;
+  color: white;
   font-family: Aventura;
-  padding-top: .5em;
+  padding-top: 0.5em;
   text-align: center;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px 5px black;
+}
+
+.both-forms {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0.5em; */
 }
 
 .addMarkerOnBoard {
   color: white;
   font-family: 'Gliford Demo';
   font-size: 30px;
+  padding-left: .5em;
+  padding-right: .5em;
   text-align: center;
   text-shadow: 2px 2px black;
-}
-
-.long-lat-input-row {
-  font-family: 'Gliford Demo';
-  margin-bottom: 1em;
-  text-align: center;
 }
 
 .longitudeLabel {
   font-family: 'Gliford Demo';
   font-size: 25px;
-  position: relative;
-  top: 5px;
+}
+
+.longitude-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 70%;
+}
+
+.latitude-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 70%;
 }
 
 .latitudeLabel {
   font-family: 'Gliford Demo';
   font-size: 25px;
-  position: relative;
-  top: 5px;
 }
 
 .nameLabel {
@@ -141,22 +174,45 @@
 
 .addressLabel {
   font-family: Gliford Demo;
-  position: relative;
-  top: 5px;
   font-size: 25px;
 }
 
+.latitudeInput {
+  border-radius: 5px;
+  font-size: 20px;
+  height: 2em;
+}
+
+.addressInput {
+  border-radius: 5px;
+  font-size: 20px;
+  height: 2em;
+  margin-bottom: 0.3em;
+}
+
+.addressInput::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 20px;
+}
+
+.latitudeInput::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 20px;
+}
+
 .longitudeInput {
-  margin-right: 2em;
+  border-radius: 5px;
+  font-size: 20px;
+  height: 2em;
+}
+
+.longitudeInput::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 20px;
 }
 
 .nameInput {
   margin-right: 5px;
-}
-
-.addressInput {
-  margin-right: 5px;
-  margin-bottom: 1em;
 }
 
 .nameSubmit {
@@ -174,10 +230,18 @@
   cursor: pointer;
   font-family: Gliford Demo;
   font-size: 20px;
-  height: 30px;
-  position: relative;
-  top: 2px;
-  width: 75px;
+  height: 40px;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: 1em;
+  width: 85px;
+}
+
+.addressSubmit:hover {
+  background: green;
+  border-color: lightgrey !important;
+  color: #ffffff !important;
+  transition: all 0.4s ease 0s;
 }
 
 .longLatSubmit {
@@ -185,10 +249,17 @@
   cursor: pointer;
   font-family: Gliford Demo;
   font-size: 20px;
-  height: 30px;
-  position: relative;
-  top: 2px;
-  width: 75px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: 1em;
+  width: 85px;
+}
+
+.longLatSubmit:hover {
+  background: green;
+  border-color: lightgrey !important;
+  color: #ffffff !important;
+  transition: all 0.4s ease 0s;
 }
 
 .modalContainer {

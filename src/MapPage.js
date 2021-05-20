@@ -84,13 +84,13 @@ class MapPage extends Component {
         <div className='nav-bar'>
           <Navbar />
         </div>
-        <div className='titleContainer'>
-          <h1 className='maptitle'>YOUR FISHING SPOTS</h1>
-          <h3 className='mapsubtitle'>- Click a Marker to See Past Trips-</h3>
-        </div>
-        <div id='map' />
-        <div className='form-modal-container'>
-          <div className='formInputs'>
+        <div className='map-page-container'>
+          <div className='titleContainer'>
+            <h1 className='maptitle'>YOUR FISHING SPOTS</h1>
+            <h3 className='mapsubtitle'>- Click a Marker to See Past Trips-</h3>
+          </div>
+          <div id='map' />
+          <div className='form-modal-container'>
             <LongLatForm
               addLocation={this.addLocation}
               locations={this.state.locations}

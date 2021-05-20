@@ -39,14 +39,16 @@
 }
 
 .Card-Back {
-  width: '100%';
   height: '100%';
+  width: '100%';
 }
+
 .PR {
-    font-size: 30px;
+  font-size: 30px;
   position: relative;
   top: 20px;
 }
+
 div.flippy-card.flippy-front {
   background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
   border: 2px solid;
@@ -54,6 +56,7 @@ div.flippy-card.flippy-front {
   justify-content: center;
   width: 100%;
 }
+
 div.flippy-card.flippy-back {
   background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
   border: 2px solid;
@@ -61,15 +64,15 @@ div.flippy-card.flippy-back {
 }
 
 .FishPic {
-  height: 150px;
-  margin: 0px;
   border-radius: 3px;
   box-shadow: 5px 5px 13px;
+  height: 150px;
+  margin: 0px;
 }
 
 .FishName {
-  text-shadow: 2px 2px 5px black;
   color: white;
+  text-shadow: 2px 2px 5px black;
 }
 
 .all-fish {
@@ -92,9 +95,9 @@ div.flippy-card.flippy-back {
 }
 
 .NotCaughtTitle {
-  text-align: center;
   font-family: aventura;
   font-size: 30px;
+  text-align: center;
 }
 
 .Button-Flip {
@@ -127,10 +130,10 @@ div.flippy-card.flippy-back {
 
 .Card-Back-Content {
   color: white;
-  text-align: left;
-  top: -8px;
   position: relative;
+  text-align: left;
   text-shadow: 2px 2px black;
+  top: -8px;
 }
 
 .fishparagraph {
@@ -145,9 +148,9 @@ div.flippy-card.flippy-back {
   flex-flow: column;
 }
 .pr-title {
+  left: 20px;
   position: relative;
   top: 17px;
-  left: 20px;
 }
 
 .Card-Front {
@@ -160,24 +163,24 @@ div.flippy-card.flippy-back {
 }
 
 .pr-container {
+  box-shadow: black;
   display: flex;
   flex-direction: row;
-  box-shadow: black;
 }
 
 .inputPR {
-  position: relative;
-  width: 80px;
   height: 40px;
   margin-left: 1em;
+  position: relative;
   top: 3px;
+  width: 80px;
 }
 
 .submitPR {
   border-bottom: 2px solid black;
   cursor: pointer;
   height: 50px;
-  font-family: 'canter bold';
+  font-family: Gliford Demo;
   font-size: 20px;
   height: 50px;
   transition: all 0.4s ease 0s;
@@ -186,16 +189,15 @@ div.flippy-card.flippy-back {
 }
 
 .submitPR:hover {
-  transition: all 0.4s ease 0s;
   background-color: green;
+  transition: all 0.4s ease 0s;
 }
+
 .submitPR:active {
-  padding: 0;
-  margin: 0;
-  transition: all 0.1s ease 0s;
   background-color: rgb(131, 236, 131);
-  opacity: 1;
+  transition: all 0.1s ease 0s;
 }
+
 .submitPR:after {
   margin-left: -20px !important;
   margin-top: -120%;

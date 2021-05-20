@@ -3,7 +3,6 @@ import Navbar from './navbar.js';
 import './tripspage.css';
 import LocationCard from './components/LocationCard';
 import TripForm from './components/TripForm';
-import TripModal from './components/TripsModal';
 import TripCards from './components/TripCards';
 
 class TripsPage extends Component {
