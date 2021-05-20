@@ -87,8 +87,24 @@ export default class TripForm extends Component {
       location_id,
       fish_id,
     };
+
+    const defaultState = {
+      id: 1,
+      date: '',
+      time: '',
+      weather: '',
+      temperature: 0,
+      length: '',
+      description: '',
+      bestLure: 0,
+      allLures: [],
+      tackleBox: [],
+      allFish: [],
+      targetedSpecies: 0,
+    };
     event.preventDefault();
     this.props.addTrip(addedTrip);
+    this.setState(defaultState);
   };
 
   render() {
