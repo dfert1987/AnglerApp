@@ -28,16 +28,19 @@
 }
 
 .form-modal-container {
+  justify-content: center;
   padding-bottom: 2em;
-  padding-left: 29.5em;
-  padding-right: 29.5em;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .map-page-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .addressContainer {
@@ -109,6 +112,12 @@
   margin-bottom: 2em;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+}
+.map-with-modal {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .addMarkerTitle {

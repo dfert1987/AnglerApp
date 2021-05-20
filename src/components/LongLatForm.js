@@ -83,7 +83,7 @@ class LongLatForm extends Component {
 
   render() {
     return (
-      <div className='mapwithmodal'>
+      <div className='map-with-modal'>
         <div className='mapFormContainer'>
           <div className='title-container'>
             <h2 className='addMarkerTitle'>ADD NEW FISHING SPOT</h2>
