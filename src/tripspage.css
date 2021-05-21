@@ -25,14 +25,14 @@ h3 {
 .location-header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
 }
 
 .image {
   box-shadow: 2px 2px 3px black;
-  border-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2')
-    30 round;
   border-radius: 5px;
+  margin-left: 1em;
   width: 100%;
 }
 
@@ -99,19 +99,20 @@ h3 {
 }
 
 .date {
-  font-family: 'Impact';
   color: black;
-  text-shadow: 2px 2px 3px white;
+  font-family: Aventura;
   font-size: 35px;
+  text-align: center;
+  text-shadow: 2px 2px 3px white;
+}
+
+.description-text {
+  margin-left: 2em;
 }
 
 .tripDate {
   font-family: Impact;
-}
-
-.weather {
-  display: flex;
-  flex-direction: column;
+  margin-right: 0.5em;
 }
 
 div.row2 input {
@@ -150,8 +151,6 @@ input .placeHolder .time {
   cursor: pointer;
   font-family: 'Gliford Demo';
   font-size: 35px;
-  justify-content: center;
-  margin-left: 2em;
   text-align: center;
   vertical-align: center;
   width: 300px;
@@ -213,11 +212,11 @@ input .placeHolder .time {
 }
 
 .content {
-
-  text-align: center;
+  text-align: left;
 }
 
 .content p {
+  margin-left: 1em;
   margin-top: 10px;
 }
 .pastTrips {
@@ -301,6 +300,13 @@ label {
   margin-left: 0px;
 }
 
+.targetedSpecies {
+  display: flex;
+  flex-direction: row;
+  font-family: Aventura;
+  font-size: 20px;
+}
+
 .targetedSpeciesContainer {
   display: flex;
   flex-direction: column;
@@ -327,14 +333,19 @@ input.datePicker {
 }
 
 .time {
-  font-family: Gliford Demo;
-  font-size: 30px;
+  font-family: Aventura;
+  font-size: 20px;
 }
 
 .speciesLabel {
   font-family: Gliford Demo;
   font-size: 25px;
   text-align: left;
+}
+
+.speciesName {
+  font-family: Aventura;
+  font-size: 20px;
 }
 
 .timeCont {
@@ -344,28 +355,41 @@ input.datePicker {
 }
 
 .duration {
-  font-family: Gliford Demo;
-  font-size: 30px;
+  font-family: Aventura;
+  font-size: 20px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-text {
+  font-family: Aventura;
+  font-size: 14px;
 }
 
 .weather {
-  font-family: Gliford Demo;
-  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  font-family: Aventura;
+  font-size: 20px;
 }
 
 .temperature {
-  font-family: Gliford Demo;
-  font-size: 30px;
+  font-family: Aventura;
+  font-size: 20px;
+  margin-bottom: .5em;
 }
 
 .bestLure {
-  font-family: Gliford Demo;
-  font-size: 30px;
+  font-family: Aventura;
+  font-size: 20px;
 }
 
 .trip-description {
-  font-family: Gliford Demo;
-  font-size: 30px;
+  font-family: Aventura;
+  font-size: 20px;
 }
 
 .react-time-picker {
@@ -375,12 +399,19 @@ input.datePicker {
 .tripNoModal {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  margin: 1em;
+  justify-content: space-between;
 }
 
 .pastTripCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 1em;
+  margin-right: auto;
+  margin-left: auto;
   padding-bottom: 3em;
+  width: 50%;
 }
 
 .tripsubmit {
@@ -415,14 +446,18 @@ input.datePicker {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: Gliford Demo;
-  font-size: 30px;
+  font-family: Aventura;
+  font-size: 20px;
   margin-top: 1em;
 }
 
 .no-target {
-  position: relative;
-  bottom: 0.2em;
+  font-family: Aventura;
+  font-size: 20px;
+}
+
+p.no-target {
+  margin-top: 0px;
 }
 
 .speciesHeader {
@@ -476,6 +511,8 @@ input.datePicker {
   z-index: 0;
   background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
 }
+
 .tripWithModal {
-  align-items: center;
+  margin-right: 10%;
+  margin-left: 10%;
 }

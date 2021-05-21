@@ -30,7 +30,7 @@ render() {
 
 
 return (
-        <h4 className="speciesName">{this.state.species}</h4>
+        <p className="speciesName"> {this.state.species.toLocaleUpperCase()}</p>
         )
     }
 }

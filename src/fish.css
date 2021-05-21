@@ -12,6 +12,7 @@
   border-bottom-left-radius: 0;
   box-shadow: 2px 2px 5px black;
   color: white;
+  cursor: pointer;
   font-family: aventura;
   height: 35px;
   text-shadow: 2px 2px 1px black;
@@ -115,6 +116,7 @@ div.flippy-card.flippy-back {
   background-color: darkgreen;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
   font-family: aventura;
   height: 35px;
   position: relative;

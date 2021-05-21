@@ -90,16 +90,16 @@ class FishCard extends Component {
         >
           <FrontSide>
             <div className='Card-Front'>
-                <h3 className='FishName'>{this.props.oneFish.species}</h3>
-                <img
-                  className='FishPic'
-                  src={this.props.oneFish.image}
-                  alt={this.props.oneFish.name}
-                />
-                <div className='Button-Container'>
-                  <button className='Button-Flip'>SEE INFO</button>
-                </div>
-                {this.showBiggestCatch()}
+              <h3 className='FishName'>{this.props.oneFish.species}</h3>
+              <img
+                className='FishPic'
+                src={this.props.oneFish.image}
+                alt={this.props.oneFish.name}
+              />
+              <div className='Button-Container'>
+                <button className='Button-Flip'>SEE INFO</button>
+              </div>
+              {this.showBiggestCatch()}
             </div>
           </FrontSide>
           <BackSide>

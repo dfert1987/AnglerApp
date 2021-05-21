@@ -11,26 +11,48 @@ class TripsModal extends Component {
       <div className='tripscard'>
         <div className='trip-wrapper'>
           <div className='content'>
-            <h4 className='date'>Date: {this.props.trip.date}</h4>
-            <div className='species'>
-              <h4 className='speciesHeader'>TARGETED SPECIES: </h4>
-              <div className='speciesNameContainer'>
-                  {fishID ? <TargetSpecies fishID={fishID} /> : <p className="no-target">No Target</p>}
-              </div>
-            </div>
-            <p className='time'>STARTING TIME: {this.props.trip.time_start}</p>
+            <h4 className='date'>DATE: {this.props.trip.date}</h4>
+            <p className='targetedSpecies'>
+              TARGETED SPECIES:{' '}
+              {fishID ? (
+                <TargetSpecies fishID={fishID.toUpperCase()} />
+              ) : (
+                'NO DATA'
+              )}
+            </p>
+            <p className='time'>
+              STARTING TIME:{' '}
+              {this.props.trip.time_start
+                ? this.props.trip.time_start.toUpperCase()
+                : 'NO DATA'}
+            </p>
             <p className='duration'>
               {' '}
-              HOURS FISHED: {this.props.trip.duration}
+              HOURS FISHED:{' '}
+              {this.props.trip.duration ? this.props.trip.duration : 'NO DATA'}
             </p>
-            <p className='weather'>WEATHER: {this.props.trip.weather}</p>
+            <p className='weather'>
+              WEATHER: {this.props.trip.weather.toUpperCase()}
+            </p>
             <p className='temperature'>
-              TEMPERATURE: {this.props.trip.temperature}
+              TEMPERATURE:{' '}
+              {this.props.trip.temperature
+                ? this.props.trip.temperature + '°F'
+                : 'NO DATA'}
             </p>
-            <p className='trip-description'>
-              DESCRITPION: {this.props.trip.description}
-            </p>
-            <BestLure lureID={lureID} />
+            {lureID ? (
+              <BestLure lureID={lureID.toUpperCase()} />
+            ) : (
+              <p className='no-target'>BEST LURE: NO DATA</p>
+            )}
+            <div className='description-container'>
+              <p className='trip-description'>DESCRITPION: </p>
+              <p className='description-text'>
+                {this.props.trip.description
+                  ? this.props.trip.description.toUpperCase()
+                  : 'NO DATA'}
+              </p>
+            </div>
           </div>
         </div>
       </div>

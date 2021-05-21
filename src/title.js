@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './title.css';
 import Navbar from './navbar.js';
 import fishicon from './images/fish.png';
+import './title.css';
 
 class Title extends Component {
   render() {

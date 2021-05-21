@@ -19,14 +19,13 @@ body {
 .title-container {
   display: flex;
   flex-direction: column;
-  height: 80%;
   justify-content: center;
-  margin-top: 12em;
 }
 
 .welcome-to {
   font-size: 80px;
   font-family: 'gliford demo';
+  margin-top: 5%;
   position: relative;
   text-align: center;
   top: 0.5em;
