@@ -40,11 +40,13 @@
 .Add-remove {
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'canter bold';
+  font-family: Gliford Demo;
   font-size: 20px;
   height: 40px;
+  margin-bottom: .5em;
+  margin-top: .5em;
   transition: all 0.4s ease 0s;
-  width: 100px;
+  width: 8em;
 }
 
 .current-tacklebox {
@@ -70,6 +72,7 @@
 
 li .lure-card {
   line-height: 1.5em;
+  font-family: Gliford-Demo;
   border-bottom: 1px solid #ccc;
   display: flex;
   position: relative;
@@ -80,19 +83,19 @@ li .lure-card {
 
 .lure-card {
   background-image: url('https://cdn10.bigcommerce.com/s-nxbphakg/products/136/images/1311/lost-coast-reclaimed-redwood-full-range__84102.1493922331.400.513.jpg?c=2');
-  width: 250px;
-  box-shadow: 0 2px 5px 2px black;
-  text-align: center;
-  font-family: 'canter bold';
-  color: white;
-  font-size: 30px;
-  text-shadow: 2px 2px 3px black;
-  font-style: bold;
   border-radius: 15px;
+  box-shadow: 0 2px 5px 2px black;
+  color: white;
+ font-family: Gliford Demo;
+  font-size: 30px;
+  font-style: bold;
   margin-bottom: 40px;
-  margin-right: 3px;
   margin-left: 3px;
+  margin-right: 3px;
   margin-top: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 3px black;
+  width: 250px;
 }
 
 .lure-card-img {
@@ -156,7 +159,7 @@ li .lure-card {
 .row-2 {
   display: flex;
   flex-direction: row;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   text-align: left;
 }
 
@@ -263,6 +266,10 @@ input:focus {
   font-size: 18px;
   position: relative;
   top: 2px;
+}
+
+.card-item-brand {
+  font-family: Gliford Demo;
 }
 
 input.submit {
