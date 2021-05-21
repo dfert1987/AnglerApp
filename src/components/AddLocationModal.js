@@ -107,13 +107,15 @@ class AddLocationModal extends Component {
           <div className='descriptionContainer'>
             <label className='descriptionLabel'>DESCRIPTION: </label>
             <br></br>
-            <input
+            <textarea
               className='locationDescriptionInput'
               name='description'
-              placeholder='Small lake in a residential neighborhood'
+              rows='10'
+              cols='40'
+              placeholder='Small lake in a residential neighborhood....'
               value={this.state.description}
               onChange={this.handleChange}
-            ></input>
+            ></textarea>
             <br></br>
             <div className='buttonRow'>
               <input className='locationSubmit' type='submit' />

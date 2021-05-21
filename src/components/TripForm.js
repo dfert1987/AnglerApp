@@ -197,16 +197,15 @@ export default class TripForm extends Component {
         </div>
         <div className='descriptionWrapper'>
           <label className='descriptionHeader'>Description: </label>
-          <p type='textarea'>
-            <input
-              className='descriptionInput'
-              name='description'
-              multiline={true}
-              placeholder='Describe your day fishing...'
-              value={this.state.description}
-              onChange={this.handleChange}
-            />
-          </p>
+          <textarea
+            className='descriptionInput'
+            name='description'
+            rows='10'
+            cols='30'
+            placeholder='Describe your day fishing...'
+            value={this.state.description}
+            onChange={this.handleChange}
+          ></textarea>
         </div>
         <input className='tripsubmit' type='submit' />
       </form>
