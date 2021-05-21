@@ -34,14 +34,18 @@ class TackleBox extends Component {
 
   showLures = () =>
     this.state.lures.map((lure) => {
-      return (
-        <LureCard
-          key={lure.id}
-          addToTackleBox={this.addToTackleBox}
-          favoriteBackend={this.tackleBoxBackend}
-          lure={lure}
-        />
-      );
+      if (this.state.tacklebox.includes(lure)) {
+        return null;
+      } else {
+        return (
+          <LureCard
+            key={lure.id}
+            addToTackleBox={this.addToTackleBox}
+            favoriteBackend={this.tackleBoxBackend}
+            lure={lure}
+          />
+        );
+      }
     });
 
   showTackleBox = () =>
