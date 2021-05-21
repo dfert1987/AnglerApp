@@ -12,6 +12,7 @@ export default function LureCard({
     if (addToTackleBox) {
       addToTackleBox(lure);
       favoriteBackend(lure);
+      console.log(lure.image)
     } else {
       removeFromTackleBox(lure);
       unfavoriteBackend(lure);

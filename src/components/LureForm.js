@@ -19,8 +19,20 @@ export default class LureForm extends Component {
   };
 
   handleSubmit = (event) => {
+    const defaultState = {
+      id: this.state.id,
+      name: '',
+      image: '',
+      brand: '',
+      lureType: '',
+      color: '',
+      size: '',
+      favorited: false,
+    };
+
     event.preventDefault();
     this.props.addLure(this.state);
+    this.setState(defaultState);
   };
 
   render() {
@@ -29,7 +41,7 @@ export default class LureForm extends Component {
         <h2 className='form-title'>ADD NEW LURE</h2>
         <div className='first-row'>
           <div className='name-container'>
-            <label> NAME: </label>
+            <label>NAME: </label>
             <input
               className='name-input'
               type='text'
@@ -40,7 +52,7 @@ export default class LureForm extends Component {
             />
           </div>
           <div className='image-container'>
-            <label> IMAGE: </label>
+            <label>IMAGE: </label>
             <input
               className='image-input'
               type='text'
@@ -51,7 +63,7 @@ export default class LureForm extends Component {
             />
           </div>
           <div className='brand-container'>
-            <label> BRAND: </label>
+            <label>BRAND: </label>
             <input
               className='brand-input'
               type='text'
@@ -64,7 +76,7 @@ export default class LureForm extends Component {
         </div>
         <div className='row-2'>
           <div className='type-container'>
-            <label> TYPE: </label>
+            <label>TYPE: </label>
             <select
               className='type-input'
               id='lure-types'
@@ -85,7 +97,7 @@ export default class LureForm extends Component {
             </select>
           </div>
           <div className='color-container'>
-            <label> COLOR: </label>
+            <label>COLOR: </label>
             <input
               className='color-input'
               type='text'
@@ -96,7 +108,7 @@ export default class LureForm extends Component {
             />
           </div>
           <div className='size-container'>
-            <label> SIZE: </label>
+            <label>SIZE: </label>
             <select
               className='size-input'
               id='lure-size'
