@@ -237,9 +237,10 @@ input .placeHolder .time {
   border-radius: 8px;
   bottom: 40em;
   height: 30em;
-  margin-left: 10em;
-  margin-right: 10em;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30em;
   z-index: 100;
 }
 

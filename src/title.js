@@ -7,8 +7,8 @@ class Title extends Component {
   render() {
     return (
       <div className='landing-container'>
-        <Navbar />
-        <div className='title-container'>
+        <Navbar className='nav'/>
+        <div className='container'>
           <h3 className='welcome-to'>WELCOME TO</h3>
           <h1 className='title'>ANGLER</h1>
           <h4 className='subtitle'> - LOG EVERY CAST - </h4>

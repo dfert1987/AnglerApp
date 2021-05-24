@@ -41,7 +41,7 @@ class TripsModal extends Component {
                 : 'NO DATA'}
             </p>
             {lureID ? (
-              <BestLure lureID={lureID.toUpperCase()} />
+              <BestLure lureID={lureID} />
             ) : (
               <p className='no-target'>BEST LURE: NO DATA</p>
             )}

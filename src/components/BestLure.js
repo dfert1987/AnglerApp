@@ -25,7 +25,7 @@ class BestLure extends Component {
     render(){
 
         return(
-            <p className="bestLure">BEST LURE: {this.state.lureName} </p>
+            <p className="bestLure">BEST LURE: {this.state.lureName.toLocaleUpperCase()} </p>
         )
     }
 }
