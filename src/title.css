@@ -7,19 +7,22 @@ body {
 }
 
 .landing-container {
+  height: 100%;
+}
+
+.title-container {
   background: url('https://i.imgur.com/C2IhcZg.jpg') no-repeat center center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100%;
-}
-
-.title-container {
+  bottom: 1em;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: center;
+  position: relative;
 }
 
 .welcome-to {

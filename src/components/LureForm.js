@@ -4,7 +4,7 @@ export default class LureForm extends Component {
   state = {
     id: 6,
     name: '',
-    image: '',
+    image: null,
     brand: '',
     lureType: '',
     color: '',
@@ -57,7 +57,7 @@ export default class LureForm extends Component {
               className='image-input'
               type='text'
               name='image'
-              placeholder='Image URL'
+              placeholder='Choose Image'
               value={this.state.image}
               onChange={this.handleChange}
             />
