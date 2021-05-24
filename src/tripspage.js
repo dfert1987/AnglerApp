@@ -87,7 +87,7 @@ class TripsPage extends Component {
     };
 
     return (
-      <div className='trip container'>
+      <div className='trip-container'>
         <div className='nav-bar'>
           <Navbar />
         </div>
