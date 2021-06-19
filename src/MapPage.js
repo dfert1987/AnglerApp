@@ -69,7 +69,6 @@ class MapPage extends Component {
       });
       marker.addListener('click', function () {
         window.location.href = `/tripspage/${location.id}`;
-        console.log(this.state.locations);
       });
       marker.addListener('mouseover', function () {
         infowindow.setContent(contentString);

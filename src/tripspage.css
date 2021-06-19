@@ -265,10 +265,6 @@ label {
   flex-direction: column;
 }
 
-.trip-container {
-
-}
-
 .top-row {
   display: flex;
   flex-direction: row;
